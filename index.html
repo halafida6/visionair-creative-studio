@@ -3,32 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Vision'Air Creative Studio | Premium Video &amp; Photography Production</title>
+<title>Vision'Air Creative Studio | Production photo &amp; vidéo premium</title>
 <meta name="description" content="Vision'Air produit des campagnes photo et vidéo premium pour les marques, entrepreneurs et événements. Direction artistique, tournage, livraison.">
-<meta name="theme-color" content="#000000">
+<meta name="theme-color" content="#ffffff">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Vision'Air Creative Studio | Premium Video &amp; Photography Production">
+<meta property="og:title" content="Vision'Air Creative Studio | Production photo &amp; vidéo premium">
 <meta property="og:description" content="Campagnes photo et vidéo premium pour marques, entrepreneurs et événements.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Vision'Air Creative Studio">
 <meta name="twitter:description" content="Campagnes photo et vidéo premium pour marques, entrepreneurs et événements.">
 
-<link rel="preload" href="fonts/anton-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 
 <style>
-  /* Polices auto-hébergées : aucun appel externe, chargement instantané */
-  @font-face{
-    font-family:'Anton';font-style:normal;font-weight:400;font-display:swap;
-    src:url('fonts/anton-latin.woff2') format('woff2');
-    unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
-  }
-  @font-face{
-    font-family:'Anton';font-style:normal;font-weight:400;font-display:swap;
-    src:url('fonts/anton-latin-ext.woff2') format('woff2');
-    unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
-  }
+  /* Polices auto-hébergées : aucun appel externe */
   @font-face{
     font-family:'Inter';font-style:normal;font-weight:400 800;font-display:swap;
     src:url('fonts/inter-latin.woff2') format('woff2');
@@ -39,28 +28,42 @@
     src:url('fonts/inter-latin-ext.woff2') format('woff2');
     unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
   }
+  @font-face{
+    font-family:'Plex Mono';font-style:normal;font-weight:500;font-display:swap;
+    src:url('fonts/plexmono-latin.woff2') format('woff2');
+    unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+  }
+  @font-face{
+    font-family:'Plex Mono';font-style:normal;font-weight:500;font-display:swap;
+    src:url('fonts/plexmono-latin-ext.woff2') format('woff2');
+    unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+  }
 
   :root{
-    --bg:#000000;
-    --bg-2:#0a0a0a;
-    --fg:#ffffff;
-    --muted:#8b8b8b;
-    --dim:#5a5a5a;
-    --line:rgba(255,255,255,.12);
+    --bg:#ffffff;
+    --bg-soft:#F7F7F8;
+    --bg-tint:#FBFBFC;
+    --ink:#0B0B0F;
+    --ink-2:#1D1D22;
+    --muted:#6E6E78;
+    --faint:#9A9AA4;
+    --line:#E9E9EE;
+    --line-2:#F1F1F4;
     --pink:#FF2D6E;
-    --pink-deep:#E01B57;
+    --pink-soft:#FFF0F5;
     --wa:#25D366;
-    --wa-hover:#1FB855;
+    --wa-dark:#128C7E;
     --ease:cubic-bezier(.16,1,.3,1);
-    --display:'Anton',Impact,'Haettenschweiler','Arial Narrow Bold',sans-serif;
-    --body:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    --mono:'Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
   }
 
   *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden;background:var(--bg);}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden;}
   body{
-    background:var(--bg);color:var(--fg);font-family:var(--body);
-    overflow-x:hidden;-webkit-font-smoothing:antialiased;line-height:1.55;
+    background:var(--bg);color:var(--ink);font-family:var(--sans);
+    font-size:16px;line-height:1.6;overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
     -webkit-tap-highlight-color:transparent;
   }
   img,svg,video{max-width:100%;display:block;}
@@ -69,332 +72,358 @@
   button{font-family:inherit;}
   ::selection{background:var(--pink);color:#fff;}
 
-  .wrap{max-width:1280px;margin:0 auto;padding:0 22px;}
-  @media(min-width:768px){.wrap{padding:0 48px;}}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 22px;}
+  @media(min-width:768px){.wrap{padding:0 40px;}}
 
   /* === TYPO === */
-  .display{
-    font-family:var(--display);font-weight:400;text-transform:uppercase;
-    /* 1.02 : les capitales accentuées (È, Ô, É) débordent au-dessus de la hauteur de capitale */
-    line-height:1.02;letter-spacing:.005em;
-  }
-  .ac{color:var(--pink);font-style:normal;}
-  .eyebrow{
-    font-size:10.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);
-  }
-  .eyebrow .pk{color:var(--pink);}
+  h1,h2,h3{font-weight:600;letter-spacing:-0.035em;line-height:1.06;text-wrap:balance;}
+  h1{font-size:clamp(38px,5.6vw,72px);letter-spacing:-0.04em;}
+  h2{font-size:clamp(29px,4vw,50px);}
+  h3{font-size:19px;letter-spacing:-0.02em;line-height:1.3;}
+  p{color:var(--muted);}
+  .lead{font-size:clamp(16px,1.7vw,19px);color:var(--muted);line-height:1.6;}
 
-  /* === LOADER === */
-  #loader{
-    position:fixed;inset:0;z-index:9998;background:var(--bg);
-    display:flex;align-items:center;justify-content:center;
-    transition:transform 1s var(--ease);
+  .label{
+    font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--faint);
   }
-  #loader.done{transform:translateY(-101%);}
-  #loader .mark{width:74px;color:#fff;animation:markIn 1s var(--ease) both;}
-  @keyframes markIn{from{opacity:0;transform:scale(.8);}to{opacity:1;transform:scale(1);}}
-
-  /* === GRAIN === */
-  .grain{
-    position:fixed;inset:0;pointer-events:none;z-index:9000;opacity:.05;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
-
-  /* === CURSOR === */
-  #cursor{
-    position:fixed;top:0;left:0;width:8px;height:8px;border-radius:50%;background:var(--pink);
-    pointer-events:none;z-index:9500;transform:translate(-50%,-50%);
-    transition:width .3s var(--ease),height .3s var(--ease),opacity .3s;opacity:0;
-    mix-blend-mode:screen;
-  }
-  #cursor.big{width:46px;height:46px;background:rgba(255,45,110,.25);border:1px solid var(--pink);}
-  @media(hover:none),(pointer:coarse){#cursor{display:none;}}
+  .label .pk{color:var(--pink);}
+  .ac{color:var(--pink);}
 
   /* === NAV === */
   header{
     position:fixed;top:0;left:0;right:0;z-index:200;
-    background:rgba(0,0,0,.6);backdrop-filter:blur(16px) saturate(150%);
-    -webkit-backdrop-filter:blur(16px) saturate(150%);
+    background:rgba(255,255,255,.72);
+    backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);
     border-bottom:1px solid transparent;transition:border-color .35s,background .35s;
   }
-  header.scrolled{border-bottom-color:var(--line);background:rgba(0,0,0,.85);}
-  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:14px;}
-  .brand{display:flex;align-items:center;gap:10px;}
-  .brand .mark{width:34px;color:#fff;flex-shrink:0;}
-  .brand-txt{font-family:var(--display);font-size:16px;letter-spacing:.03em;text-transform:uppercase;line-height:1;}
-  .brand-txt small{display:block;font-family:var(--body);font-size:8.5px;letter-spacing:.24em;color:var(--muted);font-weight:600;margin-top:3px;}
+  header.scrolled{border-bottom-color:var(--line);background:rgba(255,255,255,.9);}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:13px 0;gap:14px;}
+  .brand{display:flex;align-items:center;gap:9px;}
+  .brand .mark{width:29px;flex-shrink:0;color:var(--ink);}
+  .brand-txt{font-size:15px;font-weight:600;letter-spacing:-.02em;line-height:1.15;}
+  .brand-txt small{
+    display:block;font-family:var(--mono);font-size:8.5px;font-weight:500;
+    letter-spacing:.16em;color:var(--faint);text-transform:uppercase;margin-top:1px;
+  }
 
-  .nav-links{display:none;align-items:center;gap:30px;margin-left:auto;margin-right:20px;}
-  .nav-links a{font-size:12.5px;font-weight:600;letter-spacing:.04em;color:var(--muted);position:relative;padding:4px 0;transition:color .3s;}
-  .nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1.5px;background:var(--pink);transition:width .35s var(--ease);}
-  .nav-links a:hover{color:var(--fg);}
-  .nav-links a:hover::after{width:100%;}
-  @media(min-width:960px){.nav-links{display:flex;}}
+  .nav-links{display:none;align-items:center;gap:24px;margin-left:auto;margin-right:18px;}
+  .nav-links a{font-size:14px;font-weight:450;color:var(--muted);transition:color .25s;}
+  .nav-links a:hover{color:var(--ink);}
+  @media(min-width:1050px){.nav-links{display:flex;}}
 
   .lang{
-    display:flex;align-items:center;border:1px solid var(--line);border-radius:100px;padding:2px;
-    font-size:10.5px;font-weight:800;letter-spacing:.06em;flex-shrink:0;
+    display:flex;align-items:center;background:var(--bg-soft);border-radius:8px;padding:2px;
+    font-family:var(--mono);font-size:10.5px;font-weight:500;flex-shrink:0;
   }
-  .lang button{background:none;border:0;padding:6px 10px;border-radius:100px;cursor:pointer;color:var(--dim);transition:.25s;}
-  .lang button.active{background:var(--fg);color:#000;}
+  .lang button{
+    background:none;border:0;padding:6px 9px;border-radius:6px;cursor:pointer;
+    color:var(--faint);transition:.25s;letter-spacing:.05em;
+  }
+  .lang button.active{background:#fff;color:var(--ink);box-shadow:0 1px 2px rgba(11,11,15,.08);}
 
   .btn{
-    display:inline-flex;align-items:center;justify-content:center;gap:9px;
-    padding:15px 26px;border-radius:100px;font-size:13px;font-weight:700;letter-spacing:.02em;
-    border:1.5px solid transparent;cursor:pointer;white-space:nowrap;
-    transition:background .3s var(--ease),color .3s var(--ease),transform .25s var(--ease),box-shadow .3s;
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:12px 20px;border-radius:10px;font-size:14.5px;font-weight:550;
+    letter-spacing:-.01em;border:1px solid transparent;cursor:pointer;white-space:nowrap;
+    transition:background .25s var(--ease),color .25s,border-color .25s,transform .25s var(--ease),box-shadow .25s;
   }
   .btn svg{width:16px;height:16px;flex-shrink:0;}
-  .btn-wa{background:var(--wa);color:#062d15;border-color:var(--wa);box-shadow:0 0 0 rgba(37,211,102,0);}
-  .btn-wa:hover{background:var(--wa-hover);border-color:var(--wa-hover);transform:translateY(-2px);box-shadow:0 10px 30px rgba(37,211,102,.3);}
-  .btn-line{background:transparent;color:var(--fg);border-color:rgba(255,255,255,.28);}
-  .btn-line:hover{background:var(--fg);color:#000;border-color:var(--fg);transform:translateY(-2px);}
-  .btn-sm{padding:11px 18px;font-size:12px;}
+  .btn-wa{
+    background:var(--wa);color:#fff;border-color:var(--wa);
+    box-shadow:0 1px 2px rgba(18,140,126,.18),0 6px 18px -6px rgba(37,211,102,.5);
+  }
+  .btn-wa:hover{background:#1FC15D;border-color:#1FC15D;transform:translateY(-1px);box-shadow:0 2px 4px rgba(18,140,126,.2),0 12px 26px -8px rgba(37,211,102,.6);}
+  .btn-ghost{background:#fff;color:var(--ink);border-color:var(--line);box-shadow:0 1px 2px rgba(11,11,15,.04);}
+  .btn-ghost:hover{border-color:#D6D6DE;transform:translateY(-1px);box-shadow:0 4px 14px -4px rgba(11,11,15,.12);}
+  .btn-lg{padding:14px 24px;font-size:15px;border-radius:11px;}
+  .btn-sm{padding:9px 15px;font-size:13.5px;border-radius:9px;}
   .nav-cta{display:none;}
-  @media(min-width:960px){.nav-cta{display:inline-flex;}}
+  @media(min-width:1050px){.nav-cta{display:inline-flex;}}
 
-  .burger{display:flex;flex-direction:column;gap:5px;width:26px;cursor:pointer;background:none;border:0;padding:4px 0;}
-  .burger span{height:2px;background:var(--fg);border-radius:2px;transition:.3s var(--ease);}
-  .burger.on span:first-child{transform:translateY(3.5px) rotate(45deg);}
-  .burger.on span:last-child{transform:translateY(-3.5px) rotate(-45deg);}
-  @media(min-width:960px){.burger{display:none;}}
+  .burger{display:flex;flex-direction:column;gap:4.5px;width:22px;cursor:pointer;background:none;border:0;padding:5px 0;}
+  .burger span{height:1.5px;background:var(--ink);border-radius:2px;transition:.3s var(--ease);}
+  .burger.on span:first-child{transform:translateY(3px) rotate(45deg);}
+  .burger.on span:last-child{transform:translateY(-3px) rotate(-45deg);}
+  @media(min-width:1050px){.burger{display:none;}}
 
   .mmenu{
-    position:fixed;inset:0;z-index:190;background:var(--bg);
-    display:flex;flex-direction:column;justify-content:center;gap:6px;padding:24px;
-    clip-path:inset(0 0 100% 0);transition:clip-path .65s var(--ease);
+    position:fixed;inset:0;z-index:190;background:#fff;padding:88px 22px 30px;
+    display:flex;flex-direction:column;gap:2px;
+    opacity:0;pointer-events:none;transform:translateY(-8px);
+    transition:opacity .35s var(--ease),transform .35s var(--ease);
   }
-  .mmenu.open{clip-path:inset(0 0 0 0);}
+  .mmenu.open{opacity:1;pointer-events:auto;transform:none;}
   .mmenu a.ml{
-    font-family:var(--display);font-size:34px;text-transform:uppercase;line-height:1.3;
-    opacity:0;transform:translateY(20px);transition:opacity .5s var(--ease),transform .5s var(--ease);
+    font-size:26px;font-weight:600;letter-spacing:-.03em;padding:12px 0;
+    border-bottom:1px solid var(--line-2);
   }
-  .mmenu.open a.ml{opacity:1;transform:none;transition-delay:calc(.18s + var(--i) * .06s);}
-  .mmenu .btn{align-self:flex-start;margin-top:22px;}
-  .mmenu .lang{align-self:flex-start;margin-top:16px;}
+  .mmenu .btn{margin-top:24px;}
+  .mmenu .lang{align-self:flex-start;margin-top:18px;}
 
   /* === HERO === */
-  .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:130px 0 44px;overflow:hidden;}
-  .glow{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;z-index:0;}
-  .glow-a{width:52vw;height:52vw;max-width:600px;max-height:600px;background:rgba(255,45,110,.28);top:-8%;right:-10%;animation:drift 16s ease-in-out infinite;}
-  .glow-b{width:44vw;height:44vw;max-width:480px;max-height:480px;background:rgba(255,45,110,.12);bottom:-12%;left:-12%;animation:drift 20s ease-in-out infinite reverse;}
-  @keyframes drift{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(-6%,8%) scale(1.12);}}
-
-  .hero-reel{position:absolute;inset:0;z-index:0;display:flex;align-items:center;opacity:.5;}
-  .reel-track{display:flex;gap:14px;animation:reel 46s linear infinite;will-change:transform;}
-  .reel-card{
-    height:74vh;width:25vw;min-width:210px;border-radius:16px;flex-shrink:0;
-    background:linear-gradient(160deg,#141414,#2e2e2e);border:1px solid rgba(255,255,255,.06);
+  .hero{position:relative;padding:132px 0 0;overflow:hidden;}
+  @media(min-width:768px){.hero{padding:168px 0 0;}}
+  .hero-bg{
+    position:absolute;top:-20%;left:50%;transform:translateX(-50%);
+    width:130%;height:720px;pointer-events:none;z-index:0;
+    background:
+      radial-gradient(46% 52% at 28% 34%, rgba(255,45,110,.13), transparent 68%),
+      radial-gradient(40% 46% at 74% 20%, rgba(255,150,90,.11), transparent 66%),
+      radial-gradient(50% 50% at 52% 66%, rgba(150,120,255,.08), transparent 70%);
+    filter:blur(28px);animation:float 22s ease-in-out infinite;
   }
-  @keyframes reel{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-  .hero-veil{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.82) 45%,#000 100%);}
-  .hero .wrap{position:relative;z-index:2;}
+  @keyframes float{0%,100%{transform:translateX(-50%) translateY(0) scale(1);}50%{transform:translateX(-50%) translateY(22px) scale(1.06);}}
+  .hero .wrap{position:relative;z-index:1;}
+  .hero-in{max-width:760px;}
 
-  .hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:20px;}
-  .dot{width:7px;height:7px;border-radius:50%;background:var(--pink);animation:pulse 2.2s ease-in-out infinite;}
-  @keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(255,45,110,.5);}50%{opacity:.5;box-shadow:0 0 0 8px rgba(255,45,110,0);}}
+  .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;margin-bottom:22px;
+    padding:6px 13px 6px 9px;border:1px solid var(--line);border-radius:100px;background:rgba(255,255,255,.7);}
+  .dot{width:5px;height:5px;border-radius:50%;background:var(--pink);flex-shrink:0;animation:pulse 2.4s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.35;}}
 
-  h1{font-size:clamp(38px,8.6vw,104px);}
-  /* padding-top : laisse respirer les accents des capitales (É, È) que le masque couperait */
-  .lm{display:block;overflow:hidden;padding-top:.14em;padding-bottom:.04em;margin-bottom:-.1em;}
-  .lmi{display:block;transform:translateY(110%);transition:transform 1.05s var(--ease);}
-  .ready .lmi{transform:translateY(0);}
-  .lm:nth-of-type(2) .lmi{transition-delay:.1s;}
-  .lm:nth-of-type(3) .lmi{transition-delay:.2s;}
+  .lm{display:block;overflow:hidden;padding-top:.1em;margin-top:-.1em;}
+  .lmi{display:block;transform:translateY(105%);opacity:0;transition:transform 1s var(--ease),opacity 1s var(--ease);}
+  .ready .lmi{transform:translateY(0);opacity:1;}
+  .lm:nth-of-type(2) .lmi{transition-delay:.09s;}
+  .lm:nth-of-type(3) .lmi{transition-delay:.18s;}
 
-  .hero-sub{
-    max-width:470px;margin-top:24px;font-size:clamp(14.5px,2vw,17px);color:var(--muted);font-weight:500;
-    opacity:0;transform:translateY(18px);transition:opacity .9s var(--ease) .45s,transform .9s var(--ease) .45s;
-  }
+  .hero-sub{max-width:520px;margin-top:22px;opacity:0;transform:translateY(14px);
+    transition:opacity .8s var(--ease) .34s,transform .8s var(--ease) .34s;}
   .ready .hero-sub{opacity:1;transform:none;}
-  .hero-actions{
-    display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;
-    opacity:0;transform:translateY(18px);transition:opacity .9s var(--ease) .58s,transform .9s var(--ease) .58s;
-  }
+  .hero-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:30px;opacity:0;transform:translateY(14px);
+    transition:opacity .8s var(--ease) .44s,transform .8s var(--ease) .44s;}
   .ready .hero-actions{opacity:1;transform:none;}
-  .hero-tags{
-    display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:52px;padding-top:20px;border-top:1px solid var(--line);
-    opacity:0;transition:opacity 1s var(--ease) .75s;
-  }
-  .ready .hero-tags{opacity:1;}
-  .hero-tags span{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);}
-  .hero-tags span::before{content:"◆ ";color:var(--pink);font-size:8px;}
+  .hero-note{margin-top:16px;font-size:13.5px;color:var(--faint);opacity:0;transition:opacity .8s var(--ease) .56s;}
+  .ready .hero-note{opacity:1;}
 
-  /* === MARQUEE === */
-  .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:16px 0;white-space:nowrap;background:var(--bg-2);}
-  .mq-track{display:inline-flex;animation:mq 30s linear infinite;}
-  .mq-track span{
-    font-family:var(--display);font-size:clamp(19px,3vw,30px);text-transform:uppercase;
-    padding:0 24px;display:inline-flex;align-items:center;gap:24px;color:#fff;
+  /* Showreel */
+  .reel{
+    margin-top:60px;border-radius:20px;overflow:hidden;position:relative;
+    aspect-ratio:16/9;background:linear-gradient(140deg,#EDEDF1,#DEDEE6 55%,#E9E7F0);
+    border:1px solid var(--line);box-shadow:0 1px 2px rgba(11,11,15,.05),0 24px 60px -22px rgba(11,11,15,.22);
+    opacity:0;transform:translateY(26px) scale(.985);
+    transition:opacity 1s var(--ease) .6s,transform 1s var(--ease) .6s;
   }
-  .mq-track span::after{content:"◆";font-size:11px;color:var(--pink);}
-  @keyframes mq{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  .ready .reel{opacity:1;transform:none;}
+  @media(min-width:768px){.reel{margin-top:76px;}}
+  .reel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .reel-play{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.9);
+    backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;
+    box-shadow:0 8px 30px rgba(11,11,15,.18);transition:transform .35s var(--ease),background .3s;
+  }
+  .reel:hover .reel-play{transform:translate(-50%,-50%) scale(1.07);background:#fff;}
+  .reel-play svg{width:18px;height:18px;fill:var(--ink);margin-left:3px;}
+  .reel-tag{
+    position:absolute;left:16px;bottom:16px;padding:7px 12px;border-radius:8px;
+    background:rgba(255,255,255,.82);backdrop-filter:blur(8px);
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);
+  }
+
+  /* === STRIP === */
+  .strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:76px;background:var(--bg-tint);}
+  .strip-in{display:flex;flex-wrap:wrap;gap:14px 40px;padding:20px 0;justify-content:space-between;align-items:center;}
+  .strip-in span{font-family:var(--mono);font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--faint);}
 
   /* === SECTIONS === */
-  section{padding:84px 0;position:relative;}
-  @media(min-width:768px){section{padding:126px 0;}}
-  .head{max-width:620px;margin-bottom:44px;}
-  .head h2{font-size:clamp(30px,5.6vw,58px);margin-top:14px;}
-  .head p{margin-top:16px;font-size:15px;color:var(--muted);max-width:440px;}
+  section{padding:84px 0;}
+  @media(min-width:768px){section{padding:130px 0;}}
+  .head{max-width:640px;margin-bottom:52px;}
+  .head h2{margin-top:16px;}
+  .head p{margin-top:16px;font-size:16.5px;max-width:480px;}
 
-  .rv{opacity:0;transform:translateY(30px);transition:opacity .9s var(--ease),transform .9s var(--ease);}
+  .rv{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease);}
   .rv.in{opacity:1;transform:none;}
-  .rv.d1{transition-delay:.09s;}.rv.d2{transition-delay:.18s;}.rv.d3{transition-delay:.27s;}
+  .rv.d1{transition-delay:.08s;}.rv.d2{transition-delay:.16s;}.rv.d3{transition-delay:.24s;}
 
   /* === VALUE === */
-  .value-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden;}
-  @media(min-width:900px){.value-grid{grid-template-columns:repeat(3,1fr);}}
-  .value-card{background:var(--bg);padding:38px 28px;position:relative;transition:background .45s var(--ease);}
-  .value-card:hover{background:var(--bg-2);}
-  .value-card .vi{font-family:var(--display);font-size:34px;color:var(--pink);line-height:1;}
-  .value-card h3{font-family:var(--display);font-size:22px;text-transform:uppercase;margin-top:18px;line-height:1.18;}
-  .value-card p{margin-top:12px;font-size:14.5px;color:var(--muted);}
+  .grid3{display:grid;grid-template-columns:1fr;gap:16px;}
+  @media(min-width:860px){.grid3{grid-template-columns:repeat(3,1fr);}}
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 26px;
+    transition:border-color .35s var(--ease),box-shadow .35s var(--ease),transform .35s var(--ease);
+  }
+  .card:hover{border-color:#DEDEE6;box-shadow:0 2px 4px rgba(11,11,15,.03),0 18px 40px -20px rgba(11,11,15,.18);transform:translateY(-3px);}
+  .card-ic{
+    width:36px;height:36px;border-radius:9px;background:var(--pink-soft);
+    display:flex;align-items:center;justify-content:center;margin-bottom:20px;
+  }
+  .card-ic svg{width:17px;height:17px;stroke:var(--pink);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
+  .card h3{margin-bottom:9px;}
+  .card p{font-size:14.8px;line-height:1.62;}
 
   /* === OFFRE === */
-  .offer{display:grid;grid-template-columns:1fr;gap:14px;}
-  @media(min-width:900px){.offer{grid-template-columns:repeat(3,1fr);}}
+  .offer{display:grid;grid-template-columns:1fr;gap:16px;}
+  @media(min-width:860px){.offer{grid-template-columns:repeat(3,1fr);}}
   .offer-card{
-    border:1px solid var(--line);border-radius:18px;padding:34px 26px;position:relative;overflow:hidden;
-    transition:border-color .4s var(--ease),transform .4s var(--ease);
+    border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;
+    transition:border-color .35s var(--ease),box-shadow .35s var(--ease),transform .35s var(--ease);
   }
-  .offer-card::after{
-    content:"";position:absolute;inset:0;opacity:0;transition:opacity .45s var(--ease);
-    background:radial-gradient(90% 70% at 50% 0%,rgba(255,45,110,.16),transparent 70%);pointer-events:none;
+  .offer-card:hover{border-color:#DEDEE6;box-shadow:0 2px 4px rgba(11,11,15,.03),0 18px 40px -20px rgba(11,11,15,.18);transform:translateY(-3px);}
+  .offer-vis{height:150px;background:linear-gradient(140deg,#EFEFF3,#E3E3EA);position:relative;border-bottom:1px solid var(--line);}
+  .offer-vis::after{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(70% 80% at 30% 20%,rgba(255,45,110,.1),transparent 70%);
   }
-  .offer-card:hover{border-color:rgba(255,45,110,.5);transform:translateY(-4px);}
-  .offer-card:hover::after{opacity:1;}
-  .offer-card .on{font-size:11px;font-weight:800;letter-spacing:.2em;color:var(--pink);}
-  .offer-card h3{font-family:var(--display);font-size:clamp(24px,3.4vw,30px);text-transform:uppercase;margin-top:16px;line-height:1.12;}
-  .offer-card>p{margin-top:12px;font-size:14.5px;color:var(--muted);}
-  .offer-card ul{margin-top:22px;padding-top:18px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:9px;}
-  .offer-card li{font-size:13.5px;color:#c9c9c9;font-weight:500;}
-  .offer-card li::before{content:"—  ";color:var(--dim);}
+  .offer-b{padding:24px 24px 26px;}
+  .offer-b h3{margin-bottom:8px;}
+  .offer-b>p{font-size:14.8px;}
+  .offer-b ul{margin-top:18px;padding-top:16px;border-top:1px solid var(--line-2);display:flex;flex-direction:column;gap:8px;}
+  .offer-b li{font-size:14px;color:var(--muted);display:flex;align-items:center;gap:9px;}
+  .offer-b li::before{
+    content:"";width:4px;height:4px;border-radius:50%;background:var(--pink);flex-shrink:0;opacity:.75;
+  }
 
   /* === PORTFOLIO === */
   .pf{display:grid;grid-template-columns:1fr;gap:14px;}
   @media(min-width:640px){.pf{grid-template-columns:repeat(2,1fr);}}
-  @media(min-width:1100px){.pf{grid-template-columns:repeat(3,1fr);}}
+  @media(min-width:1024px){.pf{grid-template-columns:repeat(3,1fr);}}
   .p-item{
-    position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/5;cursor:pointer;
-    background:linear-gradient(150deg,#151515,#333);border:1px solid rgba(255,255,255,.07);
+    position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/5;cursor:pointer;
+    background:linear-gradient(150deg,#EEEEF2,#DFDFE7);border:1px solid var(--line);
+    transition:box-shadow .4s var(--ease),transform .4s var(--ease);
   }
-  .p-item.wide{aspect-ratio:8/5;}
+  .p-item.wide{aspect-ratio:16/10;}
   @media(min-width:640px){.p-item.wide{grid-column:span 2;}}
+  .p-item:hover{box-shadow:0 20px 46px -22px rgba(11,11,15,.3);transform:translateY(-3px);}
   .p-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease);}
-  .p-item:hover img{transform:scale(1.06);}
-  .p-ov{
-    position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;
-    background:linear-gradient(0deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,0) 55%);
+  .p-item:hover img{transform:scale(1.045);}
+  .p-ov{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;}
+  .p-meta{
+    display:inline-flex;flex-direction:column;gap:4px;padding:11px 13px;border-radius:10px;
+    background:rgba(255,255,255,.86);backdrop-filter:blur(10px);align-self:flex-start;
+    box-shadow:0 4px 16px rgba(11,11,15,.08);
   }
-  .p-item::after{
-    content:"";position:absolute;inset:0;border-radius:16px;pointer-events:none;
-    box-shadow:inset 0 0 0 1px rgba(255,45,110,0);transition:box-shadow .45s var(--ease);
-  }
-  .p-item:hover::after{box-shadow:inset 0 0 0 1.5px rgba(255,45,110,.75);}
-  .p-cat{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--pink);font-weight:800;}
-  .p-title{font-family:var(--display);font-size:19px;text-transform:uppercase;color:#fff;margin-top:8px;line-height:1.18;}
+  .p-cat{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--pink);}
+  .p-title{font-size:14.5px;font-weight:550;letter-spacing:-.015em;color:var(--ink);}
   .p-play{
-    position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:50%;
-    background:rgba(255,255,255,.1);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;
-    border:1px solid rgba(255,255,255,.18);transition:background .35s,transform .35s var(--ease);
+    position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;
+    background:rgba(255,255,255,.86);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;
+    box-shadow:0 3px 12px rgba(11,11,15,.1);transition:transform .35s var(--ease);
   }
-  .p-item:hover .p-play{background:var(--pink);transform:scale(1.1);border-color:var(--pink);}
-  .p-play svg{width:11px;height:11px;fill:#fff;}
-  .pf-note{margin-top:26px;font-size:13px;color:var(--dim);}
+  .p-item:hover .p-play{transform:scale(1.1);}
+  .p-play svg{width:10px;height:10px;fill:var(--ink);margin-left:1.5px;}
+  .pf-note{margin-top:26px;font-size:14px;color:var(--faint);}
 
-  /* === PROCESS === */
-  .steps{border-top:1px solid var(--line);}
-  .step{
-    display:grid;grid-template-columns:1fr;gap:8px;padding:26px 0;border-bottom:1px solid var(--line);
-    position:relative;transition:padding-left .4s var(--ease);
+  /* === FONDATEUR === */
+  .founder{display:grid;grid-template-columns:1fr;gap:34px;align-items:center;}
+  @media(min-width:860px){.founder{grid-template-columns:.85fr 1fr;gap:64px;}}
+  .founder-vis{position:relative;}
+  .founder-vis img,.founder-ph{
+    width:100%;aspect-ratio:4/5;border-radius:18px;object-fit:cover;
+    border:1px solid var(--line);
+    box-shadow:0 2px 4px rgba(11,11,15,.03),0 26px 60px -30px rgba(11,11,15,.35);
   }
-  @media(min-width:768px){.step{grid-template-columns:80px 1fr 1fr;align-items:center;gap:24px;padding:30px 0;}}
-  .step::before{content:"";position:absolute;left:0;top:0;bottom:0;width:0;background:rgba(255,45,110,.07);transition:width .5s var(--ease);z-index:-1;}
-  .step:hover::before{width:100%;}
-  @media(min-width:768px){.step:hover{padding-left:18px;}}
-  .step .sn{font-size:12.5px;font-weight:800;letter-spacing:.16em;color:var(--pink);}
-  .step h3{font-family:var(--display);font-size:clamp(22px,3.2vw,30px);text-transform:uppercase;line-height:1.12;}
-  .step p{color:var(--muted);font-size:14px;max-width:330px;}
-  .no-retainer{
-    margin-top:34px;padding:22px 24px;border:1px solid rgba(255,45,110,.3);border-radius:16px;
-    background:radial-gradient(80% 100% at 0% 0%,rgba(255,45,110,.09),transparent 70%);
-    font-size:15px;color:#d6d6d6;
+  .founder-ph{
+    background:linear-gradient(150deg,#EEEEF2,#DFDFE7);
+    display:flex;align-items:center;justify-content:center;
   }
-  .no-retainer b{color:#fff;}
+  .founder-vis::after{
+    content:"";position:absolute;inset:auto -14px -14px auto;width:58%;height:58%;z-index:-1;
+    border-radius:18px;background:radial-gradient(60% 60% at 60% 40%,rgba(255,45,110,.14),transparent 70%);filter:blur(18px);
+  }
+  .founder-txt h2{margin-top:16px;margin-bottom:22px;}
+  .founder-txt p{font-size:16.5px;margin-bottom:16px;}
+  .founder-pts{margin-top:26px;padding-top:22px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:11px;}
+  .founder-pts li{font-size:14.8px;color:var(--muted);display:flex;align-items:flex-start;gap:10px;}
+  .founder-pts li::before{
+    content:"";width:15px;height:15px;flex-shrink:0;margin-top:4px;border-radius:50%;
+    background:var(--pink-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FF2D6E' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E") center/9px no-repeat;
+  }
 
-  /* === PARTNER === */
+  /* === METHODE === */
+  .steps{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--line);}
+  @media(min-width:860px){.steps{grid-template-columns:repeat(4,1fr);border-top:none;gap:0;}}
+  .step{padding:26px 0;border-bottom:1px solid var(--line);}
+  @media(min-width:860px){
+    .step{border-top:1px solid var(--line);border-bottom:none;padding:26px 26px 8px 0;}
+  }
+  .step-n{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--pink);}
+  .step h3{margin-top:14px;margin-bottom:8px;}
+  .step p{font-size:14.5px;line-height:1.6;}
+  .note{
+    margin-top:44px;padding:24px 26px;border-radius:16px;background:var(--bg-soft);
+    border:1px solid var(--line);font-size:16px;color:var(--ink-2);line-height:1.62;
+  }
+  .note b{font-weight:600;color:var(--ink);}
+
+  /* === PARTENAIRE === */
   .partner{
-    border:1px solid var(--line);border-radius:26px;padding:52px 26px;text-align:center;position:relative;overflow:hidden;
-    background:var(--bg-2);
+    border:1px solid var(--line);border-radius:22px;padding:44px 26px;position:relative;overflow:hidden;
+    background:linear-gradient(180deg,#fff,#FCFCFD);
+    box-shadow:0 1px 2px rgba(11,11,15,.03),0 30px 70px -40px rgba(11,11,15,.3);
   }
-  @media(min-width:768px){.partner{padding:88px 60px;}}
-  .partner::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 90% at 50% 0%,rgba(255,45,110,.2),transparent 70%);}
-  .partner-in{position:relative;max-width:600px;margin:0 auto;}
-  .partner h2{font-size:clamp(28px,5.2vw,52px);margin-top:16px;}
-  .partner p{margin-top:16px;color:var(--muted);font-size:15px;}
-  .pct{font-family:var(--display);font-size:clamp(60px,11vw,110px);line-height:1;color:var(--pink);margin:26px 0 4px;}
-  .partner .btn{margin-top:20px;}
+  @media(min-width:768px){.partner{padding:76px 60px;text-align:center;}}
+  .partner::before{
+    content:"";position:absolute;top:-40%;left:50%;transform:translateX(-50%);
+    width:120%;height:340px;pointer-events:none;
+    background:radial-gradient(45% 60% at 50% 50%,rgba(255,45,110,.12),transparent 70%);filter:blur(20px);
+  }
+  .partner-in{position:relative;max-width:560px;margin:0 auto;}
+  .partner h2{margin-top:16px;}
+  .partner p{margin-top:16px;font-size:16.5px;}
+  .pct{
+    display:inline-flex;align-items:baseline;gap:9px;margin:30px 0 6px;
+    padding:12px 20px;border-radius:12px;background:var(--pink-soft);border:1px solid rgba(255,45,110,.16);
+  }
+  .pct b{font-size:38px;font-weight:600;letter-spacing:-.04em;color:var(--pink);line-height:1;}
+  .pct span{font-size:14px;color:var(--muted);text-align:left;}
+  .partner .btn{margin-top:26px;}
 
   /* === CONTACT === */
-  .contact{text-align:center;}
-  .contact h2{font-size:clamp(34px,7.4vw,86px);}
-  .contact p{margin-top:20px;color:var(--muted);font-size:16px;max-width:420px;margin-left:auto;margin-right:auto;}
-  .contact .btn{margin-top:34px;padding:19px 34px;font-size:14.5px;}
-  .clinks{margin-top:36px;display:flex;flex-wrap:wrap;gap:12px 30px;justify-content:center;}
-  .clinks a{font-size:13.5px;font-weight:600;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:5px;transition:.3s;}
-  .clinks a:hover{color:var(--fg);border-color:var(--pink);}
+  .contact{text-align:center;max-width:640px;margin:0 auto;}
+  .contact h2{margin-top:16px;}
+  .contact p{margin-top:18px;font-size:17px;}
+  .contact .btn{margin-top:30px;}
+  .clinks{margin-top:34px;display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:center;}
+  .clinks a{font-size:14px;color:var(--muted);transition:color .25s;}
+  .clinks a:hover{color:var(--ink);}
+  .clinks a span{border-bottom:1px solid var(--line);padding-bottom:3px;}
 
   /* === FOOTER === */
-  footer{border-top:1px solid var(--line);padding:44px 0 30px;}
-  .f-top{display:flex;flex-direction:column;gap:22px;justify-content:space-between;align-items:flex-start;padding-bottom:34px;}
-  @media(min-width:768px){.f-top{flex-direction:row;align-items:flex-end;}}
-  .f-brand{font-family:var(--display);font-size:clamp(38px,11vw,110px);text-transform:uppercase;line-height:.95;letter-spacing:.01em;}
-  .f-soc{display:flex;gap:20px;}
-  .f-soc a{font-size:12.5px;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:4px;transition:.3s;}
-  .f-soc a:hover{color:var(--fg);border-color:var(--pink);}
-  .f-bot{display:flex;flex-direction:column;gap:8px;padding-top:22px;border-top:1px solid var(--line);font-size:11.5px;color:var(--dim);}
+  footer{border-top:1px solid var(--line);padding:48px 0 34px;background:var(--bg-tint);}
+  .f-top{display:flex;flex-direction:column;gap:26px;justify-content:space-between;padding-bottom:34px;}
+  @media(min-width:768px){.f-top{flex-direction:row;align-items:flex-start;}}
+  .f-brand{display:flex;align-items:center;gap:9px;}
+  .f-brand .mark{width:27px;color:var(--ink);}
+  .f-tag{margin-top:14px;font-size:14px;color:var(--muted);max-width:270px;}
+  .f-cols{display:flex;gap:52px;flex-wrap:wrap;}
+  .f-col h4{font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);margin-bottom:14px;}
+  .f-col a{display:block;font-size:14px;color:var(--muted);margin-bottom:9px;transition:color .25s;}
+  .f-col a:hover{color:var(--ink);}
+  .f-bot{
+    display:flex;flex-direction:column;gap:8px;padding-top:24px;border-top:1px solid var(--line);
+    font-size:13px;color:var(--faint);
+  }
   @media(min-width:768px){.f-bot{flex-direction:row;justify-content:space-between;}}
 
   /* === FLOATING WA === */
   .wa-float{
-    position:fixed;right:16px;bottom:16px;z-index:180;width:54px;height:54px;border-radius:50%;
+    position:fixed;right:16px;bottom:16px;z-index:180;width:50px;height:50px;border-radius:50%;
     background:var(--wa);display:flex;align-items:center;justify-content:center;
-    box-shadow:0 10px 30px rgba(37,211,102,.35);transition:transform .3s var(--ease);
-    opacity:0;pointer-events:none;
+    box-shadow:0 6px 22px -4px rgba(37,211,102,.5),0 2px 6px rgba(11,11,15,.1);
+    transition:transform .3s var(--ease),opacity .35s;opacity:0;pointer-events:none;
   }
   .wa-float.show{opacity:1;pointer-events:auto;}
-  .wa-float:hover{transform:scale(1.08);}
-  .wa-float svg{width:27px;height:27px;fill:#062d15;}
+  .wa-float:hover{transform:scale(1.07);}
+  .wa-float svg{width:25px;height:25px;fill:#fff;}
   @media(min-width:960px){.wa-float{right:26px;bottom:26px;}}
 
   @media(prefers-reduced-motion:reduce){
     *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;}
-    .lmi{transform:none;}.hero-sub,.hero-actions,.hero-tags{opacity:1;transform:none;}
-    .rv{opacity:1;transform:none;}
+    .lmi,.hero-sub,.hero-actions,.hero-note,.reel,.rv{opacity:1!important;transform:none!important;}
   }
 </style>
 </head>
 <body>
 
-<div id="loader">
-  <svg class="mark" viewBox="0 0 100 100" aria-hidden="true">
-    <g fill="none" stroke="currentColor" stroke-width="8.5" stroke-linecap="round">
-      <path d="M11 71 C 24 38, 45 29, 58 48"/>
-      <path d="M89 41 C 76 74, 55 83, 42 64"/>
-      <path d="M33 56 C 41 43, 59 43, 67 56 C 59 69, 41 69, 33 56 Z"/>
-    </g>
-    <circle cx="77" cy="21" r="6.5" fill="#FF2D6E"/>
-  </svg>
-</div>
-
-<div class="grain"></div>
-<div id="cursor"></div>
-
 <header id="hdr">
   <div class="wrap nav">
     <a href="#top" class="brand">
       <svg class="mark" viewBox="0 0 100 100" aria-hidden="true">
-        <g fill="none" stroke="currentColor" stroke-width="8.5" stroke-linecap="round">
+        <g fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round">
           <path d="M11 71 C 24 38, 45 29, 58 48"/>
           <path d="M89 41 C 76 74, 55 83, 42 64"/>
           <path d="M33 56 C 41 43, 59 43, 67 56 C 59 69, 41 69, 33 56 Z"/>
@@ -407,6 +436,7 @@
       <a href="#value" data-fr="Approche" data-en="Approach">Approche</a>
       <a href="#offer" data-fr="Production" data-en="Production">Production</a>
       <a href="#work" data-fr="Réalisations" data-en="Work">Réalisations</a>
+      <a href="#studio" data-fr="Studio" data-en="Studio">Studio</a>
       <a href="#process" data-fr="Méthode" data-en="Method">Méthode</a>
       <a href="#partner" data-fr="Partenaires" data-en="Partners">Partenaires</a>
     </nav>
@@ -415,22 +445,23 @@
       <button data-lang="en">EN</button>
     </div>
     <a class="btn btn-wa btn-sm nav-cta js-wa" data-msg="hero">
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.47s1.06 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35z"/><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23z"/></svg>
-      <span data-fr="Démarrer un projet" data-en="Start a project">Démarrer un projet</span>
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23z"/></svg>
+      <span data-fr="Parler d'un projet" data-en="Discuss a project">Parler d'un projet</span>
     </a>
     <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
   </div>
 </header>
 
 <div class="mmenu" id="mmenu">
-  <a class="ml" style="--i:0" href="#value" data-fr="Approche" data-en="Approach">Approche</a>
-  <a class="ml" style="--i:1" href="#offer" data-fr="Production" data-en="Production">Production</a>
-  <a class="ml" style="--i:2" href="#work" data-fr="Réalisations" data-en="Work">Réalisations</a>
-  <a class="ml" style="--i:3" href="#process" data-fr="Méthode" data-en="Method">Méthode</a>
-  <a class="ml" style="--i:4" href="#partner" data-fr="Partenaires" data-en="Partners">Partenaires</a>
-  <a class="btn btn-wa js-wa" data-msg="hero">
+  <a class="ml" href="#value" data-fr="Approche" data-en="Approach">Approche</a>
+  <a class="ml" href="#offer" data-fr="Production" data-en="Production">Production</a>
+  <a class="ml" href="#work" data-fr="Réalisations" data-en="Work">Réalisations</a>
+  <a class="ml" href="#studio" data-fr="Studio" data-en="Studio">Studio</a>
+  <a class="ml" href="#process" data-fr="Méthode" data-en="Method">Méthode</a>
+  <a class="ml" href="#partner" data-fr="Partenaires" data-en="Partners">Partenaires</a>
+  <a class="btn btn-wa btn-lg js-wa" data-msg="hero">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23z"/></svg>
-    <span data-fr="Démarrer un projet" data-en="Start a project">Démarrer un projet</span>
+    <span data-fr="Parler d'un projet" data-en="Discuss a project">Parler d'un projet</span>
   </a>
   <div class="lang">
     <button data-lang="fr" class="active">FR</button>
@@ -441,119 +472,123 @@
 <main id="top">
 
   <!-- HERO -->
-  <section class="hero" id="hero">
-    <div class="glow glow-a"></div>
-    <div class="glow glow-b"></div>
-    <div class="hero-reel" aria-hidden="true">
-      <div class="reel-track" id="reelTrack">
-        <div class="reel-card"></div><div class="reel-card"></div><div class="reel-card"></div><div class="reel-card"></div>
-        <div class="reel-card"></div><div class="reel-card"></div><div class="reel-card"></div><div class="reel-card"></div>
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="wrap">
+      <div class="hero-in">
+        <div class="hero-eyebrow">
+          <span class="dot"></span>
+          <span class="label" data-fr="Studio de production photo &amp; vidéo" data-en="Photo &amp; video production studio">Studio de production photo &amp; vidéo</span>
+        </div>
+
+        <h1>
+          <span class="lm"><span class="lmi" data-fr="Des visuels à la hauteur" data-en="Visuals that match">Des visuels à la hauteur</span></span>
+          <span class="lm"><span class="lmi" data-fr="de votre <span class='ac'>ambition</span>." data-en="your <span class='ac'>ambition</span>.">de votre <span class="ac">ambition</span>.</span></span>
+        </h1>
+
+        <p class="lead hero-sub" data-fr="Nous produisons les campagnes photo et vidéo des marques qui veulent être prises au sérieux. Direction artistique, tournage, livraison." data-en="We produce the photo and video campaigns of brands that want to be taken seriously. Art direction, shooting, delivery.">Nous produisons les campagnes photo et vidéo des marques qui veulent être prises au sérieux. Direction artistique, tournage, livraison.</p>
+
+        <div class="hero-actions">
+          <a class="btn btn-wa btn-lg js-wa" data-msg="hero">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23z"/></svg>
+            <span data-fr="Parler d'un projet" data-en="Discuss a project">Parler d'un projet</span>
+          </a>
+          <a href="#work" class="btn btn-ghost btn-lg" data-fr="Voir les réalisations" data-en="See the work">Voir les réalisations</a>
+        </div>
+
+        <p class="hero-note" data-fr="Réponse sous 24 h · Cadrage du projet en un échange" data-en="Reply within 24 h · Project scoped in one conversation">Réponse sous 24 h · Cadrage du projet en un échange</p>
+      </div>
+
+      <!-- Showreel : remplacer par une vraie image/vidéo -->
+      <div class="reel">
+        <div class="reel-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="reel-tag" data-fr="Showreel 2026" data-en="Showreel 2026">Showreel 2026</div>
       </div>
     </div>
-    <div class="hero-veil"></div>
 
-    <div class="wrap">
-      <div class="hero-eyebrow">
-        <span class="dot"></span>
-        <span class="eyebrow" data-fr="Production photo &amp; vidéo <span class='pk'>— international</span>" data-en="Photo &amp; video production <span class='pk'>— worldwide</span>">Production photo &amp; vidéo <span class="pk">— international</span></span>
-      </div>
-
-      <h1 class="display">
-        <span class="lm"><span class="lmi" data-fr="On produit les visuels" data-en="We produce the visuals">On produit les visuels</span></span>
-        <span class="lm"><span class="lmi" data-fr="qui <span class='ac'>élèvent</span> votre marque." data-en="that <span class='ac'>elevate</span> your brand.">qui <span class="ac">élèvent</span> votre marque.</span></span>
-      </h1>
-
-      <p class="hero-sub" data-fr="Campagnes photo et vidéo produites de A à Z. Vous briefez. On tourne. On livre." data-en="Photo and video campaigns produced end to end. You brief. We shoot. We deliver.">Campagnes photo et vidéo produites de A à Z. Vous briefez. On tourne. On livre.</p>
-
-      <div class="hero-actions">
-        <a class="btn btn-wa js-wa" data-msg="hero">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23z"/></svg>
-          <span data-fr="Démarrer un projet" data-en="Start a project">Démarrer un projet</span>
-        </a>
-        <a href="#work" class="btn btn-line" data-fr="Voir nos réalisations" data-en="View our work">Voir nos réalisations</a>
-      </div>
-
-      <div class="hero-tags">
-        <span data-fr="Shooting de marque" data-en="Brand shoots">Shooting de marque</span>
-        <span data-fr="Films publicitaires" data-en="Brand films">Films publicitaires</span>
+    <div class="strip">
+      <div class="wrap strip-in">
+        <span data-fr="Direction artistique" data-en="Art direction">Direction artistique</span>
+        <span data-fr="Photographie" data-en="Photography">Photographie</span>
+        <span data-fr="Film de marque" data-en="Brand film">Film de marque</span>
         <span data-fr="Formats sociaux" data-en="Social formats">Formats sociaux</span>
+        <span data-fr="Post-production" data-en="Post-production">Post-production</span>
       </div>
     </div>
   </section>
 
-  <!-- MARQUEE -->
-  <div class="marquee">
-    <div class="mq-track">
-      <span>Photo</span><span>Vidéo</span><span data-fr="Direction artistique" data-en="Art direction">Direction artistique</span><span>Production</span>
-      <span>Photo</span><span>Vidéo</span><span data-fr="Direction artistique" data-en="Art direction">Direction artistique</span><span>Production</span>
-    </div>
-  </div>
-
-  <!-- VALUE : ce qu'on apporte aux marques -->
+  <!-- VALUE -->
   <section id="value">
     <div class="wrap">
       <div class="head rv">
-        <div class="eyebrow" data-fr="Pour les marques" data-en="For brands">Pour les marques</div>
-        <h2 class="display" data-fr="Ce qu'on apporte <span class='ac'>concrètement</span>." data-en="What you <span class='ac'>actually</span> get.">Ce qu'on apporte <span class="ac">concrètement</span>.</h2>
+        <div class="label" data-fr="Pour les marques" data-en="For brands">Pour les marques</div>
+        <h2 data-fr="Ce que vous obtenez, concrètement." data-en="What you actually get.">Ce que vous obtenez, concrètement.</h2>
+        <p data-fr="Pas de jargon créatif. Trois résultats mesurables sur votre image." data-en="No creative jargon. Three measurable outcomes for your image.">Pas de jargon créatif. Trois résultats mesurables sur votre image.</p>
       </div>
-      <div class="value-grid rv d1">
-        <div class="value-card">
-          <div class="vi">01</div>
+      <div class="grid3 rv d1">
+        <div class="card">
+          <div class="card-ic"><svg viewBox="0 0 24 24"><path d="M12 2l2.6 6.6L21 10l-5 4.3L17.5 21 12 17.5 6.5 21 8 14.3 3 10l6.4-1.4z"/></svg></div>
           <h3 data-fr="Une image qui inspire confiance" data-en="An image that earns trust">Une image qui inspire confiance</h3>
-          <p data-fr="Vos photos et vos films vous placent au niveau des références de votre secteur. Le client vous prend au sérieux avant même de vous parler." data-en="Your photos and films place you alongside the references of your industry. Clients take you seriously before they even speak to you.">Vos photos et vos films vous placent au niveau des références de votre secteur. Le client vous prend au sérieux avant même de vous parler.</p>
+          <p data-fr="Vos photos et vos films vous placent au niveau des références de votre secteur. Le client vous prend au sérieux avant même l'échange." data-en="Your photos and films place you alongside the references of your industry. Clients take you seriously before the first call.">Vos photos et vos films vous placent au niveau des références de votre secteur. Le client vous prend au sérieux avant même l'échange.</p>
         </div>
-        <div class="value-card">
-          <div class="vi">02</div>
+        <div class="card">
+          <div class="card-ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 15l4.5-4.5 3.5 3.5 3-3L21 16"/><circle cx="8.5" cy="8.5" r="1.2"/></svg></div>
           <h3 data-fr="Une banque de contenu complète" data-en="A full content library">Une banque de contenu complète</h3>
-          <p data-fr="Une campagne alimente vos réseaux, votre site et vos publicités pendant des mois. Tout est livré calibré pour chaque support." data-en="One campaign feeds your socials, your site and your ads for months. Everything is delivered sized for each channel.">Une campagne alimente vos réseaux, votre site et vos publicités pendant des mois. Tout est livré calibré pour chaque support.</p>
+          <p data-fr="Une campagne alimente vos réseaux, votre site et vos publicités pendant des mois. Chaque fichier est livré au bon format." data-en="One campaign feeds your socials, your site and your ads for months. Every file delivered in the right format.">Une campagne alimente vos réseaux, votre site et vos publicités pendant des mois. Chaque fichier est livré au bon format.</p>
         </div>
-        <div class="value-card">
-          <div class="vi">03</div>
+        <div class="card">
+          <div class="card-ic"><svg viewBox="0 0 24 24"><path d="M20 7L9.5 17.5 4 12"/></svg></div>
           <h3 data-fr="Aucune charge de votre côté" data-en="Nothing to manage on your side">Aucune charge de votre côté</h3>
-          <p data-fr="Un brief au départ, des fichiers finis à l'arrivée. Repérage, équipe, matériel, montage : c'est notre métier, pas votre problème." data-en="One brief at the start, finished files at the end. Scouting, crew, gear, editing: our job, not your problem.">Un brief au départ, des fichiers finis à l'arrivée. Repérage, équipe, matériel, montage : c'est notre métier, pas votre problème.</p>
+          <p data-fr="Un brief au départ, des fichiers finis à l'arrivée. Repérage, équipe, matériel, montage : notre métier, pas votre problème." data-en="One brief at the start, finished files at the end. Scouting, crew, gear, editing: our job, not your problem.">Un brief au départ, des fichiers finis à l'arrivée. Repérage, équipe, matériel, montage : notre métier, pas votre problème.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- OFFRE -->
-  <section id="offer">
+  <section id="offer" style="background:var(--bg-tint);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
     <div class="wrap">
       <div class="head rv">
-        <div class="eyebrow" data-fr="L'offre" data-en="The offer">L'offre</div>
-        <h2 class="display" data-fr="Une campagne. <span class='ac'>Trois terrains.</span>" data-en="One campaign. <span class='ac'>Three grounds.</span>">Une campagne. <span class="ac">Trois terrains.</span></h2>
-        <p data-fr="Chaque projet est cadré sur mesure après un échange de dix minutes." data-en="Every project is scoped after a ten-minute conversation.">Chaque projet est cadré sur mesure après un échange de dix minutes.</p>
+        <div class="label" data-fr="La production" data-en="Production">La production</div>
+        <h2 data-fr="Une campagne, trois terrains." data-en="One campaign, three grounds.">Une campagne, trois terrains.</h2>
+        <p data-fr="Chaque projet est cadré sur mesure après un premier échange." data-en="Every project is scoped individually after a first conversation.">Chaque projet est cadré sur mesure après un premier échange.</p>
       </div>
       <div class="offer rv d1">
         <div class="offer-card">
-          <div class="on">01</div>
-          <h3 data-fr="Image de marque" data-en="Brand image">Image de marque</h3>
-          <p data-fr="Le visage de votre entreprise : dirigeant, équipe, lieux, savoir-faire." data-en="The face of your company: founder, team, spaces, craft.">Le visage de votre entreprise : dirigeant, équipe, lieux, savoir-faire.</p>
-          <ul>
-            <li data-fr="Portraits dirigeants" data-en="Leadership portraits">Portraits dirigeants</li>
-            <li data-fr="Reportage d'entreprise" data-en="Company reportage">Reportage d'entreprise</li>
-            <li data-fr="Film de présentation" data-en="Company film">Film de présentation</li>
-          </ul>
+          <div class="offer-vis"></div>
+          <div class="offer-b">
+            <h3 data-fr="Image de marque" data-en="Brand image">Image de marque</h3>
+            <p data-fr="Le visage de votre entreprise : dirigeant, équipe, lieux, savoir-faire." data-en="The face of your company: founder, team, spaces, craft.">Le visage de votre entreprise : dirigeant, équipe, lieux, savoir-faire.</p>
+            <ul>
+              <li data-fr="Portraits dirigeants" data-en="Leadership portraits">Portraits dirigeants</li>
+              <li data-fr="Reportage d'entreprise" data-en="Company reportage">Reportage d'entreprise</li>
+              <li data-fr="Film de présentation" data-en="Company film">Film de présentation</li>
+            </ul>
+          </div>
         </div>
         <div class="offer-card">
-          <div class="on">02</div>
-          <h3 data-fr="Produit &amp; publicité" data-en="Product &amp; advertising">Produit &amp; publicité</h3>
-          <p data-fr="Ce que vous vendez, mis en scène pour donner envie." data-en="What you sell, staged to create desire.">Ce que vous vendez, mis en scène pour donner envie.</p>
-          <ul>
-            <li data-fr="Shooting produit" data-en="Product shoot">Shooting produit</li>
-            <li data-fr="Film publicitaire" data-en="Advertising film">Film publicitaire</li>
-            <li data-fr="Formats courts sociaux" data-en="Short social formats">Formats courts sociaux</li>
-          </ul>
+          <div class="offer-vis"></div>
+          <div class="offer-b">
+            <h3 data-fr="Produit &amp; publicité" data-en="Product &amp; advertising">Produit &amp; publicité</h3>
+            <p data-fr="Ce que vous vendez, mis en scène pour donner envie." data-en="What you sell, staged to create desire.">Ce que vous vendez, mis en scène pour donner envie.</p>
+            <ul>
+              <li data-fr="Shooting produit" data-en="Product shoot">Shooting produit</li>
+              <li data-fr="Film publicitaire" data-en="Advertising film">Film publicitaire</li>
+              <li data-fr="Formats courts sociaux" data-en="Short social formats">Formats courts sociaux</li>
+            </ul>
+          </div>
         </div>
         <div class="offer-card">
-          <div class="on">03</div>
-          <h3 data-fr="Événement" data-en="Event">Événement</h3>
-          <p data-fr="Vos temps forts capturés, montés et livrés rapidement." data-en="Your key moments captured, edited and delivered fast.">Vos temps forts capturés, montés et livrés rapidement.</p>
-          <ul>
-            <li data-fr="Aftermovie" data-en="Aftermovie">Aftermovie</li>
-            <li data-fr="Couverture photo" data-en="Photo coverage">Couverture photo</li>
-            <li data-fr="Extraits réseaux" data-en="Social cutdowns">Extraits réseaux</li>
-          </ul>
+          <div class="offer-vis"></div>
+          <div class="offer-b">
+            <h3 data-fr="Événement" data-en="Event">Événement</h3>
+            <p data-fr="Vos temps forts capturés, montés et livrés rapidement." data-en="Your key moments captured, edited and delivered fast.">Vos temps forts capturés, montés et livrés rapidement.</p>
+            <ul>
+              <li data-fr="Aftermovie" data-en="Aftermovie">Aftermovie</li>
+              <li data-fr="Couverture photo" data-en="Photo coverage">Couverture photo</li>
+              <li data-fr="Extraits réseaux" data-en="Social cutdowns">Extraits réseaux</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -563,81 +598,104 @@
   <section id="work">
     <div class="wrap">
       <div class="head rv">
-        <div class="eyebrow" data-fr="Portfolio" data-en="Portfolio">Portfolio</div>
-        <h2 class="display" data-fr="Réalisations" data-en="Selected work">Réalisations</h2>
+        <div class="label" data-fr="Portfolio" data-en="Portfolio">Portfolio</div>
+        <h2 data-fr="Réalisations sélectionnées" data-en="Selected work">Réalisations sélectionnées</h2>
       </div>
       <div class="pf rv d1">
         <div class="p-item wide">
           <div class="p-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          <div class="p-ov"><div class="p-cat" data-fr="Publicité" data-en="Advertising">Publicité</div><div class="p-title" data-fr="Lancement produit" data-en="Product launch">Lancement produit</div></div>
+          <div class="p-ov"><div class="p-meta"><span class="p-cat" data-fr="Publicité" data-en="Advertising">Publicité</span><span class="p-title" data-fr="Lancement produit" data-en="Product launch">Lancement produit</span></div></div>
         </div>
         <div class="p-item">
-          <div class="p-ov"><div class="p-cat" data-fr="Image de marque" data-en="Brand image">Image de marque</div><div class="p-title" data-fr="Portraits fondateur" data-en="Founder portraits">Portraits fondateur</div></div>
+          <div class="p-ov"><div class="p-meta"><span class="p-cat" data-fr="Image de marque" data-en="Brand image">Image de marque</span><span class="p-title" data-fr="Portraits fondateur" data-en="Founder portraits">Portraits fondateur</span></div></div>
         </div>
         <div class="p-item">
           <div class="p-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          <div class="p-ov"><div class="p-cat" data-fr="Événement" data-en="Event">Événement</div><div class="p-title" data-fr="Aftermovie soirée" data-en="Nightlife aftermovie">Aftermovie soirée</div></div>
+          <div class="p-ov"><div class="p-meta"><span class="p-cat" data-fr="Événement" data-en="Event">Événement</span><span class="p-title" data-fr="Aftermovie" data-en="Aftermovie">Aftermovie</span></div></div>
         </div>
         <div class="p-item">
-          <div class="p-ov"><div class="p-cat" data-fr="Produit" data-en="Product">Produit</div><div class="p-title" data-fr="Série éditoriale" data-en="Editorial series">Série éditoriale</div></div>
+          <div class="p-ov"><div class="p-meta"><span class="p-cat" data-fr="Produit" data-en="Product">Produit</span><span class="p-title" data-fr="Série éditoriale" data-en="Editorial series">Série éditoriale</span></div></div>
         </div>
         <div class="p-item wide">
           <div class="p-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          <div class="p-ov"><div class="p-cat" data-fr="Format court" data-en="Short form">Format court</div><div class="p-title" data-fr="Campagne sociale" data-en="Social campaign">Campagne sociale</div></div>
+          <div class="p-ov"><div class="p-meta"><span class="p-cat" data-fr="Format court" data-en="Short form">Format court</span><span class="p-title" data-fr="Campagne sociale" data-en="Social campaign">Campagne sociale</span></div></div>
         </div>
         <div class="p-item">
-          <div class="p-ov"><div class="p-cat" data-fr="Entreprise" data-en="Corporate">Entreprise</div><div class="p-title" data-fr="Reportage annuel" data-en="Annual reportage">Reportage annuel</div></div>
+          <div class="p-ov"><div class="p-meta"><span class="p-cat" data-fr="Entreprise" data-en="Corporate">Entreprise</span><span class="p-title" data-fr="Reportage annuel" data-en="Annual reportage">Reportage annuel</span></div></div>
         </div>
       </div>
-      <p class="pf-note rv" data-fr="Book complet envoyé sur demande — @visionair.studio" data-en="Full book sent on request — @visionair.studio">Book complet envoyé sur demande — @visionair.studio</p>
+      <p class="pf-note rv" data-fr="Book complet envoyé sur demande." data-en="Full book sent on request.">Book complet envoyé sur demande.</p>
+    </div>
+  </section>
+
+  <!-- LE STUDIO / FONDATEUR -->
+  <section id="studio">
+    <div class="wrap founder">
+      <div class="founder-vis rv">
+        <!-- Remplacer par ton portrait : <img src="portrait.jpg" alt="..."> -->
+        <div class="founder-ph"><span class="label">Portrait</span></div>
+      </div>
+      <div class="founder-txt rv d1">
+        <div class="label" data-fr="Derrière le studio" data-en="Behind the studio">Derrière le studio</div>
+        <h2 data-fr="Un seul interlocuteur, du brief à la livraison." data-en="One person, from brief to delivery.">Un seul interlocuteur, du brief à la livraison.</h2>
+        <p data-fr="Je suis [Prénom], fondateur de Vision'Air. Je dirige chaque projet moi-même : le cadrage, la direction artistique, le tournage et le montage final. Vous ne passez pas d'un commercial à un chef de projet puis à un monteur — vous parlez directement à la personne qui tient la caméra." data-en="I'm [First name], founder of Vision'Air. I run every project myself: scoping, art direction, shooting and the final edit. You don't get passed from a salesperson to a project manager to an editor — you talk directly to the person holding the camera.">Je suis [Prénom], fondateur de Vision'Air. Je dirige chaque projet moi-même : le cadrage, la direction artistique, le tournage et le montage final. Vous ne passez pas d'un commercial à un chef de projet puis à un monteur — vous parlez directement à la personne qui tient la caméra.</p>
+        <p data-fr="[À compléter : ton parcours en deux phrases — d'où tu viens, le type de marques avec lesquelles tu as travaillé, et ce qui te pousse à faire ce métier.]" data-en="[To complete: your background in two sentences — where you come from, the kind of brands you've worked with, and what drives you.]">[À compléter : ton parcours en deux phrases — d'où tu viens, le type de marques avec lesquelles tu as travaillé, et ce qui te pousse à faire ce métier.]</p>
+        <ul class="founder-pts">
+          <li data-fr="Direction artistique assurée en personne" data-en="Art direction handled personally">Direction artistique assurée en personne</li>
+          <li data-fr="Équipe et matériel professionnels mobilisés par projet" data-en="Professional crew and gear brought in per project">Équipe et matériel professionnels mobilisés par projet</li>
+          <li data-fr="Déplacements en France et à l'international" data-en="Available across France and internationally">Déplacements en France et à l'international</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <!-- METHODE -->
-  <section id="process">
+  <section id="process" style="background:var(--bg-tint);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
     <div class="wrap">
       <div class="head rv">
-        <div class="eyebrow" data-fr="La méthode" data-en="The method">La méthode</div>
-        <h2 class="display" data-fr="Court, cadré, <span class='ac'>livré</span>." data-en="Short, scoped, <span class='ac'>delivered</span>.">Court, cadré, <span class="ac">livré</span>.</h2>
+        <div class="label" data-fr="La méthode" data-en="The method">La méthode</div>
+        <h2 data-fr="Court, cadré, livré." data-en="Short, scoped, delivered.">Court, cadré, livré.</h2>
       </div>
       <div class="steps rv d1">
         <div class="step">
-          <div class="sn">01</div>
+          <div class="step-n">01</div>
           <h3 data-fr="Brief" data-en="Brief">Brief</h3>
-          <p data-fr="Dix minutes pour cerner l'objectif, la cible et le ton." data-en="Ten minutes to pin down the goal, audience and tone.">Dix minutes pour cerner l'objectif, la cible et le ton.</p>
+          <p data-fr="Un échange pour cerner l'objectif, la cible et le ton." data-en="One conversation to pin down the goal, audience and tone.">Un échange pour cerner l'objectif, la cible et le ton.</p>
         </div>
         <div class="step">
-          <div class="sn">02</div>
+          <div class="step-n">02</div>
           <h3 data-fr="Direction" data-en="Direction">Direction</h3>
           <p data-fr="Concept, références visuelles et plan de tournage validés avant de bouger." data-en="Concept, visual references and shoot plan signed off before anything moves.">Concept, références visuelles et plan de tournage validés avant de bouger.</p>
         </div>
         <div class="step">
-          <div class="sn">03</div>
+          <div class="step-n">03</div>
           <h3 data-fr="Tournage" data-en="Shoot">Tournage</h3>
           <p data-fr="Équipe et matériel professionnels sur place. Vous n'organisez rien." data-en="Professional crew and gear on location. You organise nothing.">Équipe et matériel professionnels sur place. Vous n'organisez rien.</p>
         </div>
         <div class="step">
-          <div class="sn">04</div>
+          <div class="step-n">04</div>
           <h3 data-fr="Livraison" data-en="Delivery">Livraison</h3>
           <p data-fr="Fichiers montés, étalonnés, déclinés par format. Prêts à publier." data-en="Edited, graded files, cut per format. Ready to publish.">Fichiers montés, étalonnés, déclinés par format. Prêts à publier.</p>
         </div>
       </div>
-      <div class="no-retainer rv d2" data-fr="Pas d'abonnement, pas de gestion mensuelle. <b>On intervient, on produit, on livre.</b> Vous gardez la main sur votre communication." data-en="No retainer, no monthly management. <b>We step in, we produce, we deliver.</b> You keep control of your communication.">Pas d'abonnement, pas de gestion mensuelle. <b>On intervient, on produit, on livre.</b> Vous gardez la main sur votre communication.</div>
+      <div class="note rv d2" data-fr="Pas d'abonnement, pas de gestion mensuelle. <b>On intervient, on produit, on livre.</b> Vous gardez la main sur votre communication." data-en="No retainer, no monthly management. <b>We step in, we produce, we deliver.</b> You keep control of your communication.">Pas d'abonnement, pas de gestion mensuelle. <b>On intervient, on produit, on livre.</b> Vous gardez la main sur votre communication.</div>
     </div>
   </section>
 
-  <!-- PARTENAIRES -->
+  <!-- PARTENAIRE -->
   <section id="partner">
     <div class="wrap">
       <div class="partner rv">
         <div class="partner-in">
-          <div class="eyebrow" data-fr="Programme partenaire" data-en="Partner program">Programme partenaire</div>
-          <h2 class="display" data-fr="Recommandez, <span class='ac'>touchez</span>." data-en="Refer us, <span class='ac'>get paid</span>.">Recommandez, <span class="ac">touchez</span>.</h2>
+          <div class="label" data-fr="Programme partenaire" data-en="Partner program">Programme partenaire</div>
+          <h2 data-fr="Recommandez-nous, touchez 15 %." data-en="Refer us, earn 15%.">Recommandez-nous, touchez 15 %.</h2>
           <p data-fr="Vous connaissez une entreprise qui a besoin de visuels sérieux ? Mettez-nous en relation." data-en="Know a company that needs serious visuals? Put us in touch.">Vous connaissez une entreprise qui a besoin de visuels sérieux ? Mettez-nous en relation.</p>
-          <div class="pct">15%</div>
-          <div class="eyebrow" data-fr="sur chaque projet signé" data-en="on every signed project">sur chaque projet signé</div>
+          <div class="pct">
+            <b>15 %</b>
+            <span data-fr="de commission sur<br>chaque projet signé" data-en="commission on<br>every signed project">de commission sur<br>chaque projet signé</span>
+          </div>
           <div>
-            <a class="btn btn-wa js-wa" data-msg="partner">
+            <a class="btn btn-wa btn-lg js-wa" data-msg="partner">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23z"/></svg>
               <span data-fr="Devenir partenaire" data-en="Become a partner">Devenir partenaire</span>
             </a>
@@ -650,18 +708,18 @@
   <!-- CONTACT -->
   <section id="contact">
     <div class="wrap contact">
-      <div class="eyebrow rv" data-fr="On en parle" data-en="Let's talk">On en parle</div>
-      <h2 class="display rv d1" style="margin-top:16px;" data-fr="Votre prochaine <span class='ac'>campagne</span> commence ici." data-en="Your next <span class='ac'>campaign</span> starts here.">Votre prochaine <span class="ac">campagne</span> commence ici.</h2>
-      <p class="rv d2" data-fr="Un message, une réponse rapide, un projet cadré." data-en="One message, a fast reply, a scoped project.">Un message, une réponse rapide, un projet cadré.</p>
+      <div class="label rv" data-fr="On en parle" data-en="Let's talk">On en parle</div>
+      <h2 class="rv d1" data-fr="Votre prochaine campagne commence par un message." data-en="Your next campaign starts with a message.">Votre prochaine campagne commence par un message.</h2>
+      <p class="rv d2" data-fr="Dites-nous ce que vous voulez produire. On revient vers vous sous 24 heures avec un cadrage clair." data-en="Tell us what you want to produce. We come back within 24 hours with a clear scope.">Dites-nous ce que vous voulez produire. On revient vers vous sous 24 heures avec un cadrage clair.</p>
       <div class="rv d2">
-        <a class="btn btn-wa js-wa" data-msg="hero">
+        <a class="btn btn-wa btn-lg js-wa" data-msg="hero">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23z"/></svg>
           <span data-fr="Écrire sur WhatsApp" data-en="Message on WhatsApp">Écrire sur WhatsApp</span>
         </a>
       </div>
       <div class="clinks rv d3">
-        <a href="https://instagram.com/visionair.studio" target="_blank" rel="noopener">Instagram</a>
-        <a href="mailto:hello@visionair.studio">hello@visionair.studio</a>
+        <a href="https://instagram.com/visionair.studio" target="_blank" rel="noopener"><span>Instagram</span></a>
+        <a href="mailto:hello@visionair.studio"><span>hello@visionair.studio</span></a>
       </div>
     </div>
   </section>
@@ -671,11 +729,36 @@
 <footer>
   <div class="wrap">
     <div class="f-top">
-      <div class="f-brand">Vision<span class="ac">'</span>Air</div>
-      <div class="f-soc">
-        <a href="https://instagram.com/visionair.studio" target="_blank" rel="noopener">Instagram</a>
-        <a class="js-wa" data-msg="hero">WhatsApp</a>
-        <a href="mailto:hello@visionair.studio">Email</a>
+      <div>
+        <div class="f-brand">
+          <svg class="mark" viewBox="0 0 100 100" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round">
+              <path d="M11 71 C 24 38, 45 29, 58 48"/>
+              <path d="M89 41 C 76 74, 55 83, 42 64"/>
+              <path d="M33 56 C 41 43, 59 43, 67 56 C 59 69, 41 69, 33 56 Z"/>
+            </g>
+            <circle cx="77" cy="21" r="6.5" fill="#FF2D6E"/>
+          </svg>
+          <span class="brand-txt">Vision'Air<small>Creative Studio</small></span>
+        </div>
+        <p class="f-tag" data-fr="Production photo et vidéo pour marques et entrepreneurs." data-en="Photo and video production for brands and entrepreneurs.">Production photo et vidéo pour marques et entrepreneurs.</p>
+      </div>
+      <div class="f-cols">
+        <div class="f-col">
+          <h4 data-fr="Studio" data-en="Studio">Studio</h4>
+          <a href="#value" data-fr="Approche" data-en="Approach">Approche</a>
+          <a href="#offer" data-fr="Production" data-en="Production">Production</a>
+          <a href="#work" data-fr="Réalisations" data-en="Work">Réalisations</a>
+          <a href="#studio" data-fr="Studio" data-en="Studio">Studio</a>
+          <a href="#process" data-fr="Méthode" data-en="Method">Méthode</a>
+        </div>
+        <div class="f-col">
+          <h4 data-fr="Contact" data-en="Contact">Contact</h4>
+          <a class="js-wa" data-msg="hero">WhatsApp</a>
+          <a href="https://instagram.com/visionair.studio" target="_blank" rel="noopener">Instagram</a>
+          <a href="mailto:hello@visionair.studio">Email</a>
+          <a href="#partner" data-fr="Partenaires" data-en="Partners">Partenaires</a>
+        </div>
       </div>
     </div>
     <div class="f-bot">
@@ -740,28 +823,19 @@ refreshWaLinks();
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
-/* Loader + hero intro */
-window.addEventListener('load', ()=>{
-  setTimeout(()=>{
-    document.getElementById('loader').classList.add('done');
-    document.body.classList.add('ready');
-  }, 550);
-});
-setTimeout(()=>{
-  document.getElementById('loader').classList.add('done');
-  document.body.classList.add('ready');
-}, 2200);
+/* Intro */
+requestAnimationFrame(()=>document.body.classList.add('ready'));
 
-/* Header state + floating WhatsApp */
+/* Header + bouton flottant */
 const hdr = document.getElementById('hdr');
 const waFloat = document.getElementById('waFloat');
 window.addEventListener('scroll', ()=>{
   const y = window.scrollY;
   hdr.classList.toggle('scrolled', y > 8);
-  waFloat.classList.toggle('show', y > window.innerHeight * .6);
+  waFloat.classList.toggle('show', y > window.innerHeight * .7);
 }, {passive:true});
 
-/* Burger */
+/* Menu mobile */
 const burger = document.getElementById('burger');
 const mmenu = document.getElementById('mmenu');
 burger.addEventListener('click', ()=>{
@@ -775,48 +849,11 @@ mmenu.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{
   document.body.style.overflow = '';
 }));
 
-/* Scroll reveal */
+/* Révélations au scroll */
 const io = new IntersectionObserver(entries=>{
   entries.forEach(e=>{ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-}, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+}, {threshold:.1, rootMargin:'0px 0px -50px 0px'});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-
-/* Parallax on hero reel */
-const reel = document.getElementById('reelTrack');
-window.addEventListener('scroll', ()=>{
-  const y = window.scrollY;
-  if (y < window.innerHeight) reel.style.translate = '0 ' + (y * .18) + 'px';
-}, {passive:true});
-
-/* Custom cursor (desktop only) */
-const fine = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
-if (fine){
-  const cur = document.getElementById('cursor');
-  let cx = 0, cy = 0, tx = 0, ty = 0;
-  window.addEventListener('mousemove', e=>{
-    tx = e.clientX; ty = e.clientY; cur.style.opacity = 1;
-  });
-  (function loop(){
-    cx += (tx - cx) * .18; cy += (ty - cy) * .18;
-    cur.style.transform = `translate(${cx}px,${cy}px) translate(-50%,-50%)`;
-    requestAnimationFrame(loop);
-  })();
-  document.querySelectorAll('a,button,.p-item').forEach(el=>{
-    el.addEventListener('mouseenter', ()=>cur.classList.add('big'));
-    el.addEventListener('mouseleave', ()=>cur.classList.remove('big'));
-  });
-
-  /* Magnetic buttons */
-  document.querySelectorAll('.btn').forEach(btn=>{
-    btn.addEventListener('mousemove', e=>{
-      const r = btn.getBoundingClientRect();
-      const mx = e.clientX - r.left - r.width/2;
-      const my = e.clientY - r.top - r.height/2;
-      btn.style.translate = (mx * .18) + 'px ' + (my * .3) + 'px';
-    });
-    btn.addEventListener('mouseleave', ()=>{ btn.style.translate = '0 0'; });
-  });
-}
 </script>
 
 </body>
