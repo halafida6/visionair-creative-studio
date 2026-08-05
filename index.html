@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Vision'Air Creative Studio | Premium Video & Photography Production</title>
+<meta name="description" content="Vision'Air creates premium video and photography content for entrepreneurs, brands and events worldwide.">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vision'Air Creative Studio | Premium Video & Photography Production">
+<meta property="og:description" content="Vision'Air creates premium video and photography content for entrepreneurs, brands and events worldwide.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vision'Air Creative Studio | Premium Video & Photography Production">
+<meta name="twitter:description" content="Vision'Air creates premium video and photography content for entrepreneurs, brands and events worldwide.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#0a0a0a;
+    --paper:#ffffff;
+    --muted:#6e6e6e;
+    --line:#e6e6e6;
+    --ease:cubic-bezier(.16,1,.3,1);
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+  img,svg,video{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  button{font-family:inherit;}
+
+  .wrap{max-width:1280px;margin:0 auto;padding:0 24px;}
+  @media(min-width:768px){.wrap{padding:0 48px;}}
+
+  .eyebrow{
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+
+  h1,h2,h3{
+    font-weight:900;
+    letter-spacing:-0.035em;
+    line-height:.98;
+    text-wrap:balance;
+  }
+
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease);}
+  .reveal.in{opacity:1;transform:translateY(0);}
+  .reveal-d1{transition-delay:.08s;}
+  .reveal-d2{transition-delay:.16s;}
+  .reveal-d3{transition-delay:.24s;}
+
+  /* === GRAIN OVERLAY === */
+  .grain{
+    position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.035;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* === NAV === */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:200;
+    background:rgba(255,255,255,.82);
+    backdrop-filter:blur(14px) saturate(160%);
+    -webkit-backdrop-filter:blur(14px) saturate(160%);
+    border-bottom:1px solid transparent;
+    transition:border-color .3s;
+  }
+  header.scrolled{border-bottom-color:var(--line);}
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 0;
+  }
+  .logo{
+    font-weight:900;font-size:18px;letter-spacing:-0.02em;text-transform:uppercase;
+  }
+  .logo span{color:var(--muted);font-weight:600;}
+  .nav-links{display:none;align-items:center;gap:36px;}
+  .nav-links a{
+    font-size:13px;font-weight:600;letter-spacing:.02em;
+    position:relative;padding:4px 0;
+  }
+  .nav-links a::after{
+    content:"";position:absolute;left:0;bottom:0;width:0;height:1.5px;background:var(--ink);
+    transition:width .35s var(--ease);
+  }
+  .nav-links a:hover::after{width:100%;}
+  @media(min-width:900px){.nav-links{display:flex;}}
+
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:14px 26px;border-radius:100px;
+    font-size:13px;font-weight:700;letter-spacing:.02em;
+    border:1.5px solid var(--ink);
+    cursor:pointer;white-space:nowrap;
+    transition:background .3s var(--ease),color .3s var(--ease),transform .2s var(--ease);
+  }
+  .btn-primary{background:var(--ink);color:var(--paper);}
+  .btn-primary:hover{transform:translateY(-2px);background:#222;}
+  .btn-ghost{background:transparent;color:var(--ink);}
+  .btn-ghost:hover{background:var(--ink);color:var(--paper);}
+  .btn-sm{padding:11px 20px;font-size:12px;}
+
+  .nav-cta{display:none;}
+  @media(min-width:900px){.nav-cta{display:inline-flex;}}
+
+  .burger{
+    display:flex;flex-direction:column;gap:5px;width:26px;cursor:pointer;background:none;border:0;
+  }
+  .burger span{height:2px;background:var(--ink);border-radius:2px;transition:transform .3s,opacity .3s;}
+  @media(min-width:900px){.burger{display:none;}}
+
+  .mobile-menu{
+    position:fixed;inset:0;z-index:190;background:var(--paper);
+    display:flex;flex-direction:column;justify-content:center;gap:28px;padding:24px;
+    transform:translateY(-100%);transition:transform .5s var(--ease);
+  }
+  .mobile-menu.open{transform:translateY(0);}
+  .mobile-menu a{font-size:34px;font-weight:800;letter-spacing:-0.03em;}
+  .mobile-menu .btn{align-self:flex-start;margin-top:12px;}
+
+  /* === HERO === */
+  .hero{
+    position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;
+    padding:140px 0 48px;overflow:hidden;
+  }
+  .hero-bg{
+    position:absolute;inset:0;z-index:-1;
+    background:
+      radial-gradient(120% 90% at 15% 0%, #f4f4f4 0%, transparent 55%),
+      radial-gradient(90% 70% at 100% 10%, #ececec 0%, transparent 50%),
+      var(--paper);
+  }
+  .hero-bg::before{
+    content:"";position:absolute;inset:-10%;
+    background:conic-gradient(from 180deg at 50% 50%, #0000 0deg, #0000 320deg, #00000008 360deg);
+    animation:spin 30s linear infinite;
+  }
+  @keyframes spin{to{transform:rotate(360deg);}}
+
+  .hero-reel{
+    position:absolute;inset:0;z-index:-1;display:flex;align-items:center;
+    gap:14px;opacity:.9;
+  }
+  .reel-track{display:flex;gap:14px;animation:reel 38s linear infinite;}
+  .reel-track img,.reel-card{
+    height:78vh;width:26vw;min-width:220px;border-radius:18px;flex-shrink:0;
+    background:linear-gradient(160deg,#1a1a1a,#3a3a3a);
+    filter:grayscale(1) brightness(.55);
+  }
+  @keyframes reel{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  .hero::after{
+    content:"";position:absolute;inset:0;z-index:-1;
+    background:linear-gradient(180deg,rgba(255,255,255,.55) 0%,rgba(255,255,255,.85) 55%,#fff 100%);
+  }
+
+  .hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:18px;}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--ink);animation:pulse 2s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.25;}}
+
+  .hero h1{
+    font-size:clamp(40px,10vw,108px);
+    text-transform:uppercase;
+  }
+  .hero-sub{
+    max-width:560px;margin-top:22px;font-size:clamp(15px,2.2vw,19px);color:var(--muted);font-weight:500;
+  }
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px;}
+  .hero-meta{
+    display:flex;gap:40px;margin-top:64px;padding-top:24px;border-top:1px solid var(--line);flex-wrap:wrap;
+  }
+  .hero-meta div b{display:block;font-size:26px;font-weight:900;letter-spacing:-.02em;}
+  .hero-meta div span{font-size:11px;color:var(--muted);font-weight:600;letter-spacing:.06em;text-transform:uppercase;}
+
+  /* === MARQUEE === */
+  .marquee{
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    overflow:hidden;padding:20px 0;white-space:nowrap;
+  }
+  .marquee-track{display:inline-flex;animation:mq 26s linear infinite;}
+  .marquee-track span{
+    font-size:clamp(20px,3.4vw,32px);font-weight:800;letter-spacing:-.02em;text-transform:uppercase;
+    padding:0 28px;color:var(--ink);display:inline-flex;align-items:center;gap:28px;
+  }
+  .marquee-track span::after{content:"✦";font-size:16px;color:var(--muted);}
+  @keyframes mq{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+  /* === SECTION SHARED === */
+  section{padding:96px 0;}
+  @media(min-width:768px){section{padding:140px 0;}}
+  .section-head{max-width:760px;margin-bottom:56px;}
+  .section-head h2{font-size:clamp(30px,5.4vw,58px);margin-top:14px;}
+  .section-head p{margin-top:18px;font-size:16px;color:var(--muted);max-width:540px;}
+
+  /* === ABOUT === */
+  .about-body{
+    font-size:clamp(20px,3.4vw,36px);font-weight:700;letter-spacing:-.02em;line-height:1.3;max-width:980px;
+  }
+  .about-body .dim{color:#c7c7c7;}
+  .about-stats{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:64px;
+  }
+  @media(min-width:768px){.about-stats{grid-template-columns:repeat(4,1fr);}}
+  .about-stats div{border-top:2px solid var(--ink);padding-top:14px;}
+  .about-stats b{display:block;font-size:34px;font-weight:900;}
+  .about-stats span{font-size:12px;color:var(--muted);font-weight:600;}
+
+  /* === SERVICES === */
+  .services-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);}
+  @media(min-width:900px){.services-grid{grid-template-columns:repeat(3,1fr);}}
+  .service-card{
+    background:var(--paper);padding:44px 32px;position:relative;overflow:hidden;
+    transition:background .4s var(--ease);
+  }
+  .service-card:hover{background:var(--ink);color:var(--paper);}
+  .service-card:hover .svc-tag,.service-card:hover .svc-for,.service-card:hover li{color:#bdbdbd;}
+  .svc-num{font-size:12px;font-weight:700;color:var(--muted);}
+  .service-card:hover .svc-num{color:#9a9a9a;}
+  .service-card h3{font-size:26px;margin-top:22px;text-transform:uppercase;}
+  .svc-tag{margin-top:10px;font-size:14px;color:var(--muted);font-weight:600;}
+  .svc-for{margin-top:26px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+  .service-card ul{margin-top:12px;display:flex;flex-direction:column;gap:9px;}
+  .service-card li{font-size:14.5px;font-weight:500;color:#3a3a3a;transition:color .4s var(--ease);}
+  .service-card li::before{content:"— ";}
+
+  /* === PORTFOLIO === */
+  .portfolio-grid{display:grid;grid-template-columns:1fr;gap:18px;}
+  @media(min-width:640px){.portfolio-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(min-width:1100px){.portfolio-grid{grid-template-columns:repeat(3,1fr);}}
+  .p-item{
+    position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/5;cursor:pointer;
+    background:linear-gradient(150deg,var(--c1,#1c1c1c),var(--c2,#3d3d3d));
+  }
+  .p-item.wide{aspect-ratio:8/5;}
+  @media(min-width:640px){.p-item.wide{grid-column:span 2;}}
+  .p-item::before{
+    content:"";position:absolute;inset:0;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+    mix-blend-mode:overlay;opacity:.5;
+  }
+  .p-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .p-item .p-overlay{
+    position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;
+    background:linear-gradient(0deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,0) 45%);
+    transform:translateY(8px);opacity:0;transition:transform .45s var(--ease),opacity .45s var(--ease);
+  }
+  .p-item:hover .p-overlay{transform:translateY(0);opacity:1;}
+  .p-item:hover{box-shadow:0 20px 50px rgba(0,0,0,.25);}
+  .p-cat{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#d8d8d8;font-weight:700;}
+  .p-title{font-size:20px;font-weight:800;color:#fff;margin-top:6px;letter-spacing:-.01em;}
+  .p-play{
+    position:absolute;top:18px;right:18px;width:38px;height:38px;border-radius:50%;
+    background:rgba(255,255,255,.14);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;
+  }
+  .p-play svg{width:12px;height:12px;fill:#fff;}
+  .portfolio-note{margin-top:32px;font-size:13px;color:var(--muted);text-align:center;}
+
+  /* === PROCESS === */
+  .process-list{border-top:1px solid var(--line);}
+  .process-row{
+    display:grid;grid-template-columns:1fr;gap:12px;padding:34px 0;border-bottom:1px solid var(--line);
+    transition:padding .3s var(--ease);
+  }
+  @media(min-width:768px){
+    .process-row{grid-template-columns:110px 1fr 1fr;align-items:center;gap:24px;}
+  }
+  .process-row:hover{background:#fafafa;}
+  .process-num{font-size:15px;font-weight:800;color:var(--muted);}
+  .process-row h3{font-size:clamp(24px,3.6vw,32px);text-transform:uppercase;}
+  .process-row p{color:var(--muted);font-size:15px;max-width:380px;}
+
+  /* === PARTNER === */
+  .partner{
+    background:var(--ink);color:var(--paper);border-radius:28px;
+    padding:56px 28px;text-align:center;position:relative;overflow:hidden;
+  }
+  @media(min-width:768px){.partner{padding:100px 60px;}}
+  .partner::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(60% 60% at 50% 0%, rgba(255,255,255,.08), transparent 70%);
+  }
+  .partner-inner{position:relative;max-width:680px;margin:0 auto;}
+  .partner .eyebrow{color:#8a8a8a;}
+  .partner h2{font-size:clamp(30px,5.6vw,54px);color:#fff;margin-top:16px;text-transform:uppercase;}
+  .partner p{margin-top:20px;color:#b8b8b8;font-size:16px;line-height:1.6;}
+  .partner-pct{
+    display:inline-flex;align-items:baseline;gap:6px;margin:32px 0 8px;
+  }
+  .partner-pct b{font-size:clamp(56px,10vw,96px);font-weight:900;color:#fff;letter-spacing:-.03em;}
+  .partner-pct span{font-size:16px;color:#9a9a9a;font-weight:700;}
+  .partner .btn-primary{background:#fff;color:var(--ink);border-color:#fff;margin-top:20px;}
+  .partner .btn-primary:hover{background:#e9e9e9;}
+
+  /* === CONTACT === */
+  .contact-grid{display:grid;grid-template-columns:1fr;gap:56px;}
+  @media(min-width:900px){.contact-grid{grid-template-columns:1fr 1.1fr;gap:80px;}}
+  .contact-info h2{font-size:clamp(32px,5.6vw,56px);}
+  .contact-info p{margin-top:20px;color:var(--muted);font-size:16px;max-width:400px;}
+  .contact-links{margin-top:40px;display:flex;flex-direction:column;gap:16px;}
+  .contact-links a{
+    font-size:16px;font-weight:700;display:flex;align-items:center;gap:10px;width:fit-content;
+    border-bottom:1px solid var(--line);padding-bottom:6px;
+  }
+  .contact-links a:hover{border-color:var(--ink);}
+  .price-note{
+    margin-top:48px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;font-size:14px;color:var(--muted);
+  }
+  .price-note b{color:var(--ink);}
+
+  form{display:flex;flex-direction:column;gap:22px;}
+  .row2{display:grid;grid-template-columns:1fr;gap:22px;}
+  @media(min-width:520px){.row2{grid-template-columns:1fr 1fr;}}
+  .field{display:flex;flex-direction:column;gap:8px;}
+  .field label{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);}
+  .field input,.field select,.field textarea{
+    border:none;border-bottom:1.5px solid var(--line);padding:12px 2px;font-size:16px;
+    background:transparent;color:var(--ink);font-family:inherit;transition:border-color .3s;
+  }
+  .field textarea{resize:vertical;min-height:90px;}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--ink);}
+  .field select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23999'%3E%3Cpath fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z' clip-rule='evenodd'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 2px center;background-size:18px;}
+  form .btn{margin-top:8px;align-self:flex-start;}
+  .form-status{font-size:13px;font-weight:600;min-height:18px;}
+
+  /* === FOOTER === */
+  footer{border-top:1px solid var(--line);padding:48px 0 32px;}
+  .footer-top{
+    display:flex;flex-direction:column;gap:24px;justify-content:space-between;padding-bottom:40px;
+  }
+  @media(min-width:768px){.footer-top{flex-direction:row;align-items:flex-end;}}
+  .footer-brand{font-size:clamp(30px,7vw,64px);font-weight:900;letter-spacing:-.03em;text-transform:uppercase;}
+  .footer-social{display:flex;gap:22px;}
+  .footer-social a{font-size:13px;font-weight:700;border-bottom:1px solid var(--line);padding-bottom:4px;}
+  .footer-social a:hover{border-color:var(--ink);}
+  .footer-bottom{
+    display:flex;flex-direction:column;gap:10px;padding-top:24px;border-top:1px solid var(--line);
+    font-size:12px;color:var(--muted);
+  }
+  @media(min-width:768px){.footer-bottom{flex-direction:row;justify-content:space-between;}}
+</style>
+</head>
+<body>
+
+<div class="grain"></div>
+
+<header id="siteHeader">
+  <div class="wrap nav">
+    <a href="#top" class="logo">VISION'AIR <span>studio</span></a>
+    <nav class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#partner">Partner</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn-primary btn-sm nav-cta">Start a project</a>
+    <button class="burger" id="burgerBtn" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#work">Work</a>
+  <a href="#services">Services</a>
+  <a href="#process">Process</a>
+  <a href="#partner">Partner</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact" class="btn btn-primary">Start a project</a>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-reel" aria-hidden="true">
+      <div class="reel-track">
+        <div class="reel-card"></div><div class="reel-card"></div><div class="reel-card"></div>
+        <div class="reel-card"></div><div class="reel-card"></div><div class="reel-card"></div>
+        <div class="reel-card"></div><div class="reel-card"></div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="hero-eyebrow reveal in">
+        <span class="dot"></span>
+        <span class="eyebrow">Creative studio — worldwide</span>
+      </div>
+      <h1 class="reveal in">Vision'Air<br>Creative Studio</h1>
+      <p class="hero-sub reveal in reveal-d1">Premium video &amp; photography production for brands, entrepreneurs and events worldwide.</p>
+      <div class="hero-actions reveal in reveal-d2">
+        <a href="#contact" class="btn btn-primary">Start a project</a>
+        <a href="#work" class="btn btn-ghost">View our work</a>
+      </div>
+      <div class="hero-meta reveal in reveal-d3">
+        <div><b>15%</b><span>Partner commission</span></div>
+        <div><b>€1,500</b><span>Projects starting from</span></div>
+        <div><b>Global</b><span>Brands &amp; events</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>Photography</span><span>Video Production</span><span>Brand Storytelling</span><span>Creative Direction</span>
+      <span>Photography</span><span>Video Production</span><span>Brand Storytelling</span><span>Creative Direction</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="eyebrow reveal">About the studio</div>
+      <p class="about-body reveal reveal-d1" style="margin-top:20px;">
+        We create visuals that make people remember. Vision'Air is a creative production studio specialized in high-end photography and video production. We help entrepreneurs, brands and companies build a <span class="dim">stronger image</span> through powerful visual storytelling — from personal branding to commercial content and events, designed to capture attention.
+      </p>
+      <div class="about-stats reveal reveal-d2">
+        <div><b>Personal</b><span>Branding</span></div>
+        <div><b>Brand</b><span>Content</span></div>
+        <div><b>Events</b><span>&amp; Nightlife</span></div>
+        <div><b>Worldwide</b><span>Production</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">What we do</div>
+        <h2>Services built for<br>impact.</h2>
+      </div>
+      <div class="services-grid reveal reveal-d1">
+        <div class="service-card">
+          <span class="svc-num">01</span>
+          <h3>Personal Branding</h3>
+          <p class="svc-tag">Build a powerful personal image.</p>
+          <div class="svc-for">For — Entrepreneurs, CEOs, Creators, Public figures</div>
+          <ul>
+            <li>Professional photoshoots</li>
+            <li>Social media content</li>
+            <li>Reels / short-form videos</li>
+            <li>Lifestyle content</li>
+            <li>Creative direction</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <span class="svc-num">02</span>
+          <h3>Brand Content</h3>
+          <p class="svc-tag">Premium content for companies.</p>
+          <div class="svc-for">Services</div>
+          <ul>
+            <li>Corporate videos</li>
+            <li>Brand storytelling</li>
+            <li>Product videos</li>
+            <li>Social media campaigns</li>
+            <li>Commercial content</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <span class="svc-num">03</span>
+          <h3>Events &amp; Nightlife</h3>
+          <p class="svc-tag">Capture moments that create impact.</p>
+          <div class="svc-for">Services</div>
+          <ul>
+            <li>Event films</li>
+            <li>Aftermovies</li>
+            <li>Photography</li>
+            <li>Social media content</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="work">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Portfolio</div>
+        <h2>Selected Work</h2>
+        <p>Replace these placeholders with real photo &amp; video work — the visuals should sell before a word is read.</p>
+      </div>
+      <div class="portfolio-grid reveal reveal-d1">
+        <div class="p-item wide" style="--c1:#141414;--c2:#3a3a3a;">
+          <div class="p-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          <div class="p-overlay"><div class="p-cat">Brand Content</div><div class="p-title">Aftermovie — Product Launch</div></div>
+        </div>
+        <div class="p-item" style="--c1:#1c1c1c;--c2:#4a4a4a;">
+          <div class="p-overlay"><div class="p-cat">Personal Branding</div><div class="p-title">Founder Portrait Series</div></div>
+        </div>
+        <div class="p-item" style="--c1:#101010;--c2:#333;">
+          <div class="p-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          <div class="p-overlay"><div class="p-cat">Events</div><div class="p-title">Nightlife Aftermovie</div></div>
+        </div>
+        <div class="p-item" style="--c1:#232323;--c2:#4f4f4f;">
+          <div class="p-overlay"><div class="p-cat">Brand Content</div><div class="p-title">Editorial Campaign</div></div>
+        </div>
+        <div class="p-item wide" style="--c1:#161616;--c2:#3f3f3f;">
+          <div class="p-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          <div class="p-overlay"><div class="p-cat">Personal Branding</div><div class="p-title">CEO Reel — Short Form</div></div>
+        </div>
+        <div class="p-item" style="--c1:#181818;--c2:#454545;">
+          <div class="p-overlay"><div class="p-cat">Events</div><div class="p-title">Corporate Event Coverage</div></div>
+        </div>
+      </div>
+      <p class="portfolio-note reveal">More work available on request — Instagram @visionair.studio</p>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">How we work</div>
+        <h2>Our Process</h2>
+      </div>
+      <div class="process-list reveal reveal-d1">
+        <div class="process-row">
+          <div class="process-num">01</div>
+          <h3>Discovery</h3>
+          <p>Understanding your vision, goals and audience.</p>
+        </div>
+        <div class="process-row">
+          <div class="process-num">02</div>
+          <h3>Creative Direction</h3>
+          <p>Building the concept, style and storytelling.</p>
+        </div>
+        <div class="process-row">
+          <div class="process-num">03</div>
+          <h3>Production</h3>
+          <p>Professional shooting and content creation.</p>
+        </div>
+        <div class="process-row">
+          <div class="process-num">04</div>
+          <h3>Delivery</h3>
+          <p>Premium edited content ready to use.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNER -->
+  <section id="partner">
+    <div class="wrap">
+      <div class="partner reveal">
+        <div class="partner-inner">
+          <div class="eyebrow">Partner program</div>
+          <h2>Become a<br>Vision'Air Partner</h2>
+          <p>Do you know a brand, entrepreneur or company looking for premium content? Refer them to us.</p>
+          <div class="partner-pct"><b>15%</b><span>commission per<br>successful referral</span></div>
+          <div><a href="#contact" class="btn btn-primary">Become a partner</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-info reveal">
+        <div class="eyebrow">Get in touch</div>
+        <h2 style="margin-top:14px;">Let's create<br>something<br>unforgettable.</h2>
+        <p>Tell us about your project — we'll get back to you within 24-48 hours with next steps.</p>
+        <div class="contact-links">
+          <a href="mailto:hello@visionair.studio">hello@visionair.studio</a>
+          <a href="https://instagram.com/visionair.studio" target="_blank" rel="noopener">@visionair.studio</a>
+        </div>
+        <div class="price-note">Projects starting from <b>€1,500</b>. Every project is scoped individually after a short discovery call.</div>
+      </div>
+
+      <form id="contactForm" action="https://formsubmit.co/iam7limitless@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New Vision'Air project request">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+        <div class="row2">
+          <div class="field">
+            <label for="f-name">Name</label>
+            <input id="f-name" name="Name" type="text" required>
+          </div>
+          <div class="field">
+            <label for="f-company">Company</label>
+            <input id="f-company" name="Company" type="text">
+          </div>
+        </div>
+
+        <div class="row2">
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="Email" type="email" required>
+          </div>
+          <div class="field">
+            <label for="f-type">Project type</label>
+            <select id="f-type" name="Project type" required>
+              <option value="">Select one</option>
+              <option>Personal Branding</option>
+              <option>Brand Content</option>
+              <option>Events &amp; Nightlife</option>
+              <option>Partner referral</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="f-budget">Budget</label>
+          <select id="f-budget" name="Budget">
+            <option value="">Select a range</option>
+            <option>€1,500 – €3,000</option>
+            <option>€3,000 – €6,000</option>
+            <option>€6,000 – €10,000</option>
+            <option>€10,000+</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="f-message">Message</label>
+          <textarea id="f-message" name="Message" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Request a consultation</button>
+        <div class="form-status" id="formStatus"></div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">Vision'Air</div>
+      <div class="footer-social">
+        <a href="https://instagram.com/visionair.studio" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:hello@visionair.studio">Email</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Vision'Air Creative Studio. All rights reserved.</span>
+      <span>Premium video &amp; photography production, worldwide.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 8);
+  }, { passive: true });
+
+  const burger = document.getElementById('burgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  burger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+  }));
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal:not(.in)').forEach(el => io.observe(el));
+
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('formStatus');
+  form.addEventListener('submit', () => {
+    status.textContent = 'Sending…';
+    status.style.color = '#6e6e6e';
+  });
+</script>
+
+</body>
+</html>
