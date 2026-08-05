@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Vision'Air Creative Studio | Production photo &amp; vidéo premium</title>
-<meta name="description" content="Vision'Air produit des campagnes photo et vidéo premium pour les marques, entrepreneurs et événements. Direction artistique, tournage, livraison.">
+<title>Vision'Air — Photographe &amp; vidéaste lifestyle | Terry</title>
+<meta name="description" content="Photographe et vidéaste lifestyle. Je suis les artistes, sportifs et entrepreneurs dans leur quotidien et leurs voyages, partout dans le monde.">
 <meta name="theme-color" content="#ffffff">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Vision'Air Creative Studio | Production photo &amp; vidéo premium">
-<meta property="og:description" content="Campagnes photo et vidéo premium pour marques, entrepreneurs et événements.">
+<meta property="og:title" content="Vision'Air — Photographe &amp; vidéaste lifestyle">
+<meta property="og:description" content="Je suis les artistes, sportifs et entrepreneurs dans leur quotidien et leurs voyages, partout dans le monde.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Vision'Air Creative Studio">
-<meta name="twitter:description" content="Campagnes photo et vidéo premium pour marques, entrepreneurs et événements.">
+<meta name="twitter:title" content="Vision'Air — Photographe &amp; vidéaste lifestyle">
+<meta name="twitter:description" content="Je suis les artistes, sportifs et entrepreneurs dans leur quotidien et leurs voyages, partout dans le monde.">
 
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -54,7 +54,6 @@
     --pink:#FF2D6E;
     --pink-soft:#FFF0F5;
     --wa:#25D366;
-    --wa-dark:#128C7E;
     --ease:cubic-bezier(.16,1,.3,1);
     --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
     --mono:'Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
@@ -79,17 +78,15 @@
 
   /* === TYPO === */
   h1,h2,h3{font-weight:600;letter-spacing:-0.035em;line-height:1.06;text-wrap:balance;}
-  h1{font-size:clamp(38px,5.6vw,72px);letter-spacing:-0.04em;}
+  h1{font-size:clamp(38px,5.8vw,74px);letter-spacing:-0.04em;}
   h2{font-size:clamp(29px,4vw,50px);}
   h3{font-size:19px;letter-spacing:-0.02em;line-height:1.3;}
   p{color:var(--muted);}
   .lead{font-size:clamp(16px,1.7vw,19px);color:var(--muted);line-height:1.6;}
-
   .label{
     font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.13em;
     text-transform:uppercase;color:var(--faint);
   }
-  .label .pk{color:var(--pink);}
   .ac{color:var(--pink);}
 
   /* === NAV === */
@@ -103,16 +100,12 @@
   .nav{display:flex;align-items:center;justify-content:space-between;padding:13px 0;gap:14px;}
   .brand{display:flex;align-items:center;gap:9px;}
   .brand .mark{width:29px;flex-shrink:0;color:var(--ink);}
-  .brand-txt{font-size:15px;font-weight:600;letter-spacing:-.02em;line-height:1.15;}
-  .brand-txt small{
-    display:block;font-family:var(--mono);font-size:8.5px;font-weight:500;
-    letter-spacing:.16em;color:var(--faint);text-transform:uppercase;margin-top:1px;
-  }
+  .brand-txt{font-size:16px;font-weight:600;letter-spacing:-.02em;}
 
-  .nav-links{display:none;align-items:center;gap:24px;margin-left:auto;margin-right:18px;}
+  .nav-links{display:none;align-items:center;gap:26px;margin-left:auto;margin-right:18px;}
   .nav-links a{font-size:14px;font-weight:450;color:var(--muted);transition:color .25s;}
   .nav-links a:hover{color:var(--ink);}
-  @media(min-width:1050px){.nav-links{display:flex;}}
+  @media(min-width:900px){.nav-links{display:flex;}}
 
   .lang{
     display:flex;align-items:center;background:var(--bg-soft);border-radius:8px;padding:2px;
@@ -141,13 +134,13 @@
   .btn-lg{padding:14px 24px;font-size:15px;border-radius:11px;}
   .btn-sm{padding:9px 15px;font-size:13.5px;border-radius:9px;}
   .nav-cta{display:none;}
-  @media(min-width:1050px){.nav-cta{display:inline-flex;}}
+  @media(min-width:900px){.nav-cta{display:inline-flex;}}
 
   .burger{display:flex;flex-direction:column;gap:4.5px;width:22px;cursor:pointer;background:none;border:0;padding:5px 0;}
   .burger span{height:1.5px;background:var(--ink);border-radius:2px;transition:.3s var(--ease);}
   .burger.on span:first-child{transform:translateY(3px) rotate(45deg);}
   .burger.on span:last-child{transform:translateY(-3px) rotate(-45deg);}
-  @media(min-width:1050px){.burger{display:none;}}
+  @media(min-width:900px){.burger{display:none;}}
 
   .mmenu{
     position:fixed;inset:0;z-index:190;background:#fff;padding:88px 22px 30px;
@@ -164,83 +157,81 @@
   .mmenu .lang{align-self:flex-start;margin-top:18px;}
 
   /* === HERO === */
-  .hero{position:relative;padding:132px 0 0;overflow:hidden;}
-  @media(min-width:768px){.hero{padding:168px 0 0;}}
+  .hero{position:relative;padding:126px 0 0;overflow:hidden;}
+  @media(min-width:768px){.hero{padding:158px 0 0;}}
   .hero-bg{
-    position:absolute;top:-20%;left:50%;transform:translateX(-50%);
-    width:130%;height:720px;pointer-events:none;z-index:0;
+    position:absolute;top:-22%;left:50%;transform:translateX(-50%);
+    width:130%;height:680px;pointer-events:none;z-index:0;
     background:
-      radial-gradient(46% 52% at 28% 34%, rgba(255,45,110,.13), transparent 68%),
-      radial-gradient(40% 46% at 74% 20%, rgba(255,150,90,.11), transparent 66%),
-      radial-gradient(50% 50% at 52% 66%, rgba(150,120,255,.08), transparent 70%);
+      radial-gradient(46% 52% at 26% 34%, rgba(255,45,110,.13), transparent 68%),
+      radial-gradient(40% 46% at 76% 18%, rgba(255,160,90,.12), transparent 66%),
+      radial-gradient(50% 50% at 54% 68%, rgba(140,120,255,.08), transparent 70%);
     filter:blur(28px);animation:float 22s ease-in-out infinite;
   }
-  @keyframes float{0%,100%{transform:translateX(-50%) translateY(0) scale(1);}50%{transform:translateX(-50%) translateY(22px) scale(1.06);}}
+  @keyframes float{0%,100%{transform:translateX(-50%) translateY(0) scale(1);}50%{transform:translateX(-50%) translateY(20px) scale(1.06);}}
   .hero .wrap{position:relative;z-index:1;}
-  .hero-in{max-width:760px;}
-
-  .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;margin-bottom:22px;
-    padding:6px 13px 6px 9px;border:1px solid var(--line);border-radius:100px;background:rgba(255,255,255,.7);}
-  .dot{width:5px;height:5px;border-radius:50%;background:var(--pink);flex-shrink:0;animation:pulse 2.4s ease-in-out infinite;}
-  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.35;}}
+  .hero-in{max-width:780px;}
 
   .lm{display:block;overflow:hidden;padding-top:.1em;margin-top:-.1em;}
   .lmi{display:block;transform:translateY(105%);opacity:0;transition:transform 1s var(--ease),opacity 1s var(--ease);}
   .ready .lmi{transform:translateY(0);opacity:1;}
   .lm:nth-of-type(2) .lmi{transition-delay:.09s;}
-  .lm:nth-of-type(3) .lmi{transition-delay:.18s;}
 
-  .hero-sub{max-width:520px;margin-top:22px;opacity:0;transform:translateY(14px);
-    transition:opacity .8s var(--ease) .34s,transform .8s var(--ease) .34s;}
+  .hero-sub{max-width:540px;margin-top:22px;opacity:0;transform:translateY(14px);
+    transition:opacity .8s var(--ease) .3s,transform .8s var(--ease) .3s;}
   .ready .hero-sub{opacity:1;transform:none;}
   .hero-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:30px;opacity:0;transform:translateY(14px);
-    transition:opacity .8s var(--ease) .44s,transform .8s var(--ease) .44s;}
+    transition:opacity .8s var(--ease) .4s,transform .8s var(--ease) .4s;}
   .ready .hero-actions{opacity:1;transform:none;}
-  .hero-note{margin-top:16px;font-size:13.5px;color:var(--faint);opacity:0;transition:opacity .8s var(--ease) .56s;}
+  .hero-note{margin-top:16px;font-size:13.5px;color:var(--faint);opacity:0;transition:opacity .8s var(--ease) .52s;}
   .ready .hero-note{opacity:1;}
 
-  /* Showreel */
-  .reel{
-    margin-top:60px;border-radius:20px;overflow:hidden;position:relative;
-    aspect-ratio:16/9;background:linear-gradient(140deg,#EDEDF1,#DEDEE6 55%,#E9E7F0);
-    border:1px solid var(--line);box-shadow:0 1px 2px rgba(11,11,15,.05),0 24px 60px -22px rgba(11,11,15,.22);
-    opacity:0;transform:translateY(26px) scale(.985);
-    transition:opacity 1s var(--ease) .6s,transform 1s var(--ease) .6s;
+  /* === CARROUSEL PHOTOS === */
+  .strip-photos{
+    margin-top:56px;overflow:hidden;position:relative;
+    opacity:0;transform:translateY(22px);
+    transition:opacity 1s var(--ease) .58s,transform 1s var(--ease) .58s;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);
+    mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);
   }
-  .ready .reel{opacity:1;transform:none;}
-  @media(min-width:768px){.reel{margin-top:76px;}}
-  .reel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
-  .reel-play{
-    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-    width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.9);
-    backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;
-    box-shadow:0 8px 30px rgba(11,11,15,.18);transition:transform .35s var(--ease),background .3s;
+  .ready .strip-photos{opacity:1;transform:none;}
+  @media(min-width:768px){.strip-photos{margin-top:74px;}}
+  .ph-track{display:flex;gap:14px;width:max-content;animation:slide 60s linear infinite;}
+  .strip-photos:hover .ph-track{animation-play-state:paused;}
+  @keyframes slide{from{transform:translateX(0);}to{transform:translateX(calc(-50% - 7px));}}
+  .ph{
+    width:clamp(168px,22vw,248px);aspect-ratio:4/5;flex-shrink:0;
+    border-radius:16px;overflow:hidden;position:relative;
+    border:1px solid var(--line);background:linear-gradient(150deg,#EFEFF3,#DEDEE7);
+    box-shadow:0 1px 2px rgba(11,11,15,.04),0 14px 34px -20px rgba(11,11,15,.22);
   }
-  .reel:hover .reel-play{transform:translate(-50%,-50%) scale(1.07);background:#fff;}
-  .reel-play svg{width:18px;height:18px;fill:var(--ink);margin-left:3px;}
-  .reel-tag{
-    position:absolute;left:16px;bottom:16px;padding:7px 12px;border-radius:8px;
-    background:rgba(255,255,255,.82);backdrop-filter:blur(8px);
-    font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);
-  }
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .ph:nth-child(3n+1){background:linear-gradient(150deg,#EDEEF4,#DCDDE8);}
+  .ph:nth-child(3n+2){background:linear-gradient(150deg,#F1EDF0,#E2DCE3);}
+  .ph:nth-child(4n){background:linear-gradient(150deg,#ECEFF1,#DADEE2);}
 
-  /* === STRIP === */
-  .strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:76px;background:var(--bg-tint);}
-  .strip-in{display:flex;flex-wrap:wrap;gap:14px 40px;padding:20px 0;justify-content:space-between;align-items:center;}
-  .strip-in span{font-family:var(--mono);font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--faint);}
+  /* === MARQUEE DESTINATIONS === */
+  .dest{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:64px;background:var(--bg-tint);overflow:hidden;}
+  .dest-track{display:flex;width:max-content;animation:slide2 42s linear infinite;padding:17px 0;}
+  @keyframes slide2{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  .dest-track span{
+    font-family:var(--mono);font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);
+    padding:0 22px;display:inline-flex;align-items:center;gap:22px;white-space:nowrap;
+  }
+  .dest-track span::after{content:"";width:4px;height:4px;border-radius:50%;background:var(--pink);opacity:.6;}
 
   /* === SECTIONS === */
-  section{padding:84px 0;}
-  @media(min-width:768px){section{padding:130px 0;}}
-  .head{max-width:640px;margin-bottom:52px;}
-  .head h2{margin-top:16px;}
-  .head p{margin-top:16px;font-size:16.5px;max-width:480px;}
+  section{padding:82px 0;}
+  @media(min-width:768px){section{padding:124px 0;}}
+  .head{max-width:640px;margin-bottom:48px;}
+  .head h2{margin-top:14px;}
+  .head p{margin-top:16px;font-size:16.5px;max-width:490px;}
 
   .rv{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease);}
   .rv.in{opacity:1;transform:none;}
   .rv.d1{transition-delay:.08s;}.rv.d2{transition-delay:.16s;}.rv.d3{transition-delay:.24s;}
 
-  /* === VALUE === */
+  /* === OFFRE === */
   .grid3{display:grid;grid-template-columns:1fr;gap:16px;}
   @media(min-width:860px){.grid3{grid-template-columns:repeat(3,1fr);}}
   .card{
@@ -248,118 +239,91 @@
     transition:border-color .35s var(--ease),box-shadow .35s var(--ease),transform .35s var(--ease);
   }
   .card:hover{border-color:#DEDEE6;box-shadow:0 2px 4px rgba(11,11,15,.03),0 18px 40px -20px rgba(11,11,15,.18);transform:translateY(-3px);}
-  .card-ic{
-    width:36px;height:36px;border-radius:9px;background:var(--pink-soft);
-    display:flex;align-items:center;justify-content:center;margin-bottom:20px;
-  }
-  .card-ic svg{width:17px;height:17px;stroke:var(--pink);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
-  .card h3{margin-bottom:9px;}
+  .card-n{font-family:var(--mono);font-size:11px;letter-spacing:.13em;color:var(--pink);}
+  .card h3{margin:16px 0 9px;}
   .card p{font-size:14.8px;line-height:1.62;}
+  .card ul{margin-top:18px;padding-top:16px;border-top:1px solid var(--line-2);display:flex;flex-direction:column;gap:8px;}
+  .card li{font-size:14px;color:var(--muted);display:flex;align-items:center;gap:9px;}
+  .card li::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--pink);flex-shrink:0;opacity:.7;}
 
-  /* === OFFRE === */
-  .offer{display:grid;grid-template-columns:1fr;gap:16px;}
-  @media(min-width:860px){.offer{grid-template-columns:repeat(3,1fr);}}
-  .offer-card{
-    border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;
-    transition:border-color .35s var(--ease),box-shadow .35s var(--ease),transform .35s var(--ease);
+  /* === POUR QUI === */
+  .who{display:flex;flex-wrap:wrap;gap:10px;}
+  .who li{
+    font-size:15px;font-weight:500;color:var(--ink-2);
+    background:#fff;border:1px solid var(--line);border-radius:100px;padding:11px 20px;
+    transition:border-color .3s,transform .3s var(--ease);
   }
-  .offer-card:hover{border-color:#DEDEE6;box-shadow:0 2px 4px rgba(11,11,15,.03),0 18px 40px -20px rgba(11,11,15,.18);transform:translateY(-3px);}
-  .offer-vis{height:150px;background:linear-gradient(140deg,#EFEFF3,#E3E3EA);position:relative;border-bottom:1px solid var(--line);}
-  .offer-vis::after{
-    content:"";position:absolute;inset:0;
-    background:radial-gradient(70% 80% at 30% 20%,rgba(255,45,110,.1),transparent 70%);
+  .who li:hover{border-color:var(--pink);transform:translateY(-2px);}
+
+  /* === TRUST === */
+  .trust{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;}
+  @media(min-width:860px){.trust{grid-template-columns:repeat(3,1fr);}}
+  .trust-i{background:#fff;padding:30px 26px;}
+  .trust-i .ic{
+    width:34px;height:34px;border-radius:9px;background:var(--pink-soft);
+    display:flex;align-items:center;justify-content:center;margin-bottom:18px;
   }
-  .offer-b{padding:24px 24px 26px;}
-  .offer-b h3{margin-bottom:8px;}
-  .offer-b>p{font-size:14.8px;}
-  .offer-b ul{margin-top:18px;padding-top:16px;border-top:1px solid var(--line-2);display:flex;flex-direction:column;gap:8px;}
-  .offer-b li{font-size:14px;color:var(--muted);display:flex;align-items:center;gap:9px;}
-  .offer-b li::before{
-    content:"";width:4px;height:4px;border-radius:50%;background:var(--pink);flex-shrink:0;opacity:.75;
-  }
+  .trust-i .ic svg{width:16px;height:16px;stroke:var(--pink);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+  .trust-i h3{margin-bottom:8px;}
+  .trust-i p{font-size:14.5px;}
 
   /* === PORTFOLIO === */
-  .pf{display:grid;grid-template-columns:1fr;gap:14px;}
-  @media(min-width:640px){.pf{grid-template-columns:repeat(2,1fr);}}
-  @media(min-width:1024px){.pf{grid-template-columns:repeat(3,1fr);}}
-  .p-item{
-    position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/5;cursor:pointer;
-    background:linear-gradient(150deg,#EEEEF2,#DFDFE7);border:1px solid var(--line);
+  .pf{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+  @media(min-width:768px){.pf{grid-template-columns:repeat(3,1fr);gap:14px;}}
+  @media(min-width:1024px){.pf{grid-template-columns:repeat(4,1fr);}}
+  .pf-i{
+    position:relative;aspect-ratio:4/5;border-radius:14px;overflow:hidden;
+    border:1px solid var(--line);background:linear-gradient(150deg,#EEEEF2,#DFDFE7);
     transition:box-shadow .4s var(--ease),transform .4s var(--ease);
   }
-  .p-item.wide{aspect-ratio:16/10;}
-  @media(min-width:640px){.p-item.wide{grid-column:span 2;}}
-  .p-item:hover{box-shadow:0 20px 46px -22px rgba(11,11,15,.3);transform:translateY(-3px);}
-  .p-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease);}
-  .p-item:hover img{transform:scale(1.045);}
-  .p-ov{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;}
-  .p-meta{
-    display:inline-flex;flex-direction:column;gap:4px;padding:11px 13px;border-radius:10px;
-    background:rgba(255,255,255,.86);backdrop-filter:blur(10px);align-self:flex-start;
-    box-shadow:0 4px 16px rgba(11,11,15,.08);
-  }
-  .p-cat{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--pink);}
-  .p-title{font-size:14.5px;font-weight:550;letter-spacing:-.015em;color:var(--ink);}
-  .p-play{
-    position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;
-    background:rgba(255,255,255,.86);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;
-    box-shadow:0 3px 12px rgba(11,11,15,.1);transition:transform .35s var(--ease);
-  }
-  .p-item:hover .p-play{transform:scale(1.1);}
-  .p-play svg{width:10px;height:10px;fill:var(--ink);margin-left:1.5px;}
+  .pf-i:hover{box-shadow:0 20px 46px -22px rgba(11,11,15,.3);transform:translateY(-3px);}
+  .pf-i img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease);}
+  .pf-i:hover img{transform:scale(1.05);}
   .pf-note{margin-top:26px;font-size:14px;color:var(--faint);}
 
-  /* === FONDATEUR === */
+  /* === METHODE === */
+  .steps{display:grid;grid-template-columns:1fr;border-top:1px solid var(--line);}
+  @media(min-width:860px){.steps{grid-template-columns:repeat(3,1fr);border-top:none;}}
+  .step{padding:26px 0;border-bottom:1px solid var(--line);}
+  @media(min-width:860px){.step{border-top:1px solid var(--line);border-bottom:none;padding:26px 26px 8px 0;}}
+  .step-n{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--pink);}
+  .step h3{margin:14px 0 8px;}
+  .step p{font-size:14.5px;}
+
+  /* === TERRY === */
   .founder{display:grid;grid-template-columns:1fr;gap:34px;align-items:center;}
-  @media(min-width:860px){.founder{grid-template-columns:.85fr 1fr;gap:64px;}}
+  @media(min-width:860px){.founder{grid-template-columns:.85fr 1fr;gap:60px;}}
   .founder-vis{position:relative;}
   .founder-vis img,.founder-ph{
     width:100%;aspect-ratio:4/5;border-radius:18px;object-fit:cover;
     border:1px solid var(--line);
     box-shadow:0 2px 4px rgba(11,11,15,.03),0 26px 60px -30px rgba(11,11,15,.35);
   }
-  /* Recadrage : la photo est très haute, on descend le cadrage pour couper le ciel */
+  /* Recadrage : photo très haute, on descend le cadrage pour couper le ciel */
   .founder-img{object-position:50% 80%;}
-  .founder-ph{
-    background:linear-gradient(150deg,#EEEEF2,#DFDFE7);
-    display:flex;align-items:center;justify-content:center;
-  }
-  .founder-vis::after{
-    content:"";position:absolute;inset:auto -14px -14px auto;width:58%;height:58%;z-index:-1;
-    border-radius:18px;background:radial-gradient(60% 60% at 60% 40%,rgba(255,45,110,.14),transparent 70%);filter:blur(18px);
-  }
+  .founder-ph{background:linear-gradient(150deg,#EEEEF2,#DFDFE7);display:flex;align-items:center;justify-content:center;}
   .founder-txt h2{margin-top:14px;}
   .founder-role{margin-top:10px;color:var(--pink);}
   .founder-txt p{font-size:16.5px;}
   .founder-hook{margin-top:22px;}
 
-  /* Bloc dépliable : on aperçoit les premières lignes, le reste s'ouvre au clic */
-  .more{
-    max-height:74px;overflow:hidden;position:relative;
-    transition:max-height .6s var(--ease);
-  }
+  .more{max-height:74px;overflow:hidden;position:relative;transition:max-height .6s var(--ease);}
   .more::after{
     content:"";position:absolute;left:0;right:0;bottom:0;height:56px;pointer-events:none;
-    background:linear-gradient(180deg,rgba(255,255,255,0),#fff 88%);
-    opacity:1;transition:opacity .35s;
+    background:linear-gradient(180deg,rgba(255,255,255,0),#fff 88%);transition:opacity .35s;
   }
-  .more.open{max-height:1200px;}
+  .more.open{max-height:1400px;}
   .more.open::after{opacity:0;}
   .more-inner{padding-top:14px;}
   .more-inner p+p{margin-top:15px;}
-
   .more-btn{
     display:inline-flex;align-items:center;gap:7px;margin-top:12px;
     background:none;border:0;cursor:pointer;padding:4px 0;
     font-size:14.5px;font-weight:550;color:var(--pink);letter-spacing:-.01em;
   }
-  .more-btn svg{
-    width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2.2;
-    stroke-linecap:round;stroke-linejoin:round;transition:transform .4s var(--ease);
-  }
+  .more-btn svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:transform .4s var(--ease);}
   .more-btn.open svg{transform:rotate(180deg);}
   .more-btn:hover{opacity:.75;}
-
   .chips{margin-top:28px;padding-top:24px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px;}
   .chips li{
     font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
@@ -367,70 +331,38 @@
     padding:7px 12px;border-radius:8px;
   }
 
-  /* === METHODE === */
-  .steps{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--line);}
-  @media(min-width:860px){.steps{grid-template-columns:repeat(4,1fr);border-top:none;gap:0;}}
-  .step{padding:26px 0;border-bottom:1px solid var(--line);}
-  @media(min-width:860px){
-    .step{border-top:1px solid var(--line);border-bottom:none;padding:26px 26px 8px 0;}
-  }
-  .step-n{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--pink);}
-  .step h3{margin-top:14px;margin-bottom:8px;}
-  .step p{font-size:14.5px;line-height:1.6;}
-  .note{
-    margin-top:44px;padding:24px 26px;border-radius:16px;background:var(--bg-soft);
-    border:1px solid var(--line);font-size:16px;color:var(--ink-2);line-height:1.62;
-  }
-  .note b{font-weight:600;color:var(--ink);}
-
   /* === PARTENAIRE === */
   .partner{
-    border:1px solid var(--line);border-radius:22px;padding:44px 26px;position:relative;overflow:hidden;
-    background:linear-gradient(180deg,#fff,#FCFCFD);
-    box-shadow:0 1px 2px rgba(11,11,15,.03),0 30px 70px -40px rgba(11,11,15,.3);
+    border:1px solid var(--line);border-radius:20px;padding:34px 26px;
+    background:var(--bg-soft);display:flex;flex-direction:column;gap:18px;
   }
-  @media(min-width:768px){.partner{padding:76px 60px;text-align:center;}}
-  .partner::before{
-    content:"";position:absolute;top:-40%;left:50%;transform:translateX(-50%);
-    width:120%;height:340px;pointer-events:none;
-    background:radial-gradient(45% 60% at 50% 50%,rgba(255,45,110,.12),transparent 70%);filter:blur(20px);
-  }
-  .partner-in{position:relative;max-width:560px;margin:0 auto;}
-  .partner h2{margin-top:16px;}
-  .partner p{margin-top:16px;font-size:16.5px;}
-  .pct{
-    display:inline-flex;align-items:baseline;gap:9px;margin:30px 0 6px;
-    padding:12px 20px;border-radius:12px;background:var(--pink-soft);border:1px solid rgba(255,45,110,.16);
-  }
-  .pct b{font-size:38px;font-weight:600;letter-spacing:-.04em;color:var(--pink);line-height:1;}
-  .pct span{font-size:14px;color:var(--muted);text-align:left;}
-  .partner .btn{margin-top:26px;}
+  @media(min-width:768px){.partner{flex-direction:row;align-items:center;justify-content:space-between;padding:38px 44px;gap:36px;}}
+  .partner h3{font-size:22px;margin-bottom:8px;}
+  .partner p{font-size:15px;max-width:520px;}
+  .partner b{color:var(--pink);font-weight:600;}
 
   /* === CONTACT === */
-  .contact{text-align:center;max-width:640px;margin:0 auto;}
-  .contact h2{margin-top:16px;}
+  .contact{text-align:center;max-width:660px;margin:0 auto;}
+  .contact h2{margin-top:14px;}
   .contact p{margin-top:18px;font-size:17px;}
   .contact .btn{margin-top:30px;}
-  .clinks{margin-top:34px;display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:center;}
+  .clinks{margin-top:32px;display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:center;}
   .clinks a{font-size:14px;color:var(--muted);transition:color .25s;}
   .clinks a:hover{color:var(--ink);}
   .clinks a span{border-bottom:1px solid var(--line);padding-bottom:3px;}
 
   /* === FOOTER === */
-  footer{border-top:1px solid var(--line);padding:48px 0 34px;background:var(--bg-tint);}
-  .f-top{display:flex;flex-direction:column;gap:26px;justify-content:space-between;padding-bottom:34px;}
+  footer{border-top:1px solid var(--line);padding:44px 0 32px;background:var(--bg-tint);}
+  .f-top{display:flex;flex-direction:column;gap:24px;justify-content:space-between;padding-bottom:32px;}
   @media(min-width:768px){.f-top{flex-direction:row;align-items:flex-start;}}
   .f-brand{display:flex;align-items:center;gap:9px;}
   .f-brand .mark{width:27px;color:var(--ink);}
-  .f-tag{margin-top:14px;font-size:14px;color:var(--muted);max-width:270px;}
+  .f-tag{margin-top:14px;font-size:14px;color:var(--muted);max-width:290px;}
   .f-cols{display:flex;gap:52px;flex-wrap:wrap;}
   .f-col h4{font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);margin-bottom:14px;}
   .f-col a{display:block;font-size:14px;color:var(--muted);margin-bottom:9px;transition:color .25s;}
   .f-col a:hover{color:var(--ink);}
-  .f-bot{
-    display:flex;flex-direction:column;gap:8px;padding-top:24px;border-top:1px solid var(--line);
-    font-size:13px;color:var(--faint);
-  }
+  .f-bot{display:flex;flex-direction:column;gap:8px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--faint);}
   @media(min-width:768px){.f-bot{flex-direction:row;justify-content:space-between;}}
 
   /* === FLOATING WA === */
@@ -443,11 +375,12 @@
   .wa-float.show{opacity:1;pointer-events:auto;}
   .wa-float:hover{transform:scale(1.07);}
   .wa-float svg{width:25px;height:25px;fill:#fff;}
-  @media(min-width:960px){.wa-float{right:26px;bottom:26px;}}
+  @media(min-width:900px){.wa-float{right:26px;bottom:26px;}}
 
   @media(prefers-reduced-motion:reduce){
     *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;}
-    .lmi,.hero-sub,.hero-actions,.hero-note,.reel,.rv{opacity:1!important;transform:none!important;}
+    .lmi,.hero-sub,.hero-actions,.hero-note,.strip-photos,.rv{opacity:1!important;transform:none!important;}
+    .ph-track,.dest-track{animation:none!important;}
   }
 </style>
 </head>
@@ -464,15 +397,13 @@
         </g>
         <circle cx="77" cy="21" r="6.5" fill="#FF2D6E"/>
       </svg>
-      <span class="brand-txt">Vision'Air<small>Creative Studio</small></span>
+      <span class="brand-txt">Vision'Air</span>
     </a>
     <nav class="nav-links">
-      <a href="#value" data-fr="Approche" data-en="Approach">Approche</a>
-      <a href="#offer" data-fr="Production" data-en="Production">Production</a>
-      <a href="#work" data-fr="Réalisations" data-en="Work">Réalisations</a>
-      <a href="#studio" data-fr="Studio" data-en="Studio">Studio</a>
-      <a href="#process" data-fr="Méthode" data-en="Method">Méthode</a>
-      <a href="#partner" data-fr="Partenaires" data-en="Partners">Partenaires</a>
+      <a href="#offer" data-fr="Ce que je fais" data-en="What I do">Ce que je fais</a>
+      <a href="#work" data-fr="Images" data-en="Images">Images</a>
+      <a href="#terry" data-fr="Terry" data-en="Terry">Terry</a>
+      <a href="#how" data-fr="Comment ça marche" data-en="How it works">Comment ça marche</a>
     </nav>
     <div class="lang">
       <button data-lang="fr" class="active">FR</button>
@@ -480,22 +411,20 @@
     </div>
     <a class="btn btn-wa btn-sm nav-cta js-wa" data-msg="hero">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23z"/></svg>
-      <span data-fr="Parler d'un projet" data-en="Discuss a project">Parler d'un projet</span>
+      <span data-fr="Me contacter" data-en="Contact me">Me contacter</span>
     </a>
     <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
   </div>
 </header>
 
 <div class="mmenu" id="mmenu">
-  <a class="ml" href="#value" data-fr="Approche" data-en="Approach">Approche</a>
-  <a class="ml" href="#offer" data-fr="Production" data-en="Production">Production</a>
-  <a class="ml" href="#work" data-fr="Réalisations" data-en="Work">Réalisations</a>
-  <a class="ml" href="#studio" data-fr="Studio" data-en="Studio">Studio</a>
-  <a class="ml" href="#process" data-fr="Méthode" data-en="Method">Méthode</a>
-  <a class="ml" href="#partner" data-fr="Partenaires" data-en="Partners">Partenaires</a>
+  <a class="ml" href="#offer" data-fr="Ce que je fais" data-en="What I do">Ce que je fais</a>
+  <a class="ml" href="#work" data-fr="Images" data-en="Images">Images</a>
+  <a class="ml" href="#terry" data-fr="Terry" data-en="Terry">Terry</a>
+  <a class="ml" href="#how" data-fr="Comment ça marche" data-en="How it works">Comment ça marche</a>
   <a class="btn btn-wa btn-lg js-wa" data-msg="hero">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23z"/></svg>
-    <span data-fr="Parler d'un projet" data-en="Discuss a project">Parler d'un projet</span>
+    <span data-fr="Me contacter" data-en="Contact me">Me contacter</span>
   </a>
   <div class="lang">
     <button data-lang="fr" class="active">FR</button>
@@ -510,181 +439,155 @@
     <div class="hero-bg"></div>
     <div class="wrap">
       <div class="hero-in">
-        <div class="hero-eyebrow">
-          <span class="dot"></span>
-          <span class="label" data-fr="Studio de production photo &amp; vidéo" data-en="Photo &amp; video production studio">Studio de production photo &amp; vidéo</span>
-        </div>
-
         <h1>
-          <span class="lm"><span class="lmi" data-fr="Des visuels à la hauteur" data-en="Visuals that match">Des visuels à la hauteur</span></span>
-          <span class="lm"><span class="lmi" data-fr="de votre <span class='ac'>ambition</span>." data-en="your <span class='ac'>ambition</span>.">de votre <span class="ac">ambition</span>.</span></span>
+          <span class="lm"><span class="lmi" data-fr="Je vous suis" data-en="I follow you">Je vous suis</span></span>
+          <span class="lm"><span class="lmi" data-fr="<span class='ac'>partout</span> dans le monde." data-en="<span class='ac'>anywhere</span> in the world.">
+            <span class="ac">partout</span> dans le monde.</span></span>
         </h1>
 
-        <p class="lead hero-sub" data-fr="Nous produisons les campagnes photo et vidéo des marques qui veulent être prises au sérieux. Direction artistique, tournage, livraison." data-en="We produce the photo and video campaigns of brands that want to be taken seriously. Art direction, shooting, delivery.">Nous produisons les campagnes photo et vidéo des marques qui veulent être prises au sérieux. Direction artistique, tournage, livraison.</p>
+        <p class="lead hero-sub" data-fr="Photographe et vidéaste lifestyle. J'accompagne artistes, sportifs et personnalités dans leur quotidien, leurs voyages et leurs nuits. Vous vivez — je capture." data-en="Lifestyle photographer and filmmaker. I travel with artists, athletes and public figures through their daily life, their trips and their nights. You live — I capture.">Photographe et vidéaste lifestyle. J'accompagne artistes, sportifs et personnalités dans leur quotidien, leurs voyages et leurs nuits. Vous vivez — je capture.</p>
 
         <div class="hero-actions">
           <a class="btn btn-wa btn-lg js-wa" data-msg="hero">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23z"/></svg>
-            <span data-fr="Parler d'un projet" data-en="Discuss a project">Parler d'un projet</span>
+            <span data-fr="Me contacter" data-en="Contact me">Me contacter</span>
           </a>
-          <a href="#work" class="btn btn-ghost btn-lg" data-fr="Voir les réalisations" data-en="See the work">Voir les réalisations</a>
+          <a href="#work" class="btn btn-ghost btn-lg" data-fr="Voir mes images" data-en="See my images">Voir mes images</a>
         </div>
 
-        <p class="hero-note" data-fr="Réponse sous 24 h · Cadrage du projet en un échange" data-en="Reply within 24 h · Project scoped in one conversation">Réponse sous 24 h · Cadrage du projet en un échange</p>
-      </div>
-
-      <!-- Showreel : remplacer par une vraie image/vidéo -->
-      <div class="reel">
-        <div class="reel-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <div class="reel-tag" data-fr="Showreel 2026" data-en="Showreel 2026">Showreel 2026</div>
+        <p class="hero-note" data-fr="Disponible en last minute · Déplacements internationaux" data-en="Available last minute · Travelling worldwide">Disponible en last minute · Déplacements internationaux</p>
       </div>
     </div>
 
-    <div class="strip">
-      <div class="wrap strip-in">
-        <span data-fr="Direction artistique" data-en="Art direction">Direction artistique</span>
-        <span data-fr="Photographie" data-en="Photography">Photographie</span>
-        <span data-fr="Film de marque" data-en="Brand film">Film de marque</span>
-        <span data-fr="Formats sociaux" data-en="Social formats">Formats sociaux</span>
-        <span data-fr="Post-production" data-en="Post-production">Post-production</span>
-      </div>
+    <!-- Carrousel : déposer photos/01.jpg … photos/12.jpg -->
+    <div class="strip-photos">
+      <div class="ph-track" id="phTrack"></div>
+    </div>
+
+    <div class="dest">
+      <div class="dest-track" id="destTrack"></div>
     </div>
   </section>
 
-  <!-- VALUE -->
-  <section id="value">
+  <!-- CE QUE JE FAIS -->
+  <section id="offer">
     <div class="wrap">
       <div class="head rv">
-        <div class="label" data-fr="Pour les marques" data-en="For brands">Pour les marques</div>
-        <h2 data-fr="Ce que vous obtenez, concrètement." data-en="What you actually get.">Ce que vous obtenez, concrètement.</h2>
-        <p data-fr="Pas de jargon créatif. Trois résultats mesurables sur votre image." data-en="No creative jargon. Three measurable outcomes for your image.">Pas de jargon créatif. Trois résultats mesurables sur votre image.</p>
+        <div class="label" data-fr="L'offre" data-en="The offer">L'offre</div>
+        <h2 data-fr="Je vous suis, je shoote, je livre." data-en="I follow you, I shoot, I deliver.">Je vous suis, je shoote, je livre.</h2>
+        <p data-fr="Une seule spécialité : capturer des vies qui bougent." data-en="One specialty: capturing lives in motion.">Une seule spécialité : capturer des vies qui bougent.</p>
       </div>
       <div class="grid3 rv d1">
         <div class="card">
-          <div class="card-ic"><svg viewBox="0 0 24 24"><path d="M12 2l2.6 6.6L21 10l-5 4.3L17.5 21 12 17.5 6.5 21 8 14.3 3 10l6.4-1.4z"/></svg></div>
-          <h3 data-fr="Une image qui inspire confiance" data-en="An image that earns trust">Une image qui inspire confiance</h3>
-          <p data-fr="Vos photos et vos films vous placent au niveau des références de votre secteur. Le client vous prend au sérieux avant même l'échange." data-en="Your photos and films place you alongside the references of your industry. Clients take you seriously before the first call.">Vos photos et vos films vous placent au niveau des références de votre secteur. Le client vous prend au sérieux avant même l'échange.</p>
+          <div class="card-n">01</div>
+          <h3 data-fr="Voyage &amp; lifestyle" data-en="Travel &amp; lifestyle">Voyage &amp; lifestyle</h3>
+          <p data-fr="Je pars avec vous. Une semaine à Dubaï, un mois en Asie, un week-end à Ibiza — je vous accompagne et je capte tout." data-en="I travel with you. A week in Dubai, a month in Asia, a weekend in Ibiza — I come along and capture it all.">Je pars avec vous. Une semaine à Dubaï, un mois en Asie, un week-end à Ibiza — je vous accompagne et je capte tout.</p>
+          <ul>
+            <li data-fr="Voyages et déplacements" data-en="Trips and travel">Voyages et déplacements</li>
+            <li data-fr="Vie quotidienne et coulisses" data-en="Daily life and backstage">Vie quotidienne et coulisses</li>
+            <li data-fr="Soirées, clubs, événements" data-en="Nights, clubs, events">Soirées, clubs, événements</li>
+          </ul>
         </div>
         <div class="card">
-          <div class="card-ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 15l4.5-4.5 3.5 3.5 3-3L21 16"/><circle cx="8.5" cy="8.5" r="1.2"/></svg></div>
-          <h3 data-fr="Une banque de contenu complète" data-en="A full content library">Une banque de contenu complète</h3>
-          <p data-fr="Une campagne alimente vos réseaux, votre site et vos publicités pendant des mois. Chaque fichier est livré au bon format." data-en="One campaign feeds your socials, your site and your ads for months. Every file delivered in the right format.">Une campagne alimente vos réseaux, votre site et vos publicités pendant des mois. Chaque fichier est livré au bon format.</p>
+          <div class="card-n">02</div>
+          <h3 data-fr="Personal branding" data-en="Personal branding">Personal branding</h3>
+          <p data-fr="Du contenu qui construit votre image sur la durée. Pensé pour Instagram, pas pour un catalogue." data-en="Content that builds your image over time. Made for Instagram, not for a catalogue.">Du contenu qui construit votre image sur la durée. Pensé pour Instagram, pas pour un catalogue.</p>
+          <ul>
+            <li data-fr="Portraits et séries" data-en="Portraits and series">Portraits et séries</li>
+            <li data-fr="Reels et formats courts" data-en="Reels and short form">Reels et formats courts</li>
+            <li data-fr="Contenu régulier" data-en="Ongoing content">Contenu régulier</li>
+          </ul>
         </div>
         <div class="card">
-          <div class="card-ic"><svg viewBox="0 0 24 24"><path d="M20 7L9.5 17.5 4 12"/></svg></div>
-          <h3 data-fr="Aucune charge de votre côté" data-en="Nothing to manage on your side">Aucune charge de votre côté</h3>
-          <p data-fr="Un brief au départ, des fichiers finis à l'arrivée. Repérage, équipe, matériel, montage : notre métier, pas votre problème." data-en="One brief at the start, finished files at the end. Scouting, crew, gear, editing: our job, not your problem.">Un brief au départ, des fichiers finis à l'arrivée. Repérage, équipe, matériel, montage : notre métier, pas votre problème.</p>
+          <div class="card-n">03</div>
+          <h3 data-fr="Image de marque" data-en="Brand image">Image de marque</h3>
+          <p data-fr="La même énergie appliquée aux marques : campagnes, produits, événements. Sans la froideur du corporate." data-en="The same energy applied to brands: campaigns, products, events. Without the corporate coldness.">La même énergie appliquée aux marques : campagnes, produits, événements. Sans la froideur du corporate.</p>
+          <ul>
+            <li data-fr="Campagnes photo" data-en="Photo campaigns">Campagnes photo</li>
+            <li data-fr="Contenu produit" data-en="Product content">Contenu produit</li>
+            <li data-fr="Événements de marque" data-en="Brand events">Événements de marque</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- OFFRE -->
-  <section id="offer" style="background:var(--bg-tint);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <!-- POUR QUI -->
+  <section style="background:var(--bg-tint);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-top:70px;padding-bottom:70px;">
     <div class="wrap">
-      <div class="head rv">
-        <div class="label" data-fr="La production" data-en="Production">La production</div>
-        <h2 data-fr="Une campagne, trois terrains." data-en="One campaign, three grounds.">Une campagne, trois terrains.</h2>
-        <p data-fr="Chaque projet est cadré sur mesure après un premier échange." data-en="Every project is scoped individually after a first conversation.">Chaque projet est cadré sur mesure après un premier échange.</p>
-      </div>
-      <div class="offer rv d1">
-        <div class="offer-card">
-          <div class="offer-vis"></div>
-          <div class="offer-b">
-            <h3 data-fr="Image de marque" data-en="Brand image">Image de marque</h3>
-            <p data-fr="Le visage de votre entreprise : dirigeant, équipe, lieux, savoir-faire." data-en="The face of your company: founder, team, spaces, craft.">Le visage de votre entreprise : dirigeant, équipe, lieux, savoir-faire.</p>
-            <ul>
-              <li data-fr="Portraits dirigeants" data-en="Leadership portraits">Portraits dirigeants</li>
-              <li data-fr="Reportage d'entreprise" data-en="Company reportage">Reportage d'entreprise</li>
-              <li data-fr="Film de présentation" data-en="Company film">Film de présentation</li>
-            </ul>
-          </div>
-        </div>
-        <div class="offer-card">
-          <div class="offer-vis"></div>
-          <div class="offer-b">
-            <h3 data-fr="Produit &amp; publicité" data-en="Product &amp; advertising">Produit &amp; publicité</h3>
-            <p data-fr="Ce que vous vendez, mis en scène pour donner envie." data-en="What you sell, staged to create desire.">Ce que vous vendez, mis en scène pour donner envie.</p>
-            <ul>
-              <li data-fr="Shooting produit" data-en="Product shoot">Shooting produit</li>
-              <li data-fr="Film publicitaire" data-en="Advertising film">Film publicitaire</li>
-              <li data-fr="Formats courts sociaux" data-en="Short social formats">Formats courts sociaux</li>
-            </ul>
-          </div>
-        </div>
-        <div class="offer-card">
-          <div class="offer-vis"></div>
-          <div class="offer-b">
-            <h3 data-fr="Événement" data-en="Event">Événement</h3>
-            <p data-fr="Vos temps forts capturés, montés et livrés rapidement." data-en="Your key moments captured, edited and delivered fast.">Vos temps forts capturés, montés et livrés rapidement.</p>
-            <ul>
-              <li data-fr="Aftermovie" data-en="Aftermovie">Aftermovie</li>
-              <li data-fr="Couverture photo" data-en="Photo coverage">Couverture photo</li>
-              <li data-fr="Extraits réseaux" data-en="Social cutdowns">Extraits réseaux</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <div class="label rv" data-fr="Pour qui" data-en="Who I work with">Pour qui</div>
+      <h2 class="rv d1" style="margin-top:14px;margin-bottom:30px;max-width:640px;" data-fr="Des gens dont la vie mérite d'être filmée." data-en="People whose life deserves to be filmed.">Des gens dont la vie mérite d'être filmée.</h2>
+      <ul class="who rv d2">
+        <li data-fr="Artistes &amp; musiciens" data-en="Artists &amp; musicians">Artistes &amp; musiciens</li>
+        <li data-fr="Sportifs &amp; footballeurs" data-en="Athletes &amp; footballers">Sportifs &amp; footballeurs</li>
+        <li data-fr="Entrepreneurs" data-en="Entrepreneurs">Entrepreneurs</li>
+        <li data-fr="Personnalités publiques" data-en="Public figures">Personnalités publiques</li>
+        <li data-fr="Créateurs de contenu" data-en="Content creators">Créateurs de contenu</li>
+        <li data-fr="Marques" data-en="Brands">Marques</li>
+      </ul>
     </div>
   </section>
 
-  <!-- REALISATIONS -->
+  <!-- IMAGES -->
   <section id="work">
     <div class="wrap">
       <div class="head rv">
-        <div class="label" data-fr="Portfolio" data-en="Portfolio">Portfolio</div>
-        <h2 data-fr="Réalisations sélectionnées" data-en="Selected work">Réalisations sélectionnées</h2>
+        <div class="label" data-fr="Le travail" data-en="The work">Le travail</div>
+        <h2 data-fr="Des moments, pas des poses." data-en="Moments, not poses.">Des moments, pas des poses.</h2>
       </div>
-      <div class="pf rv d1">
-        <div class="p-item wide">
-          <div class="p-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          <div class="p-ov"><div class="p-meta"><span class="p-cat" data-fr="Publicité" data-en="Advertising">Publicité</span><span class="p-title" data-fr="Lancement produit" data-en="Product launch">Lancement produit</span></div></div>
-        </div>
-        <div class="p-item">
-          <div class="p-ov"><div class="p-meta"><span class="p-cat" data-fr="Image de marque" data-en="Brand image">Image de marque</span><span class="p-title" data-fr="Portraits fondateur" data-en="Founder portraits">Portraits fondateur</span></div></div>
-        </div>
-        <div class="p-item">
-          <div class="p-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          <div class="p-ov"><div class="p-meta"><span class="p-cat" data-fr="Événement" data-en="Event">Événement</span><span class="p-title" data-fr="Aftermovie" data-en="Aftermovie">Aftermovie</span></div></div>
-        </div>
-        <div class="p-item">
-          <div class="p-ov"><div class="p-meta"><span class="p-cat" data-fr="Produit" data-en="Product">Produit</span><span class="p-title" data-fr="Série éditoriale" data-en="Editorial series">Série éditoriale</span></div></div>
-        </div>
-        <div class="p-item wide">
-          <div class="p-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          <div class="p-ov"><div class="p-meta"><span class="p-cat" data-fr="Format court" data-en="Short form">Format court</span><span class="p-title" data-fr="Campagne sociale" data-en="Social campaign">Campagne sociale</span></div></div>
-        </div>
-        <div class="p-item">
-          <div class="p-ov"><div class="p-meta"><span class="p-cat" data-fr="Entreprise" data-en="Corporate">Entreprise</span><span class="p-title" data-fr="Reportage annuel" data-en="Annual reportage">Reportage annuel</span></div></div>
-        </div>
-      </div>
-      <p class="pf-note rv" data-fr="Book complet envoyé sur demande." data-en="Full book sent on request.">Book complet envoyé sur demande.</p>
+      <div class="pf rv d1" id="pfGrid"></div>
+      <p class="pf-note rv" data-fr="Book complet et références envoyés sur demande." data-en="Full book and references sent on request.">Book complet et références envoyés sur demande.</p>
     </div>
   </section>
 
-  <!-- LE STUDIO / FONDATEUR -->
-  <section id="studio">
+  <!-- POURQUOI MOI -->
+  <section style="background:var(--bg-tint);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="head rv">
+        <div class="label" data-fr="Travailler avec moi" data-en="Working with me">Travailler avec moi</div>
+        <h2 data-fr="Discret, flexible, déjà prêt." data-en="Discreet, flexible, already packed.">Discret, flexible, déjà prêt.</h2>
+      </div>
+      <div class="trust rv d1">
+        <div class="trust-i">
+          <div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
+          <h3 data-fr="Discrétion absolue" data-en="Absolute discretion">Discrétion absolue</h3>
+          <p data-fr="Je travaille sous secret professionnel. Ce que je vois reste entre nous, rien ne sort sans votre accord." data-en="I work under professional confidentiality. What I see stays between us, nothing is published without your approval.">Je travaille sous secret professionnel. Ce que je vois reste entre nous, rien ne sort sans votre accord.</p>
+        </div>
+        <div class="trust-i">
+          <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+          <h3 data-fr="Départ en last minute" data-en="Last-minute departures">Départ en last minute</h3>
+          <p data-fr="Un vol dans 48 h ? Je m'organise. Passeport à jour, matériel prêt, je m'adapte à votre agenda." data-en="A flight in 48 hours? I make it work. Passport ready, gear packed, I fit your schedule.">Un vol dans 48 h ? Je m'organise. Passeport à jour, matériel prêt, je m'adapte à votre agenda.</p>
+        </div>
+        <div class="trust-i">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="2.5"/></svg></div>
+          <h3 data-fr="Je me fais oublier" data-en="I stay invisible">Je me fais oublier</h3>
+          <p data-fr="Pas de mise en scène, pas de direction permanente. Vous vivez votre journée, je disparais dans le décor." data-en="No staging, no constant directing. You live your day, I disappear into the background.">Pas de mise en scène, pas de direction permanente. Vous vivez votre journée, je disparais dans le décor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TERRY -->
+  <section id="terry">
     <div class="wrap founder">
       <div class="founder-vis rv">
-        <!-- Déposer le fichier terry.jpg à la racine du dépôt. Le cadrage coupe le ciel automatiquement. -->
-        <img class="founder-img" src="terry.jpg" alt="Terry, fondateur de Vision'Air Creative Studio"
+        <!-- Déposer terry.jpg à la racine du dépôt -->
+        <img class="founder-img" src="terry.jpg" alt="Terry, photographe et vidéaste lifestyle"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
         <div class="founder-ph" style="display:none"><span class="label">terry.jpg</span></div>
       </div>
-
       <div class="founder-txt rv d1">
-        <div class="label" data-fr="Le fondateur" data-en="The founder">Le fondateur</div>
+        <div class="label" data-fr="Derrière l'objectif" data-en="Behind the lens">Derrière l'objectif</div>
         <h2>Terry</h2>
-        <div class="founder-role label" data-fr="Creative Director &amp; Head of Content" data-en="Creative Director &amp; Head of Content">Creative Director &amp; Head of Content</div>
+        <div class="founder-role label">Photographe &amp; vidéaste lifestyle</div>
 
-        <p class="founder-hook" data-fr="Passionné par l'image, le storytelling et la création de contenu, Terry accompagne les entrepreneurs, marques et entreprises dans la construction d'une identité visuelle forte." data-en="Driven by image, storytelling and content creation, Terry helps entrepreneurs, brands and companies build a strong visual identity.">Passionné par l'image, le storytelling et la création de contenu, Terry accompagne les entrepreneurs, marques et entreprises dans la construction d'une identité visuelle forte.</p>
+        <p class="founder-hook" data-fr="Dix ans que je photographie et que je filme la vie des autres. Des artistes, des sportifs, des gens qui bougent — et une valise toujours prête." data-en="Ten years photographing and filming other people's lives. Artists, athletes, people on the move — and a bag always packed.">Dix ans que je photographie et que je filme la vie des autres. Des artistes, des sportifs, des gens qui bougent — et une valise toujours prête.</p>
 
         <div class="more" id="founderMore">
           <div class="more-inner">
-            <p data-fr="Avec plus de 10 ans d'expérience dans la production vidéo et la photographie, il développe des univers visuels qui ne se limitent pas à créer de belles images : chaque projet est pensé pour transmettre une émotion, raconter une histoire et renforcer l'impact d'une marque." data-en="With over 10 years of experience in video production and photography, he builds visual worlds that go beyond beautiful images: every project is designed to carry an emotion, tell a story and strengthen a brand's impact.">Avec plus de 10 ans d'expérience dans la production vidéo et la photographie, il développe des univers visuels qui ne se limitent pas à créer de belles images : chaque projet est pensé pour transmettre une émotion, raconter une histoire et renforcer l'impact d'une marque.</p>
-            <p data-fr="De la direction artistique à la production, en passant par le tournage et la post-production, Terry combine créativité, stratégie et maîtrise technique pour créer des contenus premium adaptés aux exigences des marques modernes." data-en="From art direction to production, shooting and post-production, Terry combines creativity, strategy and technical mastery to deliver premium content that meets the standards of modern brands.">De la direction artistique à la production, en passant par le tournage et la post-production, Terry combine créativité, stratégie et maîtrise technique pour créer des contenus premium adaptés aux exigences des marques modernes.</p>
-            <p data-fr="Son approche repose sur une conviction simple : dans un monde où l'attention est devenue la ressource la plus précieuse, une image forte peut changer la perception d'une entreprise, d'un entrepreneur ou d'un projet." data-en="His approach rests on one conviction: in a world where attention has become the scarcest resource, a strong image can change how a company, an entrepreneur or a project is perceived.">Son approche repose sur une conviction simple : dans un monde où l'attention est devenue la ressource la plus précieuse, une image forte peut changer la perception d'une entreprise, d'un entrepreneur ou d'un projet.</p>
-            <p data-fr="Aujourd'hui, à travers Vision'Air Creative Studio, il collabore avec des profils ambitieux et des entreprises qui souhaitent élever leur présence visuelle et créer du contenu qui marque les esprits." data-en="Today, through Vision'Air Creative Studio, he works with ambitious profiles and companies looking to elevate their visual presence and create content that stays with people.">Aujourd'hui, à travers Vision'Air Creative Studio, il collabore avec des profils ambitieux et des entreprises qui souhaitent élever leur présence visuelle et créer du contenu qui marque les esprits.</p>
+            <p data-fr="J'ai travaillé avec des artistes et des célébrités, en tournée comme en privé. J'ai shooté entre la France, l'Espagne, les Émirats, l'Asie, l'Indonésie, l'Afrique et les États-Unis. Chaque fois le même principe : je m'intègre, j'observe, je capture." data-en="I've worked with artists and celebrities, on tour and in private. I've shot across France, Spain, the Emirates, Asia, Indonesia, Africa and the United States. Always the same principle: I blend in, I observe, I capture.">J'ai travaillé avec des artistes et des célébrités, en tournée comme en privé. J'ai shooté entre la France, l'Espagne, les Émirats, l'Asie, l'Indonésie, l'Afrique et les États-Unis. Chaque fois le même principe : je m'intègre, j'observe, je capture.</p>
+            <p data-fr="Ce que je fais de mieux, c'est suivre quelqu'un sur la durée. Pas une séance d'une heure : des jours, des semaines, un voyage entier. C'est là que les vraies images arrivent — celles que personne ne peut mettre en scène." data-en="What I do best is following someone over time. Not a one-hour session: days, weeks, an entire trip. That's when the real images happen — the ones nobody can stage.">Ce que je fais de mieux, c'est suivre quelqu'un sur la durée. Pas une séance d'une heure : des jours, des semaines, un voyage entier. C'est là que les vraies images arrivent — celles que personne ne peut mettre en scène.</p>
+            <p data-fr="La confiance passe avant tout le reste. Je partage le quotidien de gens exposés, je connais la valeur du silence, et je sais rester à ma place. C'est pour ça qu'on me rappelle." data-en="Trust comes before everything else. I share the daily life of exposed people, I know the value of silence, and I know how to stay in my place. That's why people call me back.">La confiance passe avant tout le reste. Je partage le quotidien de gens exposés, je connais la valeur du silence, et je sais rester à ma place. C'est pour ça qu'on me rappelle.</p>
           </div>
         </div>
         <button class="more-btn" id="founderBtn" aria-expanded="false" aria-controls="founderMore">
@@ -693,66 +596,45 @@
         </button>
 
         <ul class="chips">
-          <li data-fr="10+ ans d'expérience" data-en="10+ years of experience">10+ ans d'expérience</li>
-          <li data-fr="Direction artistique" data-en="Art direction">Direction artistique</li>
-          <li data-fr="Production &amp; post-production" data-en="Production &amp; post-production">Production &amp; post-production</li>
+          <li data-fr="10+ ans" data-en="10+ years">10+ ans</li>
+          <li data-fr="4 continents" data-en="4 continents">4 continents</li>
+          <li data-fr="Artistes &amp; célébrités" data-en="Artists &amp; celebrities">Artistes &amp; célébrités</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- METHODE -->
-  <section id="process" style="background:var(--bg-tint);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <!-- COMMENT CA MARCHE -->
+  <section id="how" style="background:var(--bg-tint);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
     <div class="wrap">
       <div class="head rv">
-        <div class="label" data-fr="La méthode" data-en="The method">La méthode</div>
-        <h2 data-fr="Court, cadré, livré." data-en="Short, scoped, delivered.">Court, cadré, livré.</h2>
+        <div class="label" data-fr="Comment ça marche" data-en="How it works">Comment ça marche</div>
+        <h2 data-fr="Trois messages et c'est réglé." data-en="Three messages and it's done.">Trois messages et c'est réglé.</h2>
       </div>
       <div class="steps rv d1">
         <div class="step">
           <div class="step-n">01</div>
-          <h3 data-fr="Brief" data-en="Brief">Brief</h3>
-          <p data-fr="Un échange pour cerner l'objectif, la cible et le ton." data-en="One conversation to pin down the goal, audience and tone.">Un échange pour cerner l'objectif, la cible et le ton.</p>
+          <h3 data-fr="Vous m'écrivez" data-en="You message me">Vous m'écrivez</h3>
+          <p data-fr="Où, quand, combien de jours. On cale ça sur WhatsApp en quelques minutes." data-en="Where, when, how many days. We settle it on WhatsApp in minutes.">Où, quand, combien de jours. On cale ça sur WhatsApp en quelques minutes.</p>
         </div>
         <div class="step">
           <div class="step-n">02</div>
-          <h3 data-fr="Direction" data-en="Direction">Direction</h3>
-          <p data-fr="Concept, références visuelles et plan de tournage validés avant de bouger." data-en="Concept, visual references and shoot plan signed off before anything moves.">Concept, références visuelles et plan de tournage validés avant de bouger.</p>
+          <h3 data-fr="Je vous rejoins" data-en="I join you">Je vous rejoins</h3>
+          <p data-fr="Je gère mon vol, mon matériel, mon hébergement si besoin. Vous n'organisez rien." data-en="I handle my flight, my gear, my accommodation if needed. You organise nothing.">Je gère mon vol, mon matériel, mon hébergement si besoin. Vous n'organisez rien.</p>
         </div>
         <div class="step">
           <div class="step-n">03</div>
-          <h3 data-fr="Tournage" data-en="Shoot">Tournage</h3>
-          <p data-fr="Équipe et matériel professionnels sur place. Vous n'organisez rien." data-en="Professional crew and gear on location. You organise nothing.">Équipe et matériel professionnels sur place. Vous n'organisez rien.</p>
-        </div>
-        <div class="step">
-          <div class="step-n">04</div>
-          <h3 data-fr="Livraison" data-en="Delivery">Livraison</h3>
-          <p data-fr="Fichiers montés, étalonnés, déclinés par format. Prêts à publier." data-en="Edited, graded files, cut per format. Ready to publish.">Fichiers montés, étalonnés, déclinés par format. Prêts à publier.</p>
+          <h3 data-fr="Vous recevez" data-en="You receive">Vous recevez</h3>
+          <p data-fr="Photos retouchées et vidéos montées, découpées par format, prêtes à publier." data-en="Retouched photos and edited videos, cut per format, ready to post.">Photos retouchées et vidéos montées, découpées par format, prêtes à publier.</p>
         </div>
       </div>
-      <div class="note rv d2" data-fr="Pas d'abonnement, pas de gestion mensuelle. <b>On intervient, on produit, on livre.</b> Vous gardez la main sur votre communication." data-en="No retainer, no monthly management. <b>We step in, we produce, we deliver.</b> You keep control of your communication.">Pas d'abonnement, pas de gestion mensuelle. <b>On intervient, on produit, on livre.</b> Vous gardez la main sur votre communication.</div>
-    </div>
-  </section>
 
-  <!-- PARTENAIRE -->
-  <section id="partner">
-    <div class="wrap">
-      <div class="partner rv">
-        <div class="partner-in">
-          <div class="label" data-fr="Programme partenaire" data-en="Partner program">Programme partenaire</div>
-          <h2 data-fr="Recommandez-nous, touchez 15 %." data-en="Refer us, earn 15%.">Recommandez-nous, touchez 15 %.</h2>
-          <p data-fr="Vous connaissez une entreprise qui a besoin de visuels sérieux ? Mettez-nous en relation." data-en="Know a company that needs serious visuals? Put us in touch.">Vous connaissez une entreprise qui a besoin de visuels sérieux ? Mettez-nous en relation.</p>
-          <div class="pct">
-            <b>15 %</b>
-            <span data-fr="de commission sur<br>chaque projet signé" data-en="commission on<br>every signed project">de commission sur<br>chaque projet signé</span>
-          </div>
-          <div>
-            <a class="btn btn-wa btn-lg js-wa" data-msg="partner">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23z"/></svg>
-              <span data-fr="Devenir partenaire" data-en="Become a partner">Devenir partenaire</span>
-            </a>
-          </div>
+      <div class="partner rv d2" style="margin-top:44px;">
+        <div>
+          <h3 data-fr="Vous connaissez quelqu'un ?" data-en="Know someone?">Vous connaissez quelqu'un ?</h3>
+          <p data-fr="Mettez-moi en relation avec un artiste, un sportif ou une marque : vous touchez <b>15 %</b> sur chaque projet signé." data-en="Introduce me to an artist, an athlete or a brand: you earn <b>15%</b> on every signed project.">Mettez-moi en relation avec un artiste, un sportif ou une marque : vous touchez <b>15 %</b> sur chaque projet signé.</p>
         </div>
+        <a class="btn btn-ghost js-wa" data-msg="partner" data-fr="En savoir plus" data-en="Learn more">En savoir plus</a>
       </div>
     </div>
   </section>
@@ -761,8 +643,8 @@
   <section id="contact">
     <div class="wrap contact">
       <div class="label rv" data-fr="On en parle" data-en="Let's talk">On en parle</div>
-      <h2 class="rv d1" data-fr="Votre prochaine campagne commence par un message." data-en="Your next campaign starts with a message.">Votre prochaine campagne commence par un message.</h2>
-      <p class="rv d2" data-fr="Dites-nous ce que vous voulez produire. On revient vers vous sous 24 heures avec un cadrage clair." data-en="Tell us what you want to produce. We come back within 24 hours with a clear scope.">Dites-nous ce que vous voulez produire. On revient vers vous sous 24 heures avec un cadrage clair.</p>
+      <h2 class="rv d1" data-fr="Dites-moi où et quand." data-en="Tell me where and when.">Dites-moi où et quand.</h2>
+      <p class="rv d2" data-fr="Un message, une réponse dans la journée. Si le projet me parle, je bloque les dates." data-en="One message, an answer the same day. If the project speaks to me, I block the dates.">Un message, une réponse dans la journée. Si le projet me parle, je bloque les dates.</p>
       <div class="rv d2">
         <a class="btn btn-wa btn-lg js-wa" data-msg="hero">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23z"/></svg>
@@ -791,31 +673,29 @@
             </g>
             <circle cx="77" cy="21" r="6.5" fill="#FF2D6E"/>
           </svg>
-          <span class="brand-txt">Vision'Air<small>Creative Studio</small></span>
+          <span class="brand-txt">Vision'Air</span>
         </div>
-        <p class="f-tag" data-fr="Production photo et vidéo pour marques et entrepreneurs." data-en="Photo and video production for brands and entrepreneurs.">Production photo et vidéo pour marques et entrepreneurs.</p>
+        <p class="f-tag" data-fr="Photographe et vidéaste lifestyle. Disponible partout dans le monde." data-en="Lifestyle photographer and filmmaker. Available anywhere in the world.">Photographe et vidéaste lifestyle. Disponible partout dans le monde.</p>
       </div>
       <div class="f-cols">
         <div class="f-col">
-          <h4 data-fr="Studio" data-en="Studio">Studio</h4>
-          <a href="#value" data-fr="Approche" data-en="Approach">Approche</a>
-          <a href="#offer" data-fr="Production" data-en="Production">Production</a>
-          <a href="#work" data-fr="Réalisations" data-en="Work">Réalisations</a>
-          <a href="#studio" data-fr="Studio" data-en="Studio">Studio</a>
-          <a href="#process" data-fr="Méthode" data-en="Method">Méthode</a>
+          <h4 data-fr="Navigation" data-en="Navigation">Navigation</h4>
+          <a href="#offer" data-fr="Ce que je fais" data-en="What I do">Ce que je fais</a>
+          <a href="#work" data-fr="Images" data-en="Images">Images</a>
+          <a href="#terry" data-fr="Terry" data-en="Terry">Terry</a>
+          <a href="#how" data-fr="Comment ça marche" data-en="How it works">Comment ça marche</a>
         </div>
         <div class="f-col">
           <h4 data-fr="Contact" data-en="Contact">Contact</h4>
           <a class="js-wa" data-msg="hero">WhatsApp</a>
           <a href="https://instagram.com/visionair.studio" target="_blank" rel="noopener">Instagram</a>
           <a href="mailto:hello@visionair.studio">Email</a>
-          <a href="#partner" data-fr="Partenaires" data-en="Partners">Partenaires</a>
         </div>
       </div>
     </div>
     <div class="f-bot">
-      <span>© <span id="year"></span> Vision'Air Creative Studio</span>
-      <span data-fr="Production photo &amp; vidéo — international" data-en="Photo &amp; video production — worldwide">Production photo &amp; vidéo — international</span>
+      <span>© <span id="year"></span> Vision'Air</span>
+      <span data-fr="Lifestyle · Voyage · Personal branding" data-en="Lifestyle · Travel · Personal branding">Lifestyle · Voyage · Personal branding</span>
     </div>
   </div>
 </footer>
@@ -831,18 +711,84 @@
    ============================================================ */
 const WA_NUMBER = '33612345678';
 
+/* ============================================================
+   PHOTOS — déposer les fichiers dans le dossier photos/
+   Nommés 01.jpg, 02.jpg … Ajuste PHOTO_COUNT si tu en mets plus.
+   ============================================================ */
+const PHOTO_COUNT = 12;   // carrousel du haut
+const GRID_COUNT  = 8;    // grille "Le travail"
+
 const WA_MSG = {
   fr:{
-    hero:"Bonjour Vision'Air, je souhaite parler d'un projet de production photo/vidéo.",
-    partner:"Bonjour Vision'Air, je souhaite rejoindre le programme partenaire."
+    hero:"Bonjour Terry, je souhaite parler d'un projet (lifestyle / voyage / contenu).",
+    partner:"Bonjour Terry, je souhaite en savoir plus sur le programme de recommandation."
   },
   en:{
-    hero:"Hello Vision'Air, I'd like to discuss a photo/video production project.",
-    partner:"Hello Vision'Air, I'd like to join the partner program."
+    hero:"Hi Terry, I'd like to discuss a project (lifestyle / travel / content).",
+    partner:"Hi Terry, I'd like to know more about the referral program."
   }
 };
 
 let lang = 'fr';
+
+/* Construction du carrousel : dupliqué deux fois pour une boucle sans couture */
+(function buildCarousel(){
+  const track = document.getElementById('phTrack');
+  const makeSet = () => {
+    const frag = document.createDocumentFragment();
+    for (let i = 1; i <= PHOTO_COUNT; i++){
+      const n = String(i).padStart(2,'0');
+      const d = document.createElement('div');
+      d.className = 'ph';
+      const img = document.createElement('img');
+      img.src = 'photos/' + n + '.jpg';
+      img.alt = '';
+      img.loading = 'lazy';
+      img.onerror = function(){ this.remove(); };   // pas de photo → dégradé seul
+      d.appendChild(img);
+      frag.appendChild(d);
+    }
+    return frag;
+  };
+  track.appendChild(makeSet());
+  track.appendChild(makeSet());
+})();
+
+/* Grille "Le travail" */
+(function buildGrid(){
+  const g = document.getElementById('pfGrid');
+  for (let i = 1; i <= GRID_COUNT; i++){
+    const n = String(i).padStart(2,'0');
+    const d = document.createElement('div');
+    d.className = 'pf-i';
+    const img = document.createElement('img');
+    img.src = 'photos/grid-' + n + '.jpg';
+    img.alt = '';
+    img.loading = 'lazy';
+    img.onerror = function(){ this.remove(); };
+    d.appendChild(img);
+    g.appendChild(d);
+  }
+})();
+
+/* Destinations */
+const DEST = {
+  fr:['France','Espagne','Émirats','Dubaï','Asie','Indonésie','Bali','Afrique','États-Unis','Ibiza','Maroc','Thaïlande'],
+  en:['France','Spain','Emirates','Dubai','Asia','Indonesia','Bali','Africa','United States','Ibiza','Morocco','Thailand']
+};
+function buildDest(){
+  const t = document.getElementById('destTrack');
+  t.innerHTML = '';
+  const list = DEST[lang];
+  for (let r = 0; r < 2; r++){
+    list.forEach(c => {
+      const s = document.createElement('span');
+      s.textContent = c;
+      t.appendChild(s);
+    });
+  }
+}
+buildDest();
 
 function refreshWaLinks(){
   document.querySelectorAll('.js-wa').forEach(el=>{
@@ -863,6 +809,7 @@ function setLang(l){
   document.querySelectorAll('.lang button').forEach(b=>{
     b.classList.toggle('active', b.dataset.lang === l);
   });
+  buildDest();
   refreshWaLinks();
 }
 document.querySelectorAll('.lang').forEach(sw=>{
@@ -875,10 +822,8 @@ refreshWaLinks();
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
-/* Intro */
 requestAnimationFrame(()=>document.body.classList.add('ready'));
 
-/* Header + bouton flottant */
 const hdr = document.getElementById('hdr');
 const waFloat = document.getElementById('waFloat');
 window.addEventListener('scroll', ()=>{
@@ -887,7 +832,6 @@ window.addEventListener('scroll', ()=>{
   waFloat.classList.toggle('show', y > window.innerHeight * .7);
 }, {passive:true});
 
-/* Menu mobile */
 const burger = document.getElementById('burger');
 const mmenu = document.getElementById('mmenu');
 burger.addEventListener('click', ()=>{
@@ -901,7 +845,7 @@ mmenu.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{
   document.body.style.overflow = '';
 }));
 
-/* Bio fondateur : dépliage */
+/* Bio : dépliage */
 const fBtn = document.getElementById('founderBtn');
 const fMore = document.getElementById('founderMore');
 fBtn.addEventListener('click', ()=>{
@@ -909,11 +853,9 @@ fBtn.addEventListener('click', ()=>{
   fBtn.classList.toggle('open', open);
   fBtn.setAttribute('aria-expanded', open);
   const s = fBtn.querySelector('span');
-  s.textContent = open
-    ? (lang === 'fr' ? 'Réduire' : 'Show less')
-    : (lang === 'fr' ? 'Lire la suite' : 'Read more');
   s.dataset.fr = open ? 'Réduire' : 'Lire la suite';
   s.dataset.en = open ? 'Show less' : 'Read more';
+  s.textContent = lang === 'fr' ? s.dataset.fr : s.dataset.en;
 });
 
 /* Révélations au scroll */
