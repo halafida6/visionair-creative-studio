@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Vision'Air — Photographe &amp; vidéaste lifestyle | Terry</title>
-<meta name="description" content="Photographe et vidéaste lifestyle. Je suis les artistes, sportifs et entrepreneurs dans leur quotidien et leurs voyages, partout dans le monde.">
+<title>Vision'Air — On ne pose pas. On vit. On filme.</title>
+<meta name="description" content="Vision'Air capture la vie des artistes, sportifs et entrepreneurs en mouvement — voyages, tournées, quotidien. Basé à Paris, disponible partout dans le monde.">
 <meta name="theme-color" content="#ffffff">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Vision'Air — Photographe &amp; vidéaste lifestyle">
-<meta property="og:description" content="Je suis les artistes, sportifs et entrepreneurs dans leur quotidien et leurs voyages, partout dans le monde.">
+<meta property="og:title" content="Vision'Air — On ne pose pas. On vit. On filme.">
+<meta property="og:description" content="On capture la vie des artistes, sportifs et entrepreneurs en mouvement. Voyages, tournées, quotidien.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Vision'Air — Photographe &amp; vidéaste lifestyle">
-<meta name="twitter:description" content="Je suis les artistes, sportifs et entrepreneurs dans leur quotidien et leurs voyages, partout dans le monde.">
+<meta name="twitter:title" content="Vision'Air — On ne pose pas. On vit. On filme.">
+<meta name="twitter:description" content="On capture la vie des artistes, sportifs et entrepreneurs en mouvement.">
 
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -92,30 +92,39 @@
   /* === NAV === */
   header{
     position:fixed;top:0;left:0;right:0;z-index:200;
-    background:rgba(255,255,255,.72);
-    backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);
-    border-bottom:1px solid transparent;transition:border-color .35s,background .35s;
+    background:transparent;border-bottom:1px solid transparent;
+    transition:border-color .35s,background .35s,backdrop-filter .35s;
   }
-  header.scrolled{border-bottom-color:var(--line);background:rgba(255,255,255,.9);}
+  header.scrolled{
+    background:rgba(255,255,255,.9);border-bottom-color:var(--line);
+    backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);
+  }
   .nav{display:flex;align-items:center;justify-content:space-between;padding:13px 0;gap:14px;}
   .brand{display:flex;align-items:center;gap:9px;}
-  .brand .mark{width:29px;flex-shrink:0;color:var(--ink);}
-  .brand-txt{font-size:16px;font-weight:600;letter-spacing:-.02em;}
+  .brand .mark{width:29px;flex-shrink:0;color:#fff;transition:color .35s;}
+  .brand-txt{font-size:16px;font-weight:600;letter-spacing:-.02em;color:#fff;transition:color .35s;}
+  header.scrolled .brand .mark,header.scrolled .brand-txt{color:var(--ink);}
 
   .nav-links{display:none;align-items:center;gap:26px;margin-left:auto;margin-right:18px;}
-  .nav-links a{font-size:14px;font-weight:450;color:var(--muted);transition:color .25s;}
-  .nav-links a:hover{color:var(--ink);}
+  .nav-links a{font-size:14px;font-weight:450;color:rgba(255,255,255,.82);transition:color .25s;}
+  .nav-links a:hover{color:#fff;}
+  header.scrolled .nav-links a{color:var(--muted);}
+  header.scrolled .nav-links a:hover{color:var(--ink);}
   @media(min-width:900px){.nav-links{display:flex;}}
 
   .lang{
-    display:flex;align-items:center;background:var(--bg-soft);border-radius:8px;padding:2px;
+    display:flex;align-items:center;background:rgba(255,255,255,.16);border-radius:8px;padding:2px;
     font-family:var(--mono);font-size:10.5px;font-weight:500;flex-shrink:0;
+    backdrop-filter:blur(8px);transition:background .35s;
   }
+  header.scrolled .lang{background:var(--bg-soft);}
   .lang button{
     background:none;border:0;padding:6px 9px;border-radius:6px;cursor:pointer;
-    color:var(--faint);transition:.25s;letter-spacing:.05em;
+    color:rgba(255,255,255,.7);transition:.25s;letter-spacing:.05em;
   }
+  header.scrolled .lang button{color:var(--faint);}
   .lang button.active{background:#fff;color:var(--ink);box-shadow:0 1px 2px rgba(11,11,15,.08);}
+  header.scrolled .lang button.active{color:var(--ink);}
 
   .btn{
     display:inline-flex;align-items:center;justify-content:center;gap:8px;
@@ -131,13 +140,21 @@
   .btn-wa:hover{background:#1FC15D;border-color:#1FC15D;transform:translateY(-1px);box-shadow:0 2px 4px rgba(18,140,126,.2),0 12px 26px -8px rgba(37,211,102,.6);}
   .btn-ghost{background:#fff;color:var(--ink);border-color:var(--line);box-shadow:0 1px 2px rgba(11,11,15,.04);}
   .btn-ghost:hover{border-color:#D6D6DE;transform:translateY(-1px);box-shadow:0 4px 14px -4px rgba(11,11,15,.12);}
+  /* Bouton secondaire posé sur la vidéo */
+  .btn-glass{
+    background:rgba(255,255,255,.13);color:#fff;border-color:rgba(255,255,255,.34);
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  }
+  .btn-glass:hover{background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.5);transform:translateY(-1px);}
   .btn-lg{padding:14px 24px;font-size:15px;border-radius:11px;}
   .btn-sm{padding:9px 15px;font-size:13.5px;border-radius:9px;}
   .nav-cta{display:none;}
   @media(min-width:900px){.nav-cta{display:inline-flex;}}
 
   .burger{display:flex;flex-direction:column;gap:4.5px;width:22px;cursor:pointer;background:none;border:0;padding:5px 0;}
-  .burger span{height:1.5px;background:var(--ink);border-radius:2px;transition:.3s var(--ease);}
+  .burger span{height:1.5px;background:#fff;border-radius:2px;transition:.3s var(--ease);}
+  header.scrolled .burger span{background:var(--ink);}
+  .burger.on span{background:var(--ink);}
   .burger.on span:first-child{transform:translateY(3px) rotate(45deg);}
   .burger.on span:last-child{transform:translateY(-3px) rotate(-45deg);}
   @media(min-width:900px){.burger{display:none;}}
@@ -150,112 +167,118 @@
   }
   .mmenu.open{opacity:1;pointer-events:auto;transform:none;}
   .mmenu a.ml{
-    font-size:26px;font-weight:600;letter-spacing:-.03em;padding:12px 0;
+    font-size:26px;font-weight:600;letter-spacing:-.03em;padding:12px 0;color:var(--ink);
     border-bottom:1px solid var(--line-2);
   }
   .mmenu .btn{margin-top:24px;}
-  .mmenu .lang{align-self:flex-start;margin-top:18px;}
+  .mmenu .lang{align-self:flex-start;margin-top:18px;background:var(--bg-soft);}
+  .mmenu .lang button{color:var(--faint);}
 
-  /* === HERO === */
-  .hero{position:relative;padding:126px 0 0;overflow:hidden;}
-  @media(min-width:768px){.hero{padding:158px 0 0;}}
-  .hero-bg{
-    position:absolute;top:-22%;left:50%;transform:translateX(-50%);
-    width:130%;height:680px;pointer-events:none;z-index:0;
-    background:
-      radial-gradient(46% 52% at 26% 34%, rgba(255,45,110,.13), transparent 68%),
-      radial-gradient(40% 46% at 76% 18%, rgba(255,160,90,.12), transparent 66%),
-      radial-gradient(50% 50% at 54% 68%, rgba(140,120,255,.08), transparent 70%);
-    filter:blur(28px);animation:float 22s ease-in-out infinite;
+  /* === 1. HERO VIDÉO === */
+  .hero{
+    position:relative;min-height:100svh;display:flex;align-items:flex-end;
+    padding:150px 0 60px;overflow:hidden;background:#0B0B0F;
   }
-  @keyframes float{0%,100%{transform:translateX(-50%) translateY(0) scale(1);}50%{transform:translateX(-50%) translateY(20px) scale(1.06);}}
-  .hero .wrap{position:relative;z-index:1;}
-  .hero-in{max-width:780px;}
-
+  @media(min-width:768px){.hero{padding:170px 0 78px;}}
+  .hero-bg{position:absolute;inset:0;z-index:0;
+    /* Repli si la vidéo et le poster sont absents */
+    background:linear-gradient(150deg,#1a1a22,#3a3540 45%,#241f2b);
+  }
+  .hero-bg video,.hero-bg img{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  }
+  .hero-overlay{
+    position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:
+      linear-gradient(180deg,rgba(11,11,15,.55) 0%,rgba(11,11,15,.18) 32%,rgba(11,11,15,.62) 72%,rgba(11,11,15,.86) 100%),
+      radial-gradient(70% 60% at 20% 80%,rgba(11,11,15,.5),transparent 70%);
+  }
+  .hero .wrap{position:relative;z-index:2;width:100%;}
+  .hero-in{max-width:800px;}
+  .hero h1{color:#fff;}
   .lm{display:block;overflow:hidden;padding-top:.1em;margin-top:-.1em;}
   .lmi{display:block;transform:translateY(105%);opacity:0;transition:transform 1s var(--ease),opacity 1s var(--ease);}
   .ready .lmi{transform:translateY(0);opacity:1;}
   .lm:nth-of-type(2) .lmi{transition-delay:.09s;}
 
-  .hero-sub{max-width:540px;margin-top:22px;opacity:0;transform:translateY(14px);
-    transition:opacity .8s var(--ease) .3s,transform .8s var(--ease) .3s;}
-  .ready .hero-sub{opacity:1;transform:none;}
+  .hero-sub{
+    max-width:600px;margin-top:22px;color:rgba(255,255,255,.8);
+    opacity:0;transform:translateY(14px);
+    transition:opacity .8s var(--ease) .3s,transform .8s var(--ease) .3s;
+  }
+  .ready .hero-sub{opacity:1;transform:translateY(0);}
   .hero-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:30px;opacity:0;transform:translateY(14px);
     transition:opacity .8s var(--ease) .4s,transform .8s var(--ease) .4s;}
-  .ready .hero-actions{opacity:1;transform:none;}
-  .hero-note{margin-top:16px;font-size:13.5px;color:var(--faint);opacity:0;transition:opacity .8s var(--ease) .52s;}
+  .ready .hero-actions{opacity:1;transform:translateY(0);}
+  .hero-note{margin-top:18px;font-size:13.5px;color:rgba(255,255,255,.6);opacity:0;transition:opacity .8s var(--ease) .52s;}
   .ready .hero-note{opacity:1;}
 
-  /* === CARROUSEL PHOTOS === */
-  .strip-photos{
-    margin-top:56px;overflow:hidden;position:relative;
-    opacity:0;transform:translateY(22px);
-    transition:opacity 1s var(--ease) .58s,transform 1s var(--ease) .58s;
-    -webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);
-    mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);
+  /* === 2. BANDEAU CONFIANCE === */
+  .trustbar{border-bottom:1px solid var(--line);background:var(--bg-tint);}
+  .trustbar-in{padding:22px 0;display:flex;align-items:center;gap:14px;}
+  .trustbar .label{
+    color:var(--muted);text-transform:none;letter-spacing:.02em;font-size:12.5px;line-height:1.6;
   }
-  .ready .strip-photos{opacity:1;transform:none;}
-  @media(min-width:768px){.strip-photos{margin-top:74px;}}
-  .ph-track{display:flex;gap:14px;width:max-content;animation:slide 60s linear infinite;}
-  .strip-photos:hover .ph-track{animation-play-state:paused;}
-  @keyframes slide{from{transform:translateX(0);}to{transform:translateX(calc(-50% - 7px));}}
-  .ph{
-    width:clamp(168px,22vw,248px);aspect-ratio:4/5;flex-shrink:0;
-    border-radius:16px;overflow:hidden;position:relative;
-    border:1px solid var(--line);background:linear-gradient(150deg,#EFEFF3,#DEDEE7);
-    box-shadow:0 1px 2px rgba(11,11,15,.04),0 14px 34px -20px rgba(11,11,15,.22);
+  .trustbar .dot{width:5px;height:5px;border-radius:50%;background:var(--pink);flex-shrink:0;}
+  /* Variante logos : décommenter .logos dans le HTML si des noms sont diffusables */
+  .logos{display:flex;flex-wrap:wrap;align-items:center;gap:16px 40px;padding:24px 0;}
+  .logos span{
+    font-size:17px;font-weight:600;letter-spacing:-.02em;color:#B4B4BE;
+    filter:grayscale(1);transition:color .3s;
   }
-  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
-  .ph:nth-child(3n+1){background:linear-gradient(150deg,#EDEEF4,#DCDDE8);}
-  .ph:nth-child(3n+2){background:linear-gradient(150deg,#F1EDF0,#E2DCE3);}
-  .ph:nth-child(4n){background:linear-gradient(150deg,#ECEFF1,#DADEE2);}
+  .logos span:hover{color:var(--ink-2);}
 
-  /* === MARQUEE DESTINATIONS === */
-  .dest{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:64px;background:var(--bg-tint);overflow:hidden;}
-  .dest-track{display:flex;width:max-content;animation:slide2 42s linear infinite;padding:17px 0;}
-  @keyframes slide2{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-  .dest-track span{
-    font-family:var(--mono);font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);
-    padding:0 22px;display:inline-flex;align-items:center;gap:22px;white-space:nowrap;
+  /* === 3. PITCH === */
+  .pitch{padding:76px 0;}
+  @media(min-width:768px){.pitch{padding:104px 0;}}
+  .pitch p{
+    font-size:clamp(22px,3.2vw,38px);font-weight:600;letter-spacing:-.035em;line-height:1.2;
+    color:var(--ink);max-width:900px;text-wrap:balance;
   }
-  .dest-track span::after{content:"";width:4px;height:4px;border-radius:50%;background:var(--pink);opacity:.6;}
+  .pitch .ac{color:var(--pink);}
 
   /* === SECTIONS === */
   section{padding:82px 0;}
-  @media(min-width:768px){section{padding:124px 0;}}
-  .head{max-width:640px;margin-bottom:48px;}
+  @media(min-width:768px){section{padding:120px 0;}}
+  .head{max-width:660px;margin-bottom:48px;}
   .head h2{margin-top:14px;}
-  .head p{margin-top:16px;font-size:16.5px;max-width:490px;}
+  .head p{margin-top:16px;font-size:16.5px;max-width:520px;}
 
   .rv{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease);}
   .rv.in{opacity:1;transform:none;}
   .rv.d1{transition-delay:.08s;}.rv.d2{transition-delay:.16s;}.rv.d3{transition-delay:.24s;}
 
-  /* === OFFRE === */
-  .grid3{display:grid;grid-template-columns:1fr;gap:16px;}
-  @media(min-width:860px){.grid3{grid-template-columns:repeat(3,1fr);}}
-  .card{
-    background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 26px;
+  /* === 4. LES DEUX FORMATS === */
+  .duo{display:grid;grid-template-columns:1fr;gap:16px;}
+  @media(min-width:820px){.duo{grid-template-columns:repeat(2,1fr);gap:20px;}}
+  .duo-card{
+    background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px 28px 34px;
+    position:relative;overflow:hidden;
     transition:border-color .35s var(--ease),box-shadow .35s var(--ease),transform .35s var(--ease);
   }
-  .card:hover{border-color:#DEDEE6;box-shadow:0 2px 4px rgba(11,11,15,.03),0 18px 40px -20px rgba(11,11,15,.18);transform:translateY(-3px);}
-  .card-n{font-family:var(--mono);font-size:11px;letter-spacing:.13em;color:var(--pink);}
-  .card h3{margin:16px 0 9px;}
-  .card p{font-size:14.8px;line-height:1.62;}
-  .card ul{margin-top:18px;padding-top:16px;border-top:1px solid var(--line-2);display:flex;flex-direction:column;gap:8px;}
-  .card li{font-size:14px;color:var(--muted);display:flex;align-items:center;gap:9px;}
-  .card li::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--pink);flex-shrink:0;opacity:.7;}
-
-  /* === POUR QUI === */
-  .who{display:flex;flex-wrap:wrap;gap:10px;}
-  .who li{
-    font-size:15px;font-weight:500;color:var(--ink-2);
-    background:#fff;border:1px solid var(--line);border-radius:100px;padding:11px 20px;
-    transition:border-color .3s,transform .3s var(--ease);
+  @media(min-width:820px){.duo-card{padding:40px 36px 42px;}}
+  .duo-card::after{
+    content:"";position:absolute;inset:0;opacity:0;pointer-events:none;transition:opacity .45s var(--ease);
+    background:radial-gradient(80% 60% at 50% 0%,rgba(255,45,110,.09),transparent 70%);
   }
-  .who li:hover{border-color:var(--pink);transform:translateY(-2px);}
+  .duo-card:hover{border-color:#DEDEE6;box-shadow:0 2px 4px rgba(11,11,15,.03),0 22px 50px -24px rgba(11,11,15,.2);transform:translateY(-3px);}
+  .duo-card:hover::after{opacity:1;}
+  .duo-tag{
+    display:inline-flex;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--pink);background:var(--pink-soft);border:1px solid rgba(255,45,110,.16);
+    padding:6px 11px;border-radius:7px;margin-bottom:22px;
+  }
+  .duo-card h3{font-size:clamp(21px,2.6vw,27px);letter-spacing:-.03em;margin-bottom:14px;}
+  .duo-card p{font-size:16px;line-height:1.62;}
+  .duo-card .promise{
+    margin-top:22px;padding-top:20px;border-top:1px solid var(--line-2);
+    font-size:15px;color:var(--ink-2);font-weight:500;
+  }
+  .duo-close{
+    margin-top:26px;font-size:15.5px;color:var(--muted);max-width:640px;
+  }
 
-  /* === TRUST === */
+  /* === 5. TRUST === */
   .trust{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;}
   @media(min-width:860px){.trust{grid-template-columns:repeat(3,1fr);}}
   .trust-i{background:#fff;padding:30px 26px;}
@@ -267,30 +290,29 @@
   .trust-i h3{margin-bottom:8px;}
   .trust-i p{font-size:14.5px;}
 
-  /* === PORTFOLIO === */
-  .pf{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
-  @media(min-width:768px){.pf{grid-template-columns:repeat(3,1fr);gap:14px;}}
-  @media(min-width:1024px){.pf{grid-template-columns:repeat(4,1fr);}}
-  .pf-i{
+  /* === 6. COLLAB === */
+  .collab-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+  @media(min-width:768px){.collab-grid{grid-template-columns:repeat(3,1fr);}}
+  .collab-item{
     position:relative;aspect-ratio:4/5;border-radius:14px;overflow:hidden;
     border:1px solid var(--line);background:linear-gradient(150deg,#EEEEF2,#DFDFE7);
-    transition:box-shadow .4s var(--ease),transform .4s var(--ease);
+    transition:box-shadow .4s var(--ease);
   }
-  .pf-i:hover{box-shadow:0 20px 46px -22px rgba(11,11,15,.3);transform:translateY(-3px);}
-  .pf-i img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease);}
-  .pf-i:hover img{transform:scale(1.05);}
-  .pf-note{margin-top:26px;font-size:14px;color:var(--faint);}
+  .collab-item:hover{box-shadow:0 20px 46px -22px rgba(11,11,15,.32);}
+  .collab-item img{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    transition:transform .7s var(--ease);
+  }
+  .collab-item:hover img{transform:scale(1.04);}
+  .collab-cap{
+    position:absolute;left:0;right:0;bottom:0;padding:16px 14px 13px;
+    background:linear-gradient(0deg,rgba(11,11,15,.78),transparent);
+    font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#fff;
+    opacity:0;transform:translateY(6px);transition:opacity .4s var(--ease),transform .4s var(--ease);
+  }
+  .collab-item:hover .collab-cap{opacity:1;transform:none;}
 
-  /* === METHODE === */
-  .steps{display:grid;grid-template-columns:1fr;border-top:1px solid var(--line);}
-  @media(min-width:860px){.steps{grid-template-columns:repeat(3,1fr);border-top:none;}}
-  .step{padding:26px 0;border-bottom:1px solid var(--line);}
-  @media(min-width:860px){.step{border-top:1px solid var(--line);border-bottom:none;padding:26px 26px 8px 0;}}
-  .step-n{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--pink);}
-  .step h3{margin:14px 0 8px;}
-  .step p{font-size:14.5px;}
-
-  /* === TERRY === */
+  /* === 7. TERRY === */
   .founder{display:grid;grid-template-columns:1fr;gap:34px;align-items:center;}
   @media(min-width:860px){.founder{grid-template-columns:.85fr 1fr;gap:60px;}}
   .founder-vis{position:relative;}
@@ -299,7 +321,7 @@
     border:1px solid var(--line);
     box-shadow:0 2px 4px rgba(11,11,15,.03),0 26px 60px -30px rgba(11,11,15,.35);
   }
-  /* Recadrage : photo très haute, on descend le cadrage pour couper le ciel */
+  /* Photo en action : cadrage bas pour couper le ciel */
   .founder-img{object-position:50% 80%;}
   .founder-ph{background:linear-gradient(150deg,#EEEEF2,#DFDFE7);display:flex;align-items:center;justify-content:center;}
   .founder-txt h2{margin-top:14px;}
@@ -331,25 +353,78 @@
     padding:7px 12px;border-radius:8px;
   }
 
-  /* === PARTENAIRE === */
-  .partner{
-    border:1px solid var(--line);border-radius:20px;padding:34px 26px;
-    background:var(--bg-soft);display:flex;flex-direction:column;gap:18px;
+  /* === 8. BOOK === */
+  .counter{
+    font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--faint);margin-bottom:20px;
   }
-  @media(min-width:768px){.partner{flex-direction:row;align-items:center;justify-content:space-between;padding:38px 44px;gap:36px;}}
-  .partner h3{font-size:22px;margin-bottom:8px;}
-  .partner p{font-size:15px;max-width:520px;}
-  .partner b{color:var(--pink);font-weight:600;}
+  .counter b{color:var(--ink-2);font-weight:500;}
+  .pf{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+  @media(min-width:768px){.pf{grid-template-columns:repeat(3,1fr);gap:14px;}}
+  @media(min-width:1024px){.pf{grid-template-columns:repeat(4,1fr);}}
+  .pf-i{
+    position:relative;aspect-ratio:4/5;border-radius:14px;overflow:hidden;
+    border:1px solid var(--line);background:linear-gradient(150deg,#EEEEF2,#DFDFE7);
+    transition:box-shadow .4s var(--ease),transform .4s var(--ease);
+  }
+  .pf-i:hover{box-shadow:0 20px 46px -22px rgba(11,11,15,.3);transform:translateY(-3px);}
+  .pf-i img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease);}
+  .pf-i:hover img{transform:scale(1.05);}
+  .pf-note{margin-top:26px;font-size:14px;color:var(--faint);}
 
-  /* === CONTACT === */
-  .contact{text-align:center;max-width:660px;margin:0 auto;}
+  /* === 10. PROCESS === */
+  .steps{display:grid;grid-template-columns:1fr;border-top:1px solid var(--line);}
+  @media(min-width:860px){.steps{grid-template-columns:repeat(3,1fr);border-top:none;}}
+  .step{padding:26px 0;border-bottom:1px solid var(--line);}
+  @media(min-width:860px){.step{border-top:1px solid var(--line);border-bottom:none;padding:26px 26px 8px 0;}}
+  .step-n{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--pink);}
+  .step h3{margin:14px 0 8px;}
+  .step p{font-size:14.5px;}
+
+  /* === 11. FAQ === */
+  .faq{max-width:800px;border-top:1px solid var(--line);}
+  .faq-i{border-bottom:1px solid var(--line);}
+  .faq-q{
+    width:100%;background:none;border:0;cursor:pointer;text-align:left;
+    display:flex;align-items:flex-start;justify-content:space-between;gap:20px;
+    padding:22px 0;font-size:17px;font-weight:550;letter-spacing:-.02em;color:var(--ink);
+  }
+  .faq-q svg{
+    width:17px;height:17px;flex-shrink:0;margin-top:4px;fill:none;stroke:var(--pink);
+    stroke-width:2.1;stroke-linecap:round;transition:transform .4s var(--ease);
+  }
+  .faq-i.open .faq-q svg{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .5s var(--ease);}
+  .faq-i.open .faq-a{max-height:320px;}
+  .faq-a p{padding-bottom:24px;font-size:15.5px;max-width:640px;}
+
+  /* === 12. CONTACT === */
+  .contact{text-align:center;max-width:680px;margin:0 auto;}
   .contact h2{margin-top:14px;}
   .contact p{margin-top:18px;font-size:17px;}
   .contact .btn{margin-top:30px;}
+  .slots{
+    display:inline-flex;align-items:center;gap:9px;margin-top:24px;
+    padding:9px 16px;border-radius:100px;background:var(--pink-soft);
+    border:1px solid rgba(255,45,110,.18);
+    font-size:13.5px;font-weight:500;color:var(--ink-2);
+  }
+  .slots i{width:6px;height:6px;border-radius:50%;background:var(--pink);flex-shrink:0;animation:blink 2.2s ease-in-out infinite;}
+  @keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
   .clinks{margin-top:32px;display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:center;}
   .clinks a{font-size:14px;color:var(--muted);transition:color .25s;}
   .clinks a:hover{color:var(--ink);}
   .clinks a span{border-bottom:1px solid var(--line);padding-bottom:3px;}
+
+  /* === 13. AFFILIATION === */
+  .affil{
+    border:1px solid var(--line);border-radius:20px;padding:30px 26px;
+    background:var(--bg-soft);display:flex;flex-direction:column;gap:18px;
+  }
+  @media(min-width:768px){.affil{flex-direction:row;align-items:center;justify-content:space-between;padding:34px 40px;gap:36px;}}
+  .affil h3{font-size:21px;margin-bottom:8px;}
+  .affil p{font-size:15px;max-width:560px;}
+  .affil b{color:var(--pink);font-weight:600;}
 
   /* === FOOTER === */
   footer{border-top:1px solid var(--line);padding:44px 0 32px;background:var(--bg-tint);}
@@ -357,7 +432,8 @@
   @media(min-width:768px){.f-top{flex-direction:row;align-items:flex-start;}}
   .f-brand{display:flex;align-items:center;gap:9px;}
   .f-brand .mark{width:27px;color:var(--ink);}
-  .f-tag{margin-top:14px;font-size:14px;color:var(--muted);max-width:290px;}
+  .f-brand .brand-txt{color:var(--ink);}
+  .f-tag{margin-top:14px;font-size:14px;color:var(--muted);max-width:330px;}
   .f-cols{display:flex;gap:52px;flex-wrap:wrap;}
   .f-col h4{font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);margin-bottom:14px;}
   .f-col a{display:block;font-size:14px;color:var(--muted);margin-bottom:9px;transition:color .25s;}
@@ -379,8 +455,7 @@
 
   @media(prefers-reduced-motion:reduce){
     *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;}
-    .lmi,.hero-sub,.hero-actions,.hero-note,.strip-photos,.rv{opacity:1!important;transform:none!important;}
-    .ph-track,.dest-track{animation:none!important;}
+    .lmi,.hero-sub,.hero-actions,.hero-note,.rv{opacity:1!important;transform:none!important;}
   }
 </style>
 </head>
@@ -400,10 +475,10 @@
       <span class="brand-txt">Vision'Air</span>
     </a>
     <nav class="nav-links">
-      <a href="#offer" data-fr="Ce que je fais" data-en="What I do">Ce que je fais</a>
-      <a href="#work" data-fr="Images" data-en="Images">Images</a>
-      <a href="#terry" data-fr="Terry" data-en="Terry">Terry</a>
-      <a href="#how" data-fr="Comment ça marche" data-en="How it works">Comment ça marche</a>
+      <a href="#offer" data-fr="Formats" data-en="Formats">Formats</a>
+      <a href="#collab" data-fr="Collaborations" data-en="Collaborations">Collaborations</a>
+      <a href="#work" data-fr="Book" data-en="Book">Book</a>
+      <a href="#faq" data-fr="FAQ" data-en="FAQ">FAQ</a>
     </nav>
     <div class="lang">
       <button data-lang="fr" class="active">FR</button>
@@ -411,20 +486,21 @@
     </div>
     <a class="btn btn-wa btn-sm nav-cta js-wa" data-msg="hero">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23z"/></svg>
-      <span data-fr="Me contacter" data-en="Contact me">Me contacter</span>
+      <span data-fr="Nous écrire" data-en="Message us">Nous écrire</span>
     </a>
     <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
   </div>
 </header>
 
 <div class="mmenu" id="mmenu">
-  <a class="ml" href="#offer" data-fr="Ce que je fais" data-en="What I do">Ce que je fais</a>
-  <a class="ml" href="#work" data-fr="Images" data-en="Images">Images</a>
+  <a class="ml" href="#offer" data-fr="Formats" data-en="Formats">Formats</a>
+  <a class="ml" href="#collab" data-fr="Collaborations" data-en="Collaborations">Collaborations</a>
+  <a class="ml" href="#work" data-fr="Book" data-en="Book">Book</a>
   <a class="ml" href="#terry" data-fr="Terry" data-en="Terry">Terry</a>
-  <a class="ml" href="#how" data-fr="Comment ça marche" data-en="How it works">Comment ça marche</a>
+  <a class="ml" href="#faq" data-fr="FAQ" data-en="FAQ">FAQ</a>
   <a class="btn btn-wa btn-lg js-wa" data-msg="hero">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23z"/></svg>
-    <span data-fr="Me contacter" data-en="Contact me">Me contacter</span>
+    <span data-fr="Nous écrire" data-en="Message us">Nous écrire</span>
   </a>
   <div class="lang">
     <button data-lang="fr" class="active">FR</button>
@@ -434,160 +510,148 @@
 
 <main id="top">
 
-  <!-- HERO -->
+  <!-- ============ 1. HERO ============ -->
   <section class="hero">
-    <div class="hero-bg"></div>
+    <div class="hero-bg" id="heroBg">
+      <!-- Déposer videos/hero-reel.mp4 et photos/hero-fallback.jpg -->
+      <video id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="photos/hero-fallback.jpg">
+        <source src="videos/hero-reel.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-overlay"></div>
+
     <div class="wrap">
       <div class="hero-in">
         <h1>
-          <span class="lm"><span class="lmi" data-fr="Je vous suis" data-en="I follow you">Je vous suis</span></span>
-          <span class="lm"><span class="lmi" data-fr="<span class='ac'>partout</span> dans le monde." data-en="<span class='ac'>anywhere</span> in the world.">
-            <span class="ac">partout</span> dans le monde.</span></span>
+          <span class="lm"><span class="lmi" data-fr="On ne pose pas." data-en="We don't pose.">On ne pose pas.</span></span>
+          <span class="lm"><span class="lmi" data-fr="On vit. <span class='ac'>On filme.</span>" data-en="We live. <span class='ac'>We film.</span>">On vit. <span class="ac">On filme.</span></span></span>
         </h1>
 
-        <p class="lead hero-sub" data-fr="Photographe et vidéaste lifestyle. J'accompagne artistes, sportifs et personnalités dans leur quotidien, leurs voyages et leurs nuits. Vous vivez — je capture." data-en="Lifestyle photographer and filmmaker. I travel with artists, athletes and public figures through their daily life, their trips and their nights. You live — I capture.">Photographe et vidéaste lifestyle. J'accompagne artistes, sportifs et personnalités dans leur quotidien, leurs voyages et leurs nuits. Vous vivez — je capture.</p>
+        <p class="lead hero-sub" data-fr="Vision'Air capture la vie des artistes, sportifs et entrepreneurs en mouvement — voyages, tournées, quotidien. On ne met rien en scène. On suit, et on livre le vrai." data-en="Vision'Air captures the lives of artists, athletes and entrepreneurs in motion — travels, tours, everyday life. We stage nothing. We follow, and we deliver the real thing.">Vision'Air capture la vie des artistes, sportifs et entrepreneurs en mouvement — voyages, tournées, quotidien. On ne met rien en scène. On suit, et on livre le vrai.</p>
 
         <div class="hero-actions">
           <a class="btn btn-wa btn-lg js-wa" data-msg="hero">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23z"/></svg>
-            <span data-fr="Me contacter" data-en="Contact me">Me contacter</span>
+            <span data-fr="Écrire sur WhatsApp" data-en="Message on WhatsApp">Écrire sur WhatsApp</span>
           </a>
-          <a href="#work" class="btn btn-ghost btn-lg" data-fr="Voir mes images" data-en="See my images">Voir mes images</a>
+          <a href="#work" class="btn btn-glass btn-lg" data-fr="Voir le book" data-en="See the book">Voir le book</a>
         </div>
 
-        <p class="hero-note" data-fr="Disponible en last minute · Déplacements internationaux" data-en="Available last minute · Travelling worldwide">Disponible en last minute · Déplacements internationaux</p>
+        <p class="hero-note" data-fr="Basé à Paris. Disponible en last minute, partout dans le monde." data-en="Based in Paris. Available last minute, anywhere in the world.">Basé à Paris. Disponible en last minute, partout dans le monde.</p>
       </div>
-    </div>
-
-    <!-- Carrousel : déposer photos/01.jpg … photos/12.jpg -->
-    <div class="strip-photos">
-      <div class="ph-track" id="phTrack"></div>
-    </div>
-
-    <div class="dest">
-      <div class="dest-track" id="destTrack"></div>
     </div>
   </section>
 
-  <!-- CE QUE JE FAIS -->
+  <!-- ============ 2. BANDEAU CONFIANCE ============ -->
+  <div class="trustbar">
+    <div class="wrap trustbar-in">
+      <span class="dot"></span>
+      <span class="label" data-fr="On a suivi des artistes en tournée, des sportifs en préparation, des fondateurs en levée de fonds. Les noms restent entre nous." data-en="We've followed artists on tour, athletes in training, founders raising funds. The names stay between us.">On a suivi des artistes en tournée, des sportifs en préparation, des fondateurs en levée de fonds. Les noms restent entre nous.</span>
+    </div>
+    <!--
+      VARIANTE LOGOS — si des noms sont diffusables (hors NDA), remplacer le bloc ci-dessus par :
+      <div class="wrap logos">
+        <span>Nom 1</span><span>Nom 2</span><span>Nom 3</span><span>Nom 4</span><span>Nom 5</span>
+      </div>
+    -->
+  </div>
+
+  <!-- ============ 3. PITCH ============ -->
+  <div class="pitch">
+    <div class="wrap">
+      <p class="rv" data-fr="On monte dans l'avion avec vous. On redescend avec les images que <span class='ac'>personne d'autre n'aura</span>." data-en="We get on the plane with you. We come back with the images <span class='ac'>nobody else will have</span>.">On monte dans l'avion avec vous. On redescend avec les images que <span class="ac">personne d'autre n'aura</span>.</p>
+    </div>
+  </div>
+
+  <!-- ============ 4. LES DEUX FORMATS ============ -->
   <section id="offer">
     <div class="wrap">
       <div class="head rv">
         <div class="label" data-fr="L'offre" data-en="The offer">L'offre</div>
-        <h2 data-fr="Je vous suis, je shoote, je livre." data-en="I follow you, I shoot, I deliver.">Je vous suis, je shoote, je livre.</h2>
-        <p data-fr="Une seule spécialité : capturer des vies qui bougent." data-en="One specialty: capturing lives in motion.">Une seule spécialité : capturer des vies qui bougent.</p>
+        <h2 data-fr="Deux façons de travailler ensemble." data-en="Two ways to work together.">Deux façons de travailler ensemble.</h2>
+        <p data-fr="Simple, flexible, adapté à chaque projet." data-en="Simple, flexible, tailored to every project.">Simple, flexible, adapté à chaque projet.</p>
       </div>
-      <div class="grid3 rv d1">
-        <div class="card">
-          <div class="card-n">01</div>
-          <h3 data-fr="Voyage &amp; lifestyle" data-en="Travel &amp; lifestyle">Voyage &amp; lifestyle</h3>
-          <p data-fr="Je pars avec vous. Une semaine à Dubaï, un mois en Asie, un week-end à Ibiza — je vous accompagne et je capte tout." data-en="I travel with you. A week in Dubai, a month in Asia, a weekend in Ibiza — I come along and capture it all.">Je pars avec vous. Une semaine à Dubaï, un mois en Asie, un week-end à Ibiza — je vous accompagne et je capte tout.</p>
-          <ul>
-            <li data-fr="Voyages et déplacements" data-en="Trips and travel">Voyages et déplacements</li>
-            <li data-fr="Vie quotidienne et coulisses" data-en="Daily life and backstage">Vie quotidienne et coulisses</li>
-            <li data-fr="Soirées, clubs, événements" data-en="Nights, clubs, events">Soirées, clubs, événements</li>
-          </ul>
+
+      <div class="duo rv d1">
+        <div class="duo-card">
+          <span class="duo-tag" data-fr="Suivi complet" data-en="Full immersion">Suivi complet</span>
+          <h3 data-fr="On vous suit à temps plein" data-en="We follow you full time">On vous suit à temps plein</h3>
+          <p data-fr="Une tournée, un voyage, plusieurs semaines. On vit avec vous, on capture le quotidien, les coulisses, les moments de vie." data-en="A tour, a trip, several weeks. We live alongside you, capturing the everyday, the backstage, the moments that matter.">Une tournée, un voyage, plusieurs semaines. On vit avec vous, on capture le quotidien, les coulisses, les moments de vie.</p>
+          <div class="promise" data-fr="À la fin du voyage, vous ne repartez pas avec des photos. Vous repartez avec le film de ce que vous venez de vivre." data-en="At the end of the trip, you don't leave with photos. You leave with the film of what you just lived.">À la fin du voyage, vous ne repartez pas avec des photos. Vous repartez avec le film de ce que vous venez de vivre.</div>
         </div>
-        <div class="card">
-          <div class="card-n">02</div>
-          <h3 data-fr="Personal branding" data-en="Personal branding">Personal branding</h3>
-          <p data-fr="Du contenu qui construit votre image sur la durée. Pensé pour Instagram, pas pour un catalogue." data-en="Content that builds your image over time. Made for Instagram, not for a catalogue.">Du contenu qui construit votre image sur la durée. Pensé pour Instagram, pas pour un catalogue.</p>
-          <ul>
-            <li data-fr="Portraits et séries" data-en="Portraits and series">Portraits et séries</li>
-            <li data-fr="Reels et formats courts" data-en="Reels and short form">Reels et formats courts</li>
-            <li data-fr="Contenu régulier" data-en="Ongoing content">Contenu régulier</li>
-          </ul>
-        </div>
-        <div class="card">
-          <div class="card-n">03</div>
-          <h3 data-fr="Image de marque" data-en="Brand image">Image de marque</h3>
-          <p data-fr="La même énergie appliquée aux marques : campagnes, produits, événements. Sans la froideur du corporate." data-en="The same energy applied to brands: campaigns, products, events. Without the corporate coldness.">La même énergie appliquée aux marques : campagnes, produits, événements. Sans la froideur du corporate.</p>
-          <ul>
-            <li data-fr="Campagnes photo" data-en="Photo campaigns">Campagnes photo</li>
-            <li data-fr="Contenu produit" data-en="Product content">Contenu produit</li>
-            <li data-fr="Événements de marque" data-en="Brand events">Événements de marque</li>
-          </ul>
+
+        <div class="duo-card">
+          <span class="duo-tag" data-fr="Shooting photo / vidéo" data-en="Photo / video shoot">Shooting photo / vidéo</span>
+          <h3 data-fr="Un shooting photo ou vidéo lifestyle" data-en="A lifestyle photo or video shoot">Un shooting photo ou vidéo lifestyle</h3>
+          <p data-fr="Une journée, un événement, un besoin précis. On se déplace, on capture, on livre. Rapide, ciblé, sans complexité." data-en="A day, an event, a specific need. We travel out, we capture, we deliver. Fast, focused, no friction.">Une journée, un événement, un besoin précis. On se déplace, on capture, on livre. Rapide, ciblé, sans complexité.</p>
+          <div class="promise" data-fr="Une journée suffit pour changer la façon dont on vous regarde en ligne." data-en="One day is enough to change the way people look at you online.">Une journée suffit pour changer la façon dont on vous regarde en ligne.</div>
         </div>
       </div>
+
+      <p class="duo-close rv d2" data-fr="Durée, format, lieu : on s'adapte à la demande. Chaque projet est cadré ensemble avant de partir." data-en="Duration, format, location: we adapt to the request. Every project is scoped together before we leave.">Durée, format, lieu : on s'adapte à la demande. Chaque projet est cadré ensemble avant de partir.</p>
     </div>
   </section>
 
-  <!-- POUR QUI -->
-  <section style="background:var(--bg-tint);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-top:70px;padding-bottom:70px;">
-    <div class="wrap">
-      <div class="label rv" data-fr="Pour qui" data-en="Who I work with">Pour qui</div>
-      <h2 class="rv d1" style="margin-top:14px;margin-bottom:30px;max-width:640px;" data-fr="Des gens dont la vie mérite d'être filmée." data-en="People whose life deserves to be filmed.">Des gens dont la vie mérite d'être filmée.</h2>
-      <ul class="who rv d2">
-        <li data-fr="Artistes &amp; musiciens" data-en="Artists &amp; musicians">Artistes &amp; musiciens</li>
-        <li data-fr="Sportifs &amp; footballeurs" data-en="Athletes &amp; footballers">Sportifs &amp; footballeurs</li>
-        <li data-fr="Entrepreneurs" data-en="Entrepreneurs">Entrepreneurs</li>
-        <li data-fr="Personnalités publiques" data-en="Public figures">Personnalités publiques</li>
-        <li data-fr="Créateurs de contenu" data-en="Content creators">Créateurs de contenu</li>
-        <li data-fr="Marques" data-en="Brands">Marques</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- IMAGES -->
-  <section id="work">
+  <!-- ============ 5. POURQUOI ON NOUS RAPPELLE ============ -->
+  <section id="why" style="background:var(--bg-tint);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
     <div class="wrap">
       <div class="head rv">
-        <div class="label" data-fr="Le travail" data-en="The work">Le travail</div>
-        <h2 data-fr="Des moments, pas des poses." data-en="Moments, not poses.">Des moments, pas des poses.</h2>
-      </div>
-      <div class="pf rv d1" id="pfGrid"></div>
-      <p class="pf-note rv" data-fr="Book complet et références envoyés sur demande." data-en="Full book and references sent on request.">Book complet et références envoyés sur demande.</p>
-    </div>
-  </section>
-
-  <!-- POURQUOI MOI -->
-  <section style="background:var(--bg-tint);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
-    <div class="wrap">
-      <div class="head rv">
-        <div class="label" data-fr="Travailler avec moi" data-en="Working with me">Travailler avec moi</div>
+        <div class="label" data-fr="Pourquoi on nous rappelle" data-en="Why we get called back">Pourquoi on nous rappelle</div>
         <h2 data-fr="Discret, flexible, déjà prêt." data-en="Discreet, flexible, already packed.">Discret, flexible, déjà prêt.</h2>
       </div>
       <div class="trust rv d1">
         <div class="trust-i">
           <div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
-          <h3 data-fr="Discrétion absolue" data-en="Absolute discretion">Discrétion absolue</h3>
-          <p data-fr="Je travaille sous secret professionnel. Ce que je vois reste entre nous, rien ne sort sans votre accord." data-en="I work under professional confidentiality. What I see stays between us, nothing is published without your approval.">Je travaille sous secret professionnel. Ce que je vois reste entre nous, rien ne sort sans votre accord.</p>
+          <h3 data-fr="NDA signé avant le vol." data-en="NDA signed before the flight.">NDA signé avant le vol.</h3>
+          <p data-fr="Ce qu'on voit reste entre nous. Rien ne sort sans accord." data-en="What we see stays between us. Nothing goes out without approval.">Ce qu'on voit reste entre nous. Rien ne sort sans accord.</p>
         </div>
         <div class="trust-i">
           <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
-          <h3 data-fr="Départ en last minute" data-en="Last-minute departures">Départ en last minute</h3>
-          <p data-fr="Un vol dans 48 h ? Je m'organise. Passeport à jour, matériel prêt, je m'adapte à votre agenda." data-en="A flight in 48 hours? I make it work. Passport ready, gear packed, I fit your schedule.">Un vol dans 48 h ? Je m'organise. Passeport à jour, matériel prêt, je m'adapte à votre agenda.</p>
+          <h3 data-fr="Départ en 48 h." data-en="Wheels up in 48 h.">Départ en 48 h.</h3>
+          <p data-fr="Passeport à jour, matériel prêt. On s'organise autour de votre agenda, pas l'inverse." data-en="Passport valid, gear packed. We work around your schedule, not the other way round.">Passeport à jour, matériel prêt. On s'organise autour de votre agenda, pas l'inverse.</p>
         </div>
         <div class="trust-i">
           <div class="ic"><svg viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="2.5"/></svg></div>
-          <h3 data-fr="Je me fais oublier" data-en="I stay invisible">Je me fais oublier</h3>
-          <p data-fr="Pas de mise en scène, pas de direction permanente. Vous vivez votre journée, je disparais dans le décor." data-en="No staging, no constant directing. You live your day, I disappear into the background.">Pas de mise en scène, pas de direction permanente. Vous vivez votre journée, je disparais dans le décor.</p>
+          <h3 data-fr="On disparaît dans le décor." data-en="We disappear into the background.">On disparaît dans le décor.</h3>
+          <p data-fr="Pas de mise en scène, pas de direction permanente. Vous vivez votre journée, on capture ce qui existe vraiment." data-en="No staging, no constant directing. You live your day, we capture what actually happens.">Pas de mise en scène, pas de direction permanente. Vous vivez votre journée, on capture ce qui existe vraiment.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TERRY -->
-  <section id="terry">
+  <!-- ============ 6. AVEC QUI ON A TRAVAILLÉ ============ -->
+  <section id="collab">
+    <div class="wrap">
+      <div class="head rv">
+        <div class="label" data-fr="Collaborations" data-en="Collaborations">Collaborations</div>
+        <h2 data-fr="Avec qui on a travaillé." data-en="Who we've worked with.">Avec qui on a travaillé.</h2>
+        <p data-fr="Des artistes, des sportifs, des voyages. Certains visages restent flous — NDA oblige." data-en="Artists, athletes, journeys. Some faces stay blurred — NDA obliges.">Des artistes, des sportifs, des voyages. Certains visages restent flous — NDA oblige.</p>
+      </div>
+      <div class="collab-grid rv d1" id="collabGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ 7. TERRY ============ -->
+  <section id="terry" style="background:var(--bg-tint);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
     <div class="wrap founder">
       <div class="founder-vis rv">
-        <!-- Déposer terry.jpg à la racine du dépôt -->
-        <img class="founder-img" src="terry.jpg" alt="Terry, photographe et vidéaste lifestyle"
+        <!-- Photo en action (en train de shooter, backstage, en déplacement) : terry.jpg -->
+        <img class="founder-img" src="terry.jpg" alt="Terry, fondateur de Vision'Air, en tournage"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
         <div class="founder-ph" style="display:none"><span class="label">terry.jpg</span></div>
       </div>
       <div class="founder-txt rv d1">
         <div class="label" data-fr="Derrière l'objectif" data-en="Behind the lens">Derrière l'objectif</div>
         <h2>Terry</h2>
-        <div class="founder-role label">Photographe &amp; vidéaste lifestyle</div>
+        <div class="founder-role label" data-fr="Fondateur de Vision'Air" data-en="Founder of Vision'Air">Fondateur de Vision'Air</div>
 
-        <p class="founder-hook" data-fr="Dix ans que je photographie et que je filme la vie des autres. Des artistes, des sportifs, des gens qui bougent — et une valise toujours prête." data-en="Ten years photographing and filming other people's lives. Artists, athletes, people on the move — and a bag always packed.">Dix ans que je photographie et que je filme la vie des autres. Des artistes, des sportifs, des gens qui bougent — et une valise toujours prête.</p>
+        <p class="founder-hook" data-fr="+5 ans qu'on photographie et qu'on filme la vie des autres. Des célébrités, des sportifs, des gens." data-en="5+ years photographing and filming other people's lives. Celebrities, athletes, people.">+5 ans qu'on photographie et qu'on filme la vie des autres. Des célébrités, des sportifs, des gens.</p>
 
         <div class="more" id="founderMore">
           <div class="more-inner">
-            <p data-fr="J'ai travaillé avec des artistes et des célébrités, en tournée comme en privé. J'ai shooté entre la France, l'Espagne, les Émirats, l'Asie, l'Indonésie, l'Afrique et les États-Unis. Chaque fois le même principe : je m'intègre, j'observe, je capture." data-en="I've worked with artists and celebrities, on tour and in private. I've shot across France, Spain, the Emirates, Asia, Indonesia, Africa and the United States. Always the same principle: I blend in, I observe, I capture.">J'ai travaillé avec des artistes et des célébrités, en tournée comme en privé. J'ai shooté entre la France, l'Espagne, les Émirats, l'Asie, l'Indonésie, l'Afrique et les États-Unis. Chaque fois le même principe : je m'intègre, j'observe, je capture.</p>
-            <p data-fr="Ce que je fais de mieux, c'est suivre quelqu'un sur la durée. Pas une séance d'une heure : des jours, des semaines, un voyage entier. C'est là que les vraies images arrivent — celles que personne ne peut mettre en scène." data-en="What I do best is following someone over time. Not a one-hour session: days, weeks, an entire trip. That's when the real images happen — the ones nobody can stage.">Ce que je fais de mieux, c'est suivre quelqu'un sur la durée. Pas une séance d'une heure : des jours, des semaines, un voyage entier. C'est là que les vraies images arrivent — celles que personne ne peut mettre en scène.</p>
-            <p data-fr="La confiance passe avant tout le reste. Je partage le quotidien de gens exposés, je connais la valeur du silence, et je sais rester à ma place. C'est pour ça qu'on me rappelle." data-en="Trust comes before everything else. I share the daily life of exposed people, I know the value of silence, and I know how to stay in my place. That's why people call me back.">La confiance passe avant tout le reste. Je partage le quotidien de gens exposés, je connais la valeur du silence, et je sais rester à ma place. C'est pour ça qu'on me rappelle.</p>
+            <p data-fr="Vision'Air a travaillé avec des artistes et des personnalités, en tournée comme en privé, entre la France, l'Espagne, les Émirats et l'Asie. Toujours le même principe : on s'intègre, on observe, on capture." data-en="Vision'Air has worked with artists and public figures, on tour and in private, across France, Spain, the Emirates and Asia. Always the same principle: we blend in, we observe, we capture.">Vision'Air a travaillé avec des artistes et des personnalités, en tournée comme en privé, entre la France, l'Espagne, les Émirats et l'Asie. Toujours le même principe : on s'intègre, on observe, on capture.</p>
+            <p data-fr="Ce qu'on fait de mieux, c'est accompagner. Pas une séance d'une heure : des jours, des semaines, un voyage entier. C'est là que les vraies images arrivent — celles que personne ne peut mettre en scène." data-en="What we do best is accompany. Not a one-hour session: days, weeks, an entire trip. That's when the real images happen — the ones nobody can stage.">Ce qu'on fait de mieux, c'est accompagner. Pas une séance d'une heure : des jours, des semaines, un voyage entier. C'est là que les vraies images arrivent — celles que personne ne peut mettre en scène.</p>
+            <p data-fr="La confiance passe avant tout le reste. On partage le quotidien de gens exposés, on connaît la valeur du silence, et on sait rester à sa place. C'est pour ça qu'on nous rappelle." data-en="Trust comes before everything else. We share the daily life of exposed people, we know the value of silence, and we know how to stay in our place. That's why we get called back.">La confiance passe avant tout le reste. On partage le quotidien de gens exposés, on connaît la valeur du silence, et on sait rester à sa place. C'est pour ça qu'on nous rappelle.</p>
           </div>
         </div>
         <button class="more-btn" id="founderBtn" aria-expanded="false" aria-controls="founderMore">
@@ -596,7 +660,7 @@
         </button>
 
         <ul class="chips">
-          <li data-fr="10+ ans" data-en="10+ years">10+ ans</li>
+          <li data-fr="+5 ans" data-en="5+ years">+5 ans</li>
           <li data-fr="4 continents" data-en="4 continents">4 continents</li>
           <li data-fr="Artistes &amp; célébrités" data-en="Artists &amp; celebrities">Artistes &amp; célébrités</li>
         </ul>
@@ -604,23 +668,57 @@
     </div>
   </section>
 
-  <!-- COMMENT CA MARCHE -->
+  <!-- ============ 8. LE BOOK ============ -->
+  <section id="work">
+    <div class="wrap">
+      <div class="head rv">
+        <div class="label" data-fr="Le book" data-en="The book">Le book</div>
+        <h2 data-fr="Des moments, pas des poses." data-en="Moments, not poses.">Des moments, pas des poses.</h2>
+      </div>
+      <!-- Chiffres à mettre à jour avant publication -->
+      <div class="counter rv" data-fr="<b>12 projets</b> · <b>8 pays</b> · 2024–2025" data-en="<b>12 projects</b> · <b>8 countries</b> · 2024–2025"><b>12 projets</b> · <b>8 pays</b> · 2024–2025</div>
+      <div class="pf rv d1" id="pfGrid"></div>
+      <p class="pf-note rv" data-fr="Book complet et références envoyés sur demande." data-en="Full book and references sent on request.">Book complet et références envoyés sur demande.</p>
+    </div>
+  </section>
+
+  <!--
+    ============ 9. TÉMOIGNAGES ============
+    Section prête, désactivée tant qu'aucun témoignage n'est disponible.
+    Pour l'activer : retirer les balises de commentaire et remplir les 3 blocs.
+
+    <section id="reviews" style="background:var(--bg-tint);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+      <div class="wrap">
+        <div class="head rv">
+          <div class="label" data-fr="Ils en parlent" data-en="What they say">Ils en parlent</div>
+          <h2 data-fr="Ce qu'ils en disent." data-en="In their words.">Ce qu'ils en disent.</h2>
+        </div>
+        <div class="trust rv d1">
+          <div class="trust-i"><p>« Citation. »</p><h3 style="margin-top:14px;">Prénom — Rôle</h3></div>
+          <div class="trust-i"><p>« Citation. »</p><h3 style="margin-top:14px;">Prénom — Rôle</h3></div>
+          <div class="trust-i"><p>« Citation. »</p><h3 style="margin-top:14px;">Prénom — Rôle</h3></div>
+        </div>
+      </div>
+    </section>
+  -->
+
+  <!-- ============ 10. PROCESS ============ -->
   <section id="how" style="background:var(--bg-tint);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
     <div class="wrap">
       <div class="head rv">
         <div class="label" data-fr="Comment ça marche" data-en="How it works">Comment ça marche</div>
-        <h2 data-fr="Trois messages et c'est réglé." data-en="Three messages and it's done.">Trois messages et c'est réglé.</h2>
+        <h2 data-fr="Trois messages et c'est réglé." data-en="Three messages and it's settled.">Trois messages et c'est réglé.</h2>
       </div>
       <div class="steps rv d1">
         <div class="step">
           <div class="step-n">01</div>
-          <h3 data-fr="Vous m'écrivez" data-en="You message me">Vous m'écrivez</h3>
+          <h3 data-fr="Vous nous écrivez" data-en="You message us">Vous nous écrivez</h3>
           <p data-fr="Où, quand, combien de jours. On cale ça sur WhatsApp en quelques minutes." data-en="Where, when, how many days. We settle it on WhatsApp in minutes.">Où, quand, combien de jours. On cale ça sur WhatsApp en quelques minutes.</p>
         </div>
         <div class="step">
           <div class="step-n">02</div>
-          <h3 data-fr="Je vous rejoins" data-en="I join you">Je vous rejoins</h3>
-          <p data-fr="Je gère mon vol, mon matériel, mon hébergement si besoin. Vous n'organisez rien." data-en="I handle my flight, my gear, my accommodation if needed. You organise nothing.">Je gère mon vol, mon matériel, mon hébergement si besoin. Vous n'organisez rien.</p>
+          <h3 data-fr="On vous rejoint" data-en="We join you">On vous rejoint</h3>
+          <p data-fr="On gère le vol, le matériel, l'hébergement si besoin. Vous n'organisez rien." data-en="We handle the flight, the gear, the accommodation if needed. You organise nothing.">On gère le vol, le matériel, l'hébergement si besoin. Vous n'organisez rien.</p>
         </div>
         <div class="step">
           <div class="step-n">03</div>
@@ -628,32 +726,75 @@
           <p data-fr="Photos retouchées et vidéos montées, découpées par format, prêtes à publier." data-en="Retouched photos and edited videos, cut per format, ready to post.">Photos retouchées et vidéos montées, découpées par format, prêtes à publier.</p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="partner rv d2" style="margin-top:44px;">
-        <div>
-          <h3 data-fr="Vous connaissez quelqu'un ?" data-en="Know someone?">Vous connaissez quelqu'un ?</h3>
-          <p data-fr="Mettez-moi en relation avec un artiste, un sportif ou une marque : vous touchez <b>15 %</b> sur chaque projet signé." data-en="Introduce me to an artist, an athlete or a brand: you earn <b>15%</b> on every signed project.">Mettez-moi en relation avec un artiste, un sportif ou une marque : vous touchez <b>15 %</b> sur chaque projet signé.</p>
+  <!-- ============ 11. FAQ ============ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="head rv">
+        <div class="label" data-fr="FAQ" data-en="FAQ">FAQ</div>
+        <h2 data-fr="Les questions qu'on nous pose." data-en="The questions we get asked.">Les questions qu'on nous pose.</h2>
+      </div>
+      <div class="faq rv d1">
+        <div class="faq-i">
+          <button class="faq-q">
+            <span data-fr="Vous couvrez les frais de déplacement ?" data-en="Do you cover travel costs?">Vous couvrez les frais de déplacement ?</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-a"><p data-fr="Les frais réels (vol, hébergement) sont à la charge du client, en plus de la prestation." data-en="Actual costs (flights, accommodation) are covered by the client, on top of the service.">Les frais réels (vol, hébergement) sont à la charge du client, en plus de la prestation.</p></div>
         </div>
-        <a class="btn btn-ghost js-wa" data-msg="partner" data-fr="En savoir plus" data-en="Learn more">En savoir plus</a>
+        <div class="faq-i">
+          <button class="faq-q">
+            <span data-fr="Combien de temps pour recevoir le contenu ?" data-en="How long until I receive the content?">Combien de temps pour recevoir le contenu ?</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-a"><p data-fr="Livraison sous 7 à 14 jours après le tournage, selon le volume." data-en="Delivered within 7 to 14 days after the shoot, depending on volume.">Livraison sous 7 à 14 jours après le tournage, selon le volume.</p></div>
+        </div>
+        <div class="faq-i">
+          <button class="faq-q">
+            <span data-fr="Et le budget ?" data-en="What about budget?">Et le budget ?</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-a"><p data-fr="On s'adapte à chaque projet — durée, lieu, format. On en discute ensemble avant de partir." data-en="We adapt to each project — duration, location, format. We discuss it together before leaving.">On s'adapte à chaque projet — durée, lieu, format. On en discute ensemble avant de partir.</p></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
+  <!-- ============ 12. CTA FINAL ============ -->
+  <section id="contact" style="background:var(--bg-tint);border-top:1px solid var(--line);">
     <div class="wrap contact">
       <div class="label rv" data-fr="On en parle" data-en="Let's talk">On en parle</div>
-      <h2 class="rv d1" data-fr="Dites-moi où et quand." data-en="Tell me where and when.">Dites-moi où et quand.</h2>
-      <p class="rv d2" data-fr="Un message, une réponse dans la journée. Si le projet me parle, je bloque les dates." data-en="One message, an answer the same day. If the project speaks to me, I block the dates.">Un message, une réponse dans la journée. Si le projet me parle, je bloque les dates.</p>
+      <h2 class="rv d1" data-fr="Dites-nous où et quand." data-en="Tell us where and when.">Dites-nous où et quand.</h2>
+      <p class="rv d2" data-fr="Un message, une réponse dans la journée. Si le projet nous parle, on bloque les dates." data-en="One message, an answer the same day. If the project speaks to us, we block the dates.">Un message, une réponse dans la journée. Si le projet nous parle, on bloque les dates.</p>
       <div class="rv d2">
         <a class="btn btn-wa btn-lg js-wa" data-msg="hero">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23z"/></svg>
           <span data-fr="Écrire sur WhatsApp" data-en="Message on WhatsApp">Écrire sur WhatsApp</span>
         </a>
       </div>
+      <!-- Rareté : à mettre à jour manuellement chaque mois -->
+      <div class="slots rv d3">
+        <i></i>
+        <span data-fr="Il reste 3 créneaux disponibles en septembre." data-en="3 slots left in September.">Il reste 3 créneaux disponibles en septembre.</span>
+      </div>
       <div class="clinks rv d3">
         <a href="https://instagram.com/visionair.studio" target="_blank" rel="noopener"><span>Instagram</span></a>
         <a href="mailto:hello@visionair.studio"><span>hello@visionair.studio</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 13. AFFILIATION ============ -->
+  <section id="affiliation" style="padding-top:64px;padding-bottom:64px;">
+    <div class="wrap">
+      <div class="affil rv">
+        <div>
+          <h3 data-fr="Vous connaissez quelqu'un ?" data-en="Know someone?">Vous connaissez quelqu'un ?</h3>
+          <p data-fr="Mettez-nous en relation avec un artiste, un sportif ou une marque : vous touchez <b>15 %</b> sur chaque projet signé." data-en="Introduce us to an artist, an athlete or a brand: you earn <b>15%</b> on every signed project.">Mettez-nous en relation avec un artiste, un sportif ou une marque : vous touchez <b>15 %</b> sur chaque projet signé.</p>
+        </div>
+        <a class="btn btn-ghost js-wa" data-msg="partner" data-fr="En savoir plus" data-en="Learn more">En savoir plus</a>
       </div>
     </div>
   </section>
@@ -675,21 +816,23 @@
           </svg>
           <span class="brand-txt">Vision'Air</span>
         </div>
-        <p class="f-tag" data-fr="Photographe et vidéaste lifestyle. Disponible partout dans le monde." data-en="Lifestyle photographer and filmmaker. Available anywhere in the world.">Photographe et vidéaste lifestyle. Disponible partout dans le monde.</p>
+        <p class="f-tag" data-fr="Vision'Air capture la vie des artistes, sportifs et entrepreneurs en mouvement. Disponible partout dans le monde." data-en="Vision'Air captures the lives of artists, athletes and entrepreneurs in motion. Available anywhere in the world.">Vision'Air capture la vie des artistes, sportifs et entrepreneurs en mouvement. Disponible partout dans le monde.</p>
       </div>
       <div class="f-cols">
         <div class="f-col">
           <h4 data-fr="Navigation" data-en="Navigation">Navigation</h4>
-          <a href="#offer" data-fr="Ce que je fais" data-en="What I do">Ce que je fais</a>
-          <a href="#work" data-fr="Images" data-en="Images">Images</a>
+          <a href="#offer" data-fr="Formats" data-en="Formats">Formats</a>
+          <a href="#collab" data-fr="Collaborations" data-en="Collaborations">Collaborations</a>
+          <a href="#work" data-fr="Book" data-en="Book">Book</a>
           <a href="#terry" data-fr="Terry" data-en="Terry">Terry</a>
-          <a href="#how" data-fr="Comment ça marche" data-en="How it works">Comment ça marche</a>
+          <a href="#faq" data-fr="FAQ" data-en="FAQ">FAQ</a>
         </div>
         <div class="f-col">
           <h4 data-fr="Contact" data-en="Contact">Contact</h4>
           <a class="js-wa" data-msg="hero">WhatsApp</a>
           <a href="https://instagram.com/visionair.studio" target="_blank" rel="noopener">Instagram</a>
           <a href="mailto:hello@visionair.studio">Email</a>
+          <a href="#affiliation" data-fr="Affiliation" data-en="Affiliate">Affiliation</a>
         </div>
       </div>
     </div>
@@ -707,54 +850,86 @@
 <script>
 /* ============================================================
    NUMÉRO WHATSAPP — modifier uniquement cette ligne
-   Format international, sans "+" ni espaces.
    ============================================================ */
 const WA_NUMBER = '33612345678';
 
 /* ============================================================
-   PHOTOS — déposer les fichiers dans le dossier photos/
-   Nommés 01.jpg, 02.jpg … Ajuste PHOTO_COUNT si tu en mets plus.
+   PHOTOS — fichiers à déposer
+   Collaborations : photos/collab-01.jpg … collab-12.jpg
+   Book           : photos/grid-01.jpg   … grid-08.jpg
+   Hero           : videos/hero-reel.mp4 + photos/hero-fallback.jpg
+   Format conseillé : 4:5 vertical (1080 x 1350)
    ============================================================ */
-const PHOTO_COUNT = 12;   // carrousel du haut
-const GRID_COUNT  = 8;    // grille "Le travail"
+const COLLAB_COUNT = 12;
+const GRID_COUNT   = 8;
+
+/* Légendes collaborations — sans nom si NDA. Laisser '' pour aucune légende. */
+const COLLAB_CAPS = {
+  fr:['Tournée européenne — 2025','Dubaï — 2025','Backstage','Asie — 2024','Préparation physique','Studio',
+      'Ibiza — 2025','Voyage privé','Tournage','Événement','Portrait','Coulisses'],
+  en:['European tour — 2025','Dubai — 2025','Backstage','Asia — 2024','Training camp','Studio',
+      'Ibiza — 2025','Private trip','On set','Event','Portrait','Behind the scenes']
+};
 
 const WA_MSG = {
   fr:{
-    hero:"Bonjour Terry, je souhaite parler d'un projet (lifestyle / voyage / contenu).",
-    partner:"Bonjour Terry, je souhaite en savoir plus sur le programme de recommandation."
+    hero:"Bonjour Vision'Air, je souhaite parler d'un projet (suivi / shooting lifestyle).",
+    partner:"Bonjour Vision'Air, je souhaite en savoir plus sur le programme d'affiliation."
   },
   en:{
-    hero:"Hi Terry, I'd like to discuss a project (lifestyle / travel / content).",
-    partner:"Hi Terry, I'd like to know more about the referral program."
+    hero:"Hello Vision'Air, I'd like to discuss a project (full immersion / lifestyle shoot).",
+    partner:"Hello Vision'Air, I'd like to know more about the affiliate program."
   }
 };
 
 let lang = 'fr';
 
-/* Construction du carrousel : dupliqué deux fois pour une boucle sans couture */
-(function buildCarousel(){
-  const track = document.getElementById('phTrack');
-  const makeSet = () => {
-    const frag = document.createDocumentFragment();
-    for (let i = 1; i <= PHOTO_COUNT; i++){
-      const n = String(i).padStart(2,'0');
-      const d = document.createElement('div');
-      d.className = 'ph';
-      const img = document.createElement('img');
-      img.src = 'photos/' + n + '.jpg';
-      img.alt = '';
-      img.loading = 'lazy';
-      img.onerror = function(){ this.remove(); };   // pas de photo → dégradé seul
-      d.appendChild(img);
-      frag.appendChild(d);
-    }
-    return frag;
-  };
-  track.appendChild(makeSet());
-  track.appendChild(makeSet());
+/* --- Hero vidéo : repli si connexion lente, data saver ou animations réduites --- */
+(function heroVideo(){
+  const v = document.getElementById('heroVideo');
+  if (!v) return;
+  const c = navigator.connection || {};
+  const slow = c.saveData === true || /2g/.test(c.effectiveType || '');
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (slow || reduced){
+    // On garde le poster affiché, on ne télécharge pas la vidéo
+    v.removeAttribute('autoplay');
+    v.pause();
+    v.querySelectorAll('source').forEach(s=>s.remove());
+    v.load();
+    return;
+  }
+  // Si la vidéo est absente ou illisible, le poster (ou le dégradé) prend le relais
+  v.addEventListener('error', ()=>{ v.style.display = 'none'; }, true);
 })();
 
-/* Grille "Le travail" */
+/* --- Grille collaborations --- */
+function buildCollab(){
+  const g = document.getElementById('collabGrid');
+  g.innerHTML = '';
+  for (let i = 1; i <= COLLAB_COUNT; i++){
+    const n = String(i).padStart(2,'0');
+    const d = document.createElement('div');
+    d.className = 'collab-item';
+    const img = document.createElement('img');
+    img.src = 'photos/collab-' + n + '.jpg';
+    img.alt = '';
+    img.loading = 'lazy';
+    img.onerror = function(){ this.remove(); };
+    d.appendChild(img);
+    const cap = (COLLAB_CAPS[lang] || [])[i-1];
+    if (cap){
+      const c = document.createElement('div');
+      c.className = 'collab-cap';
+      c.textContent = cap;
+      d.appendChild(c);
+    }
+    g.appendChild(d);
+  }
+}
+buildCollab();
+
+/* --- Grille book --- */
 (function buildGrid(){
   const g = document.getElementById('pfGrid');
   for (let i = 1; i <= GRID_COUNT; i++){
@@ -770,25 +945,6 @@ let lang = 'fr';
     g.appendChild(d);
   }
 })();
-
-/* Destinations */
-const DEST = {
-  fr:['France','Espagne','Émirats','Dubaï','Asie','Indonésie','Bali','Afrique','États-Unis','Ibiza','Maroc','Thaïlande'],
-  en:['France','Spain','Emirates','Dubai','Asia','Indonesia','Bali','Africa','United States','Ibiza','Morocco','Thailand']
-};
-function buildDest(){
-  const t = document.getElementById('destTrack');
-  t.innerHTML = '';
-  const list = DEST[lang];
-  for (let r = 0; r < 2; r++){
-    list.forEach(c => {
-      const s = document.createElement('span');
-      s.textContent = c;
-      t.appendChild(s);
-    });
-  }
-}
-buildDest();
 
 function refreshWaLinks(){
   document.querySelectorAll('.js-wa').forEach(el=>{
@@ -809,7 +965,7 @@ function setLang(l){
   document.querySelectorAll('.lang button').forEach(b=>{
     b.classList.toggle('active', b.dataset.lang === l);
   });
-  buildDest();
+  buildCollab();
   refreshWaLinks();
 }
 document.querySelectorAll('.lang').forEach(sw=>{
@@ -821,17 +977,18 @@ document.querySelectorAll('.lang').forEach(sw=>{
 refreshWaLinks();
 
 document.getElementById('year').textContent = new Date().getFullYear();
-
 requestAnimationFrame(()=>document.body.classList.add('ready'));
 
+/* --- Header + bouton flottant --- */
 const hdr = document.getElementById('hdr');
 const waFloat = document.getElementById('waFloat');
 window.addEventListener('scroll', ()=>{
   const y = window.scrollY;
-  hdr.classList.toggle('scrolled', y > 8);
+  hdr.classList.toggle('scrolled', y > 60);
   waFloat.classList.toggle('show', y > window.innerHeight * .7);
 }, {passive:true});
 
+/* --- Menu mobile --- */
 const burger = document.getElementById('burger');
 const mmenu = document.getElementById('mmenu');
 burger.addEventListener('click', ()=>{
@@ -845,7 +1002,7 @@ mmenu.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{
   document.body.style.overflow = '';
 }));
 
-/* Bio : dépliage */
+/* --- Bio : dépliage --- */
 const fBtn = document.getElementById('founderBtn');
 const fMore = document.getElementById('founderMore');
 fBtn.addEventListener('click', ()=>{
@@ -858,7 +1015,14 @@ fBtn.addEventListener('click', ()=>{
   s.textContent = lang === 'fr' ? s.dataset.fr : s.dataset.en;
 });
 
-/* Révélations au scroll */
+/* --- FAQ --- */
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click', ()=>{
+    q.parentElement.classList.toggle('open');
+  });
+});
+
+/* --- Révélations au scroll --- */
 const io = new IntersectionObserver(entries=>{
   entries.forEach(e=>{ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
 }, {threshold:.1, rootMargin:'0px 0px -50px 0px'});

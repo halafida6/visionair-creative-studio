@@ -1,12 +1,15 @@
-# Photos
+# Fichiers à fournir
 
-## Carrousel du haut (défilement automatique)
-Fichiers : `01.jpg` … `12.jpg`
-Format conseillé : **4:5 vertical** (ex. 1080 x 1350 px)
+## Hero (vidéo de fond)
+- `../videos/hero-reel.mp4` — vidéo courte en boucle, muette. Compresser fort (< 5 Mo idéalement).
+- `hero-fallback.jpg` — image affichée sur connexion lente, data saver, ou animations réduites.
 
-## Grille « Le travail »
-Fichiers : `grid-01.jpg` … `grid-08.jpg`
-Format conseillé : **4:5 vertical** également
+## Collaborations (« Avec qui on a travaillé »)
+`collab-01.jpg` … `collab-12.jpg` — format 4:5 vertical (1080 x 1350)
+Légendes modifiables dans `COLLAB_CAPS` (index.html). Mettre `''` pour aucune légende.
 
-Si un fichier est absent, un dégradé gris s'affiche à la place — rien ne casse.
-Pour changer le nombre de photos, modifie `PHOTO_COUNT` et `GRID_COUNT` dans `index.html`.
+## Book
+`grid-01.jpg` … `grid-08.jpg` — format 4:5 vertical
+
+Fichier absent = dégradé gris, rien ne casse.
+Nombre de photos : `COLLAB_COUNT` et `GRID_COUNT` dans index.html.
