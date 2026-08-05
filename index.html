@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -84,13 +84,13 @@
   header.scrolled{border-bottom-color:var(--line);}
   .nav{
     display:flex;align-items:center;justify-content:space-between;
-    padding:18px 0;
+    padding:18px 0;gap:16px;
   }
   .logo{
     font-weight:900;font-size:18px;letter-spacing:-0.02em;text-transform:uppercase;
   }
   .logo span{color:var(--muted);font-weight:600;}
-  .nav-links{display:none;align-items:center;gap:36px;}
+  .nav-links{display:none;align-items:center;gap:32px;margin-left:auto;margin-right:24px;}
   .nav-links a{
     font-size:13px;font-weight:600;letter-spacing:.02em;
     position:relative;padding:4px 0;
@@ -119,6 +119,17 @@
   .nav-cta{display:none;}
   @media(min-width:900px){.nav-cta{display:inline-flex;}}
 
+  /* === LANG SWITCH === */
+  .lang-switch{
+    display:flex;align-items:center;border:1.5px solid var(--ink);border-radius:100px;
+    padding:3px;font-size:11px;font-weight:800;letter-spacing:.04em;flex-shrink:0;
+  }
+  .lang-switch button{
+    background:none;border:0;padding:6px 11px;border-radius:100px;cursor:pointer;color:var(--muted);
+    transition:background .25s,color .25s;
+  }
+  .lang-switch button.active{background:var(--ink);color:#fff;}
+
   .burger{
     display:flex;flex-direction:column;gap:5px;width:26px;cursor:pointer;background:none;border:0;
   }
@@ -127,12 +138,13 @@
 
   .mobile-menu{
     position:fixed;inset:0;z-index:190;background:var(--paper);
-    display:flex;flex-direction:column;justify-content:center;gap:28px;padding:24px;
+    display:flex;flex-direction:column;justify-content:center;gap:26px;padding:24px;
     transform:translateY(-100%);transition:transform .5s var(--ease);
   }
   .mobile-menu.open{transform:translateY(0);}
-  .mobile-menu a{font-size:34px;font-weight:800;letter-spacing:-0.03em;}
-  .mobile-menu .btn{align-self:flex-start;margin-top:12px;}
+  .mobile-menu a{font-size:32px;font-weight:800;letter-spacing:-0.03em;}
+  .mobile-menu .btn{align-self:flex-start;margin-top:8px;}
+  .mobile-menu .lang-switch{align-self:flex-start;margin-top:4px;}
 
   /* === HERO === */
   .hero{
@@ -158,7 +170,7 @@
     gap:14px;opacity:.9;
   }
   .reel-track{display:flex;gap:14px;animation:reel 38s linear infinite;}
-  .reel-track img,.reel-card{
+  .reel-card{
     height:78vh;width:26vw;min-width:220px;border-radius:18px;flex-shrink:0;
     background:linear-gradient(160deg,#1a1a1a,#3a3a3a);
     filter:grayscale(1) brightness(.55);
@@ -178,7 +190,7 @@
     text-transform:uppercase;
   }
   .hero-sub{
-    max-width:560px;margin-top:22px;font-size:clamp(15px,2.2vw,19px);color:var(--muted);font-weight:500;
+    max-width:520px;margin-top:22px;font-size:clamp(15px,2.2vw,19px);color:var(--muted);font-weight:500;
   }
   .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px;}
   .hero-meta{
@@ -201,41 +213,39 @@
   @keyframes mq{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 
   /* === SECTION SHARED === */
-  section{padding:96px 0;}
-  @media(min-width:768px){section{padding:140px 0;}}
-  .section-head{max-width:760px;margin-bottom:56px;}
-  .section-head h2{font-size:clamp(30px,5.4vw,58px);margin-top:14px;}
-  .section-head p{margin-top:18px;font-size:16px;color:var(--muted);max-width:540px;}
+  section{padding:88px 0;}
+  @media(min-width:768px){section{padding:128px 0;}}
+  .section-head{max-width:640px;margin-bottom:48px;}
+  .section-head h2{font-size:clamp(30px,5.4vw,54px);margin-top:14px;}
+  .section-head p{margin-top:16px;font-size:15px;color:var(--muted);max-width:460px;}
 
   /* === ABOUT === */
   .about-body{
-    font-size:clamp(20px,3.4vw,36px);font-weight:700;letter-spacing:-.02em;line-height:1.3;max-width:980px;
+    font-size:clamp(19px,3vw,30px);font-weight:700;letter-spacing:-.02em;line-height:1.35;max-width:820px;
   }
-  .about-body .dim{color:#c7c7c7;}
   .about-stats{
-    display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:64px;
+    display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:56px;
   }
   @media(min-width:768px){.about-stats{grid-template-columns:repeat(4,1fr);}}
   .about-stats div{border-top:2px solid var(--ink);padding-top:14px;}
-  .about-stats b{display:block;font-size:34px;font-weight:900;}
-  .about-stats span{font-size:12px;color:var(--muted);font-weight:600;}
+  .about-stats b{display:block;font-size:20px;font-weight:900;}
+  .about-stats span{font-size:11px;color:var(--muted);font-weight:600;}
 
   /* === SERVICES === */
   .services-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);}
   @media(min-width:900px){.services-grid{grid-template-columns:repeat(3,1fr);}}
   .service-card{
-    background:var(--paper);padding:44px 32px;position:relative;overflow:hidden;
+    background:var(--paper);padding:40px 30px;position:relative;overflow:hidden;
     transition:background .4s var(--ease);
   }
   .service-card:hover{background:var(--ink);color:var(--paper);}
-  .service-card:hover .svc-tag,.service-card:hover .svc-for,.service-card:hover li{color:#bdbdbd;}
+  .service-card:hover .svc-tag,.service-card:hover li{color:#bdbdbd;}
   .svc-num{font-size:12px;font-weight:700;color:var(--muted);}
   .service-card:hover .svc-num{color:#9a9a9a;}
-  .service-card h3{font-size:26px;margin-top:22px;text-transform:uppercase;}
+  .service-card h3{font-size:24px;margin-top:20px;text-transform:uppercase;}
   .svc-tag{margin-top:10px;font-size:14px;color:var(--muted);font-weight:600;}
-  .svc-for{margin-top:26px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
-  .service-card ul{margin-top:12px;display:flex;flex-direction:column;gap:9px;}
-  .service-card li{font-size:14.5px;font-weight:500;color:#3a3a3a;transition:color .4s var(--ease);}
+  .service-card ul{margin-top:22px;display:flex;flex-direction:column;gap:9px;}
+  .service-card li{font-size:14px;font-weight:500;color:#3a3a3a;transition:color .4s var(--ease);}
   .service-card li::before{content:"— ";}
 
   /* === PORTFOLIO === */
@@ -257,68 +267,66 @@
   .p-item .p-overlay{
     position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;
     background:linear-gradient(0deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,0) 45%);
-    transform:translateY(8px);opacity:0;transition:transform .45s var(--ease),opacity .45s var(--ease);
   }
-  .p-item:hover .p-overlay{transform:translateY(0);opacity:1;}
   .p-item:hover{box-shadow:0 20px 50px rgba(0,0,0,.25);}
   .p-cat{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#d8d8d8;font-weight:700;}
-  .p-title{font-size:20px;font-weight:800;color:#fff;margin-top:6px;letter-spacing:-.01em;}
+  .p-title{font-size:19px;font-weight:800;color:#fff;margin-top:6px;letter-spacing:-.01em;}
   .p-play{
     position:absolute;top:18px;right:18px;width:38px;height:38px;border-radius:50%;
     background:rgba(255,255,255,.14);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;
   }
   .p-play svg{width:12px;height:12px;fill:#fff;}
-  .portfolio-note{margin-top:32px;font-size:13px;color:var(--muted);text-align:center;}
+  .portfolio-note{margin-top:28px;font-size:13px;color:var(--muted);}
 
   /* === PROCESS === */
   .process-list{border-top:1px solid var(--line);}
   .process-row{
-    display:grid;grid-template-columns:1fr;gap:12px;padding:34px 0;border-bottom:1px solid var(--line);
+    display:grid;grid-template-columns:1fr;gap:10px;padding:28px 0;border-bottom:1px solid var(--line);
     transition:padding .3s var(--ease);
   }
   @media(min-width:768px){
-    .process-row{grid-template-columns:110px 1fr 1fr;align-items:center;gap:24px;}
+    .process-row{grid-template-columns:90px 1fr 1fr;align-items:center;gap:24px;}
   }
   .process-row:hover{background:#fafafa;}
-  .process-num{font-size:15px;font-weight:800;color:var(--muted);}
-  .process-row h3{font-size:clamp(24px,3.6vw,32px);text-transform:uppercase;}
-  .process-row p{color:var(--muted);font-size:15px;max-width:380px;}
+  .process-num{font-size:14px;font-weight:800;color:var(--muted);}
+  .process-row h3{font-size:clamp(22px,3.2vw,28px);text-transform:uppercase;}
+  .process-row p{color:var(--muted);font-size:14px;max-width:340px;}
 
   /* === PARTNER === */
   .partner{
     background:var(--ink);color:var(--paper);border-radius:28px;
-    padding:56px 28px;text-align:center;position:relative;overflow:hidden;
+    padding:52px 26px;text-align:center;position:relative;overflow:hidden;
   }
-  @media(min-width:768px){.partner{padding:100px 60px;}}
+  @media(min-width:768px){.partner{padding:92px 60px;}}
   .partner::before{
     content:"";position:absolute;inset:0;
     background:radial-gradient(60% 60% at 50% 0%, rgba(255,255,255,.08), transparent 70%);
   }
-  .partner-inner{position:relative;max-width:680px;margin:0 auto;}
+  .partner-inner{position:relative;max-width:620px;margin:0 auto;}
   .partner .eyebrow{color:#8a8a8a;}
-  .partner h2{font-size:clamp(30px,5.6vw,54px);color:#fff;margin-top:16px;text-transform:uppercase;}
-  .partner p{margin-top:20px;color:#b8b8b8;font-size:16px;line-height:1.6;}
+  .partner h2{font-size:clamp(28px,5.2vw,50px);color:#fff;margin-top:16px;text-transform:uppercase;}
+  .partner p{margin-top:18px;color:#b8b8b8;font-size:15px;line-height:1.6;}
   .partner-pct{
-    display:inline-flex;align-items:baseline;gap:6px;margin:32px 0 8px;
+    display:inline-flex;align-items:baseline;gap:6px;margin:28px 0 6px;
   }
-  .partner-pct b{font-size:clamp(56px,10vw,96px);font-weight:900;color:#fff;letter-spacing:-.03em;}
-  .partner-pct span{font-size:16px;color:#9a9a9a;font-weight:700;}
-  .partner .btn-primary{background:#fff;color:var(--ink);border-color:#fff;margin-top:20px;}
+  .partner-pct b{font-size:clamp(52px,9vw,88px);font-weight:900;color:#fff;letter-spacing:-.03em;}
+  .partner-pct span{font-size:14px;color:#9a9a9a;font-weight:700;max-width:120px;text-align:left;}
+  .partner .btn-primary{background:#fff;color:var(--ink);border-color:#fff;margin-top:18px;}
   .partner .btn-primary:hover{background:#e9e9e9;}
 
   /* === CONTACT === */
-  .contact-grid{display:grid;grid-template-columns:1fr;gap:56px;}
+  .contact-grid{display:grid;grid-template-columns:1fr;gap:52px;}
   @media(min-width:900px){.contact-grid{grid-template-columns:1fr 1.1fr;gap:80px;}}
-  .contact-info h2{font-size:clamp(32px,5.6vw,56px);}
-  .contact-info p{margin-top:20px;color:var(--muted);font-size:16px;max-width:400px;}
-  .contact-links{margin-top:40px;display:flex;flex-direction:column;gap:16px;}
+  .contact-info h2{font-size:clamp(30px,5vw,50px);}
+  .contact-info p{margin-top:18px;color:var(--muted);font-size:15px;max-width:380px;}
+  .contact-links{margin-top:36px;display:flex;flex-direction:column;gap:16px;}
   .contact-links a{
     font-size:16px;font-weight:700;display:flex;align-items:center;gap:10px;width:fit-content;
     border-bottom:1px solid var(--line);padding-bottom:6px;
   }
   .contact-links a:hover{border-color:var(--ink);}
   .price-note{
-    margin-top:48px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;font-size:14px;color:var(--muted);
+    margin-top:40px;padding:16px 18px;border:1px solid var(--line);border-radius:14px;font-size:13px;color:var(--muted);
   }
   .price-note b{color:var(--ink);}
 
@@ -338,17 +346,17 @@
   .form-status{font-size:13px;font-weight:600;min-height:18px;}
 
   /* === FOOTER === */
-  footer{border-top:1px solid var(--line);padding:48px 0 32px;}
+  footer{border-top:1px solid var(--line);padding:44px 0 30px;}
   .footer-top{
-    display:flex;flex-direction:column;gap:24px;justify-content:space-between;padding-bottom:40px;
+    display:flex;flex-direction:column;gap:22px;justify-content:space-between;padding-bottom:36px;
   }
   @media(min-width:768px){.footer-top{flex-direction:row;align-items:flex-end;}}
-  .footer-brand{font-size:clamp(30px,7vw,64px);font-weight:900;letter-spacing:-.03em;text-transform:uppercase;}
+  .footer-brand{font-size:clamp(28px,6.5vw,58px);font-weight:900;letter-spacing:-.03em;text-transform:uppercase;}
   .footer-social{display:flex;gap:22px;}
   .footer-social a{font-size:13px;font-weight:700;border-bottom:1px solid var(--line);padding-bottom:4px;}
   .footer-social a:hover{border-color:var(--ink);}
   .footer-bottom{
-    display:flex;flex-direction:column;gap:10px;padding-top:24px;border-top:1px solid var(--line);
+    display:flex;flex-direction:column;gap:10px;padding-top:22px;border-top:1px solid var(--line);
     font-size:12px;color:var(--muted);
   }
   @media(min-width:768px){.footer-bottom{flex-direction:row;justify-content:space-between;}}
@@ -362,13 +370,17 @@
   <div class="wrap nav">
     <a href="#top" class="logo">VISION'AIR <span>studio</span></a>
     <nav class="nav-links">
-      <a href="#work">Work</a>
-      <a href="#services">Services</a>
-      <a href="#process">Process</a>
-      <a href="#partner">Partner</a>
-      <a href="#contact">Contact</a>
+      <a href="#work" data-fr="Travaux" data-en="Work">Travaux</a>
+      <a href="#services" data-fr="Services" data-en="Services">Services</a>
+      <a href="#process" data-fr="Process" data-en="Process">Process</a>
+      <a href="#partner" data-fr="Partenaire" data-en="Partner">Partenaire</a>
+      <a href="#contact" data-fr="Contact" data-en="Contact">Contact</a>
     </nav>
-    <a href="#contact" class="btn btn-primary btn-sm nav-cta">Start a project</a>
+    <div class="lang-switch" id="langSwitch">
+      <button data-lang="fr" class="active">FR</button>
+      <button data-lang="en">EN</button>
+    </div>
+    <a href="#contact" class="btn btn-primary btn-sm nav-cta" data-fr="Démarrer un projet" data-en="Start a project">Démarrer un projet</a>
     <button class="burger" id="burgerBtn" aria-label="Menu">
       <span></span><span></span>
     </button>
@@ -376,12 +388,16 @@
 </header>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#work">Work</a>
-  <a href="#services">Services</a>
-  <a href="#process">Process</a>
-  <a href="#partner">Partner</a>
-  <a href="#contact">Contact</a>
-  <a href="#contact" class="btn btn-primary">Start a project</a>
+  <a href="#work" data-fr="Travaux" data-en="Work">Travaux</a>
+  <a href="#services" data-fr="Services" data-en="Services">Services</a>
+  <a href="#process" data-fr="Process" data-en="Process">Process</a>
+  <a href="#partner" data-fr="Partenaire" data-en="Partner">Partenaire</a>
+  <a href="#contact" data-fr="Contact" data-en="Contact">Contact</a>
+  <a href="#contact" class="btn btn-primary" data-fr="Démarrer un projet" data-en="Start a project">Démarrer un projet</a>
+  <div class="lang-switch" id="langSwitchMobile">
+    <button data-lang="fr" class="active">FR</button>
+    <button data-lang="en">EN</button>
+  </div>
 </div>
 
 <main id="top">
@@ -399,42 +415,42 @@
     <div class="wrap">
       <div class="hero-eyebrow reveal in">
         <span class="dot"></span>
-        <span class="eyebrow">Creative studio — worldwide</span>
+        <span class="eyebrow" data-fr="Studio créatif — international" data-en="Creative studio — worldwide">Studio créatif — international</span>
       </div>
       <h1 class="reveal in">Vision'Air<br>Creative Studio</h1>
-      <p class="hero-sub reveal in reveal-d1">Premium video &amp; photography production for brands, entrepreneurs and events worldwide.</p>
+      <p class="hero-sub reveal in reveal-d1" data-fr="Production vidéo & photo premium pour marques, entrepreneurs et événements, partout dans le monde." data-en="Premium video & photography production for brands, entrepreneurs and events worldwide.">Production vidéo & photo premium pour marques, entrepreneurs et événements, partout dans le monde.</p>
       <div class="hero-actions reveal in reveal-d2">
-        <a href="#contact" class="btn btn-primary">Start a project</a>
-        <a href="#work" class="btn btn-ghost">View our work</a>
+        <a href="#contact" class="btn btn-primary" data-fr="Démarrer un projet" data-en="Start a project">Démarrer un projet</a>
+        <a href="#work" class="btn btn-ghost" data-fr="Voir nos réalisations" data-en="View our work">Voir nos réalisations</a>
       </div>
       <div class="hero-meta reveal in reveal-d3">
-        <div><b>15%</b><span>Partner commission</span></div>
-        <div><b>€1,500</b><span>Projects starting from</span></div>
-        <div><b>Global</b><span>Brands &amp; events</span></div>
+        <div><b>15%</b><span data-fr="Commission partenaire" data-en="Partner commission">Commission partenaire</span></div>
+        <div><b>€1,500</b><span data-fr="Projets à partir de" data-en="Projects starting from">Projets à partir de</span></div>
+        <div><b data-fr="Monde" data-en="Global">Monde</b><span data-fr="Marques & événements" data-en="Brands & events">Marques & événements</span></div>
       </div>
     </div>
   </section>
 
   <!-- MARQUEE -->
   <div class="marquee">
-    <div class="marquee-track">
-      <span>Photography</span><span>Video Production</span><span>Brand Storytelling</span><span>Creative Direction</span>
-      <span>Photography</span><span>Video Production</span><span>Brand Storytelling</span><span>Creative Direction</span>
+    <div class="marquee-track" id="marqueeTrack">
+      <span data-fr="Photographie" data-en="Photography">Photographie</span><span data-fr="Production vidéo" data-en="Video Production">Production vidéo</span><span data-fr="Storytelling de marque" data-en="Brand Storytelling">Storytelling de marque</span><span data-fr="Direction créative" data-en="Creative Direction">Direction créative</span>
+      <span data-fr="Photographie" data-en="Photography">Photographie</span><span data-fr="Production vidéo" data-en="Video Production">Production vidéo</span><span data-fr="Storytelling de marque" data-en="Brand Storytelling">Storytelling de marque</span><span data-fr="Direction créative" data-en="Creative Direction">Direction créative</span>
     </div>
   </div>
 
   <!-- ABOUT -->
   <section id="about">
     <div class="wrap">
-      <div class="eyebrow reveal">About the studio</div>
-      <p class="about-body reveal reveal-d1" style="margin-top:20px;">
-        We create visuals that make people remember. Vision'Air is a creative production studio specialized in high-end photography and video production. We help entrepreneurs, brands and companies build a <span class="dim">stronger image</span> through powerful visual storytelling — from personal branding to commercial content and events, designed to capture attention.
+      <div class="eyebrow reveal" data-fr="À propos" data-en="About">À propos</div>
+      <p class="about-body reveal reveal-d1" style="margin-top:18px;" data-fr="Studio de production photo & vidéo haut de gamme. On aide entrepreneurs et marques à construire une image forte, partout dans le monde." data-en="High-end photo & video production studio. We help entrepreneurs and brands build a stronger image, worldwide.">
+        Studio de production photo & vidéo haut de gamme. On aide entrepreneurs et marques à construire une image forte, partout dans le monde.
       </p>
       <div class="about-stats reveal reveal-d2">
-        <div><b>Personal</b><span>Branding</span></div>
-        <div><b>Brand</b><span>Content</span></div>
-        <div><b>Events</b><span>&amp; Nightlife</span></div>
-        <div><b>Worldwide</b><span>Production</span></div>
+        <div><b data-fr="Personal Branding" data-en="Personal Branding">Personal Branding</b><span data-fr="Image personnelle" data-en="Personal image">Image personnelle</span></div>
+        <div><b data-fr="Brand Content" data-en="Brand Content">Brand Content</b><span data-fr="Contenu de marque" data-en="Brand content">Contenu de marque</span></div>
+        <div><b data-fr="Events" data-en="Events">Events</b><span data-fr="& Nightlife" data-en="& Nightlife">& Nightlife</span></div>
+        <div><b data-fr="Worldwide" data-en="Worldwide">Worldwide</b><span data-fr="Production internationale" data-en="International production">Production internationale</span></div>
       </div>
     </div>
   </section>
@@ -443,46 +459,40 @@
   <section id="services">
     <div class="wrap">
       <div class="section-head reveal">
-        <div class="eyebrow">What we do</div>
-        <h2>Services built for<br>impact.</h2>
+        <div class="eyebrow" data-fr="Ce qu'on fait" data-en="What we do">Ce qu'on fait</div>
+        <h2 data-fr="Des services qui marquent." data-en="Services built for impact.">Des services qui marquent.</h2>
       </div>
       <div class="services-grid reveal reveal-d1">
         <div class="service-card">
           <span class="svc-num">01</span>
           <h3>Personal Branding</h3>
-          <p class="svc-tag">Build a powerful personal image.</p>
-          <div class="svc-for">For — Entrepreneurs, CEOs, Creators, Public figures</div>
+          <p class="svc-tag" data-fr="Une image personnelle forte." data-en="Build a powerful personal image.">Une image personnelle forte.</p>
           <ul>
-            <li>Professional photoshoots</li>
-            <li>Social media content</li>
-            <li>Reels / short-form videos</li>
-            <li>Lifestyle content</li>
-            <li>Creative direction</li>
+            <li data-fr="Photoshoots" data-en="Photoshoots">Photoshoots</li>
+            <li data-fr="Contenu réseaux sociaux" data-en="Social media content">Contenu réseaux sociaux</li>
+            <li data-fr="Reels / formats courts" data-en="Reels / short-form videos">Reels / formats courts</li>
+            <li data-fr="Direction créative" data-en="Creative direction">Direction créative</li>
           </ul>
         </div>
         <div class="service-card">
           <span class="svc-num">02</span>
           <h3>Brand Content</h3>
-          <p class="svc-tag">Premium content for companies.</p>
-          <div class="svc-for">Services</div>
+          <p class="svc-tag" data-fr="Du contenu premium pour les marques." data-en="Premium content for companies.">Du contenu premium pour les marques.</p>
           <ul>
-            <li>Corporate videos</li>
-            <li>Brand storytelling</li>
-            <li>Product videos</li>
-            <li>Social media campaigns</li>
-            <li>Commercial content</li>
+            <li data-fr="Vidéos corporate" data-en="Corporate videos">Vidéos corporate</li>
+            <li data-fr="Storytelling de marque" data-en="Brand storytelling">Storytelling de marque</li>
+            <li data-fr="Vidéos produit" data-en="Product videos">Vidéos produit</li>
+            <li data-fr="Campagnes social media" data-en="Social media campaigns">Campagnes social media</li>
           </ul>
         </div>
         <div class="service-card">
           <span class="svc-num">03</span>
           <h3>Events &amp; Nightlife</h3>
-          <p class="svc-tag">Capture moments that create impact.</p>
-          <div class="svc-for">Services</div>
+          <p class="svc-tag" data-fr="Des moments capturés qui marquent." data-en="Capture moments that create impact.">Des moments capturés qui marquent.</p>
           <ul>
-            <li>Event films</li>
-            <li>Aftermovies</li>
-            <li>Photography</li>
-            <li>Social media content</li>
+            <li data-fr="Films d'événements" data-en="Event films">Films d'événements</li>
+            <li data-fr="Aftermovies" data-en="Aftermovies">Aftermovies</li>
+            <li data-fr="Photographie" data-en="Photography">Photographie</li>
           </ul>
         </div>
       </div>
@@ -493,34 +503,33 @@
   <section id="work">
     <div class="wrap">
       <div class="section-head reveal">
-        <div class="eyebrow">Portfolio</div>
-        <h2>Selected Work</h2>
-        <p>Replace these placeholders with real photo &amp; video work — the visuals should sell before a word is read.</p>
+        <div class="eyebrow" data-fr="Portfolio" data-en="Portfolio">Portfolio</div>
+        <h2 data-fr="Nos réalisations" data-en="Selected Work">Nos réalisations</h2>
       </div>
       <div class="portfolio-grid reveal reveal-d1">
         <div class="p-item wide" style="--c1:#141414;--c2:#3a3a3a;">
           <div class="p-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          <div class="p-overlay"><div class="p-cat">Brand Content</div><div class="p-title">Aftermovie — Product Launch</div></div>
+          <div class="p-overlay"><div class="p-cat" data-fr="Brand Content" data-en="Brand Content">Brand Content</div><div class="p-title" data-fr="Aftermovie — Lancement produit" data-en="Aftermovie — Product Launch">Aftermovie — Lancement produit</div></div>
         </div>
         <div class="p-item" style="--c1:#1c1c1c;--c2:#4a4a4a;">
-          <div class="p-overlay"><div class="p-cat">Personal Branding</div><div class="p-title">Founder Portrait Series</div></div>
+          <div class="p-overlay"><div class="p-cat" data-fr="Personal Branding" data-en="Personal Branding">Personal Branding</div><div class="p-title" data-fr="Portraits de fondateur" data-en="Founder Portrait Series">Portraits de fondateur</div></div>
         </div>
         <div class="p-item" style="--c1:#101010;--c2:#333;">
           <div class="p-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          <div class="p-overlay"><div class="p-cat">Events</div><div class="p-title">Nightlife Aftermovie</div></div>
+          <div class="p-overlay"><div class="p-cat" data-fr="Events" data-en="Events">Events</div><div class="p-title" data-fr="Aftermovie soirée" data-en="Nightlife Aftermovie">Aftermovie soirée</div></div>
         </div>
         <div class="p-item" style="--c1:#232323;--c2:#4f4f4f;">
-          <div class="p-overlay"><div class="p-cat">Brand Content</div><div class="p-title">Editorial Campaign</div></div>
+          <div class="p-overlay"><div class="p-cat" data-fr="Brand Content" data-en="Brand Content">Brand Content</div><div class="p-title" data-fr="Campagne éditoriale" data-en="Editorial Campaign">Campagne éditoriale</div></div>
         </div>
         <div class="p-item wide" style="--c1:#161616;--c2:#3f3f3f;">
           <div class="p-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          <div class="p-overlay"><div class="p-cat">Personal Branding</div><div class="p-title">CEO Reel — Short Form</div></div>
+          <div class="p-overlay"><div class="p-cat" data-fr="Personal Branding" data-en="Personal Branding">Personal Branding</div><div class="p-title" data-fr="Reel CEO — Format court" data-en="CEO Reel — Short Form">Reel CEO — Format court</div></div>
         </div>
         <div class="p-item" style="--c1:#181818;--c2:#454545;">
-          <div class="p-overlay"><div class="p-cat">Events</div><div class="p-title">Corporate Event Coverage</div></div>
+          <div class="p-overlay"><div class="p-cat" data-fr="Events" data-en="Events">Events</div><div class="p-title" data-fr="Couverture événement corporate" data-en="Corporate Event Coverage">Couverture événement corporate</div></div>
         </div>
       </div>
-      <p class="portfolio-note reveal">More work available on request — Instagram @visionair.studio</p>
+      <p class="portfolio-note reveal" data-fr="Plus de travaux sur demande — Instagram @visionair.studio" data-en="More work available on request — Instagram @visionair.studio">Plus de travaux sur demande — Instagram @visionair.studio</p>
     </div>
   </section>
 
@@ -528,29 +537,29 @@
   <section id="process">
     <div class="wrap">
       <div class="section-head reveal">
-        <div class="eyebrow">How we work</div>
-        <h2>Our Process</h2>
+        <div class="eyebrow" data-fr="Comment on travaille" data-en="How we work">Comment on travaille</div>
+        <h2 data-fr="Notre process" data-en="Our Process">Notre process</h2>
       </div>
       <div class="process-list reveal reveal-d1">
         <div class="process-row">
           <div class="process-num">01</div>
-          <h3>Discovery</h3>
-          <p>Understanding your vision, goals and audience.</p>
+          <h3 data-fr="Découverte" data-en="Discovery">Découverte</h3>
+          <p data-fr="On comprend votre vision et vos objectifs." data-en="Understanding your vision, goals and audience.">On comprend votre vision et vos objectifs.</p>
         </div>
         <div class="process-row">
           <div class="process-num">02</div>
-          <h3>Creative Direction</h3>
-          <p>Building the concept, style and storytelling.</p>
+          <h3 data-fr="Direction créative" data-en="Creative Direction">Direction créative</h3>
+          <p data-fr="On construit le concept et le style." data-en="Building the concept, style and storytelling.">On construit le concept et le style.</p>
         </div>
         <div class="process-row">
           <div class="process-num">03</div>
-          <h3>Production</h3>
-          <p>Professional shooting and content creation.</p>
+          <h3 data-fr="Production" data-en="Production">Production</h3>
+          <p data-fr="Tournage professionnel." data-en="Professional shooting and content creation.">Tournage professionnel.</p>
         </div>
         <div class="process-row">
           <div class="process-num">04</div>
-          <h3>Delivery</h3>
-          <p>Premium edited content ready to use.</p>
+          <h3 data-fr="Livraison" data-en="Delivery">Livraison</h3>
+          <p data-fr="Contenu monté, prêt à l'emploi." data-en="Premium edited content ready to use.">Contenu monté, prêt à l'emploi.</p>
         </div>
       </div>
     </div>
@@ -561,11 +570,11 @@
     <div class="wrap">
       <div class="partner reveal">
         <div class="partner-inner">
-          <div class="eyebrow">Partner program</div>
-          <h2>Become a<br>Vision'Air Partner</h2>
-          <p>Do you know a brand, entrepreneur or company looking for premium content? Refer them to us.</p>
-          <div class="partner-pct"><b>15%</b><span>commission per<br>successful referral</span></div>
-          <div><a href="#contact" class="btn btn-primary">Become a partner</a></div>
+          <div class="eyebrow" data-fr="Programme partenaire" data-en="Partner program">Programme partenaire</div>
+          <h2 data-fr="Devenez partenaire Vision'Air" data-en="Become a Vision'Air Partner">Devenez partenaire Vision'Air</h2>
+          <p data-fr="Vous connaissez une marque, un entrepreneur ou une entreprise ? Recommandez-nous." data-en="Know a brand, entrepreneur or company looking for premium content? Refer them to us.">Vous connaissez une marque, un entrepreneur ou une entreprise ? Recommandez-nous.</p>
+          <div class="partner-pct"><b>15%</b><span data-fr="de commission par recommandation" data-en="commission per successful referral">de commission par recommandation</span></div>
+          <div><a href="#contact" class="btn btn-primary" data-fr="Devenir partenaire" data-en="Become a partner">Devenir partenaire</a></div>
         </div>
       </div>
     </div>
@@ -575,14 +584,14 @@
   <section id="contact">
     <div class="wrap contact-grid">
       <div class="contact-info reveal">
-        <div class="eyebrow">Get in touch</div>
-        <h2 style="margin-top:14px;">Let's create<br>something<br>unforgettable.</h2>
-        <p>Tell us about your project — we'll get back to you within 24-48 hours with next steps.</p>
+        <div class="eyebrow" data-fr="Nous contacter" data-en="Get in touch">Nous contacter</div>
+        <h2 style="margin-top:14px;" data-fr="Créons quelque chose d'inoubliable." data-en="Let's create something unforgettable.">Créons quelque chose d'inoubliable.</h2>
+        <p data-fr="Parlez-nous de votre projet." data-en="Tell us about your project.">Parlez-nous de votre projet.</p>
         <div class="contact-links">
           <a href="mailto:hello@visionair.studio">hello@visionair.studio</a>
           <a href="https://instagram.com/visionair.studio" target="_blank" rel="noopener">@visionair.studio</a>
         </div>
-        <div class="price-note">Projects starting from <b>€1,500</b>. Every project is scoped individually after a short discovery call.</div>
+        <div class="price-note"><span data-fr="Projets à partir de" data-en="Projects starting from">Projets à partir de</span> <b>€1,500</b>.</div>
       </div>
 
       <form id="contactForm" action="https://formsubmit.co/iam7limitless@gmail.com" method="POST">
@@ -593,37 +602,37 @@
 
         <div class="row2">
           <div class="field">
-            <label for="f-name">Name</label>
+            <label data-fr="Nom" data-en="Name" for="f-name">Nom</label>
             <input id="f-name" name="Name" type="text" required>
           </div>
           <div class="field">
-            <label for="f-company">Company</label>
+            <label data-fr="Société" data-en="Company" for="f-company">Société</label>
             <input id="f-company" name="Company" type="text">
           </div>
         </div>
 
         <div class="row2">
           <div class="field">
-            <label for="f-email">Email</label>
+            <label data-fr="Email" data-en="Email" for="f-email">Email</label>
             <input id="f-email" name="Email" type="email" required>
           </div>
           <div class="field">
-            <label for="f-type">Project type</label>
+            <label data-fr="Type de projet" data-en="Project type" for="f-type">Type de projet</label>
             <select id="f-type" name="Project type" required>
-              <option value="">Select one</option>
-              <option>Personal Branding</option>
-              <option>Brand Content</option>
-              <option>Events &amp; Nightlife</option>
-              <option>Partner referral</option>
-              <option>Other</option>
+              <option value="" data-fr="Choisir" data-en="Select one">Choisir</option>
+              <option data-fr="Personal Branding" data-en="Personal Branding">Personal Branding</option>
+              <option data-fr="Brand Content" data-en="Brand Content">Brand Content</option>
+              <option data-fr="Events & Nightlife" data-en="Events & Nightlife">Events &amp; Nightlife</option>
+              <option data-fr="Recommandation partenaire" data-en="Partner referral">Recommandation partenaire</option>
+              <option data-fr="Autre" data-en="Other">Autre</option>
             </select>
           </div>
         </div>
 
         <div class="field">
-          <label for="f-budget">Budget</label>
+          <label data-fr="Budget" data-en="Budget" for="f-budget">Budget</label>
           <select id="f-budget" name="Budget">
-            <option value="">Select a range</option>
+            <option value="" data-fr="Choisir une fourchette" data-en="Select a range">Choisir une fourchette</option>
             <option>€1,500 – €3,000</option>
             <option>€3,000 – €6,000</option>
             <option>€6,000 – €10,000</option>
@@ -632,11 +641,11 @@
         </div>
 
         <div class="field">
-          <label for="f-message">Message</label>
+          <label data-fr="Message" data-en="Message" for="f-message">Message</label>
           <textarea id="f-message" name="Message" required></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary">Request a consultation</button>
+        <button type="submit" class="btn btn-primary" data-fr="Demander un rendez-vous" data-en="Request a consultation">Demander un rendez-vous</button>
         <div class="form-status" id="formStatus"></div>
       </form>
     </div>
@@ -654,8 +663,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span id="year"></span> Vision'Air Creative Studio. All rights reserved.</span>
-      <span>Premium video &amp; photography production, worldwide.</span>
+      <span><span data-fr="©" data-en="©">©</span> <span id="year"></span> <span data-fr="Vision'Air Creative Studio. Tous droits réservés." data-en="Vision'Air Creative Studio. All rights reserved.">Vision'Air Creative Studio. Tous droits réservés.</span></span>
+      <span data-fr="Production vidéo & photo premium, partout dans le monde." data-en="Premium video & photography production, worldwide.">Production vidéo &amp; photo premium, partout dans le monde.</span>
     </div>
   </div>
 </footer>
@@ -679,14 +688,34 @@
 
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.1 });
   document.querySelectorAll('.reveal:not(.in)').forEach(el => io.observe(el));
 
   const form = document.getElementById('contactForm');
   const status = document.getElementById('formStatus');
   form.addEventListener('submit', () => {
-    status.textContent = 'Sending…';
+    status.textContent = currentLang === 'fr' ? 'Envoi…' : 'Sending…';
     status.style.color = '#6e6e6e';
+  });
+
+  // === LANGUAGE TOGGLE ===
+  let currentLang = 'fr';
+  function setLang(lang){
+    currentLang = lang;
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-fr]').forEach(el => {
+      const val = lang === 'fr' ? el.dataset.fr : el.dataset.en;
+      if (val !== undefined) el.textContent = val;
+    });
+    document.querySelectorAll('.lang-switch button').forEach(b => {
+      b.classList.toggle('active', b.dataset.lang === lang);
+    });
+  }
+  document.querySelectorAll('.lang-switch').forEach(sw => {
+    sw.addEventListener('click', (e) => {
+      const btn = e.target.closest('button[data-lang]');
+      if (btn) setLang(btn.dataset.lang);
+    });
   });
 </script>
 
